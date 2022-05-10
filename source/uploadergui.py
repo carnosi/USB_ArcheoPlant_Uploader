@@ -44,7 +44,8 @@ try:
     import threading
     import numpy as np
     from ipywidgets import Button, Dropdown, Text, HBox, VBox, HTML, FloatProgress, Layout
-    from IPython.display import display
+    from IPython.display import display, clear_output
+    from ipyfilechooser import FileChooser
 
     # Import custom scripts
     import dataprocess as dp
@@ -64,13 +65,15 @@ except ModuleNotFoundError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "scipy"])
     subprocess.check_call([sys.executable, "-m", "pip", "install", "xmltodict"])
     subprocess.check_call([sys.executable, "-m", "pip", "install", "ipywidgets"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "ipyfilechooser"])
     subprocess.check_call([sys.executable, "-m", "pip", "install", "unicatdb==2.2b1"])
     print("Instalation finished.")
 
     import threading
     import numpy as np
     from ipywidgets import Button, Dropdown, Text, HBox, VBox, HTML, FloatProgress, Layout
-    from IPython.display import display
+    from IPython.display import display, clear_output
+    from ipyfilechooser import FileChooser
 
     # Import custom scripts
     import dataprocess as dp
@@ -101,6 +104,8 @@ class GUI():
         self.uplo = None
         self.bothtml = None
         self.bot_html = None
+        # File chooser
+        self.fc = None
         # Create gui
         self.construct_gui()
         self.link_gui()
@@ -124,7 +129,7 @@ class GUI():
         tophtml = "Welcome to jupyter notebook seed image uploader!"
         self.top_html = HTML(value=tophtml)
         # Username
-        self.user = Text(value="", placeholder="User name:", description="User name", disabled=False, layout=Layout(width="35%"))
+        self.user = Text(value="", placeholder="User name", description="User name", disabled=False, layout=Layout(width="35%"))
         # Path finder
         self.finder = Button(description="Path:", buttonstyle="", tooltip="Select path with path finder", icon="folder", layout=Layout(width="15%"))
         # Path field
@@ -234,11 +239,6 @@ class GUI():
                 self.bot_html.value = "<b style='color:red'>Exception:" + e + "</b>" + self.bothtml
                 self.__reseter__()
 
-    def __on_path_button__(self, ide):
-        """
-
-        """
-
     def __progressbar__(self, ct, ct_max=None, finished=False):
         """
         Progressbar update callback from processing scripts. If not finished ct updates index of
@@ -340,6 +340,34 @@ class GUI():
         self.butt.icon = 'check'
         self.butt.tooltip = "Start task in given mode"
 
+    def __on_path_button__(self, ide):
+        """
+        Opens file dialog and returns path
+        """
+        if self.fc == None:
+            # Init Layout of file chooser
+            self.fc = FileChooser(dp.rcwd)
+            # Set up file chooser
+            if self.mode.value == "Pre Loader":
+                self.fc.title = '<b>Select preprocessed json file</b>'
+                self.fc.filter_pattern = ['*.txt', '*.TXT', '*.json', '*.JSON']
+            else:
+                self.fc.title = '<b>Select folder with images</b>'
+                self.fc.show_only_dirs = True
+            self.fc.register_callback(self.__path_callback__)
+            display(self.fc)
+        else:
+            self.fc.close()
+            self.fc = None
+            clear_output()
+            display(self.layout)
+
+    def __path_callback__(self, change):
+        """
+        Path callback register upon selecting path
+        """
+        self.path.value = self.fc.selected
+
     def __user_entry_start__(self, change):
         """
         Upon begining of entering user name, enables start button. Locks if left empty
@@ -370,8 +398,18 @@ class GUI():
         """
         if self.mode.value == "Pre Loader":
             self.uplo.layout.visibility = "hidden"
+            if self.fc:
+                self.fc.close()
+                self.fc = None
+                clear_output()
+                display(self.layout)
         elif self.mode.value in ["Uploader", "All-in-One"]:
             self.uplo.layout.visibility = "visible"
+            if self.fc:
+                self.fc.close()
+                self.fc = None
+                clear_output()
+                display(self.layout)
 
     def link_gui(self):
         """
@@ -382,6 +420,7 @@ class GUI():
         None.
         """
         self.butt.on_click(self.__on_button_click__)
+        self.finder.on_click(self.__on_path_button__)
         self.user.observe(self.__user_entry_start__, names='value')
         self.mode.observe(self.__mode_observer__, names="value")
 
