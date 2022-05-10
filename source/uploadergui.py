@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 uploadergui.py: Jupyter GUI constructor and handler for image uploader scripts.
-Creates GUI in jupyter notebook and eases the use of any scripts for without the need of programming
-knowledge.
+Creates GUI in jupyter notebook and eases the use of any scripts for without
+the need of programming knowledge.
 
 __doc__ using Sphnix Style
 """
@@ -32,7 +32,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.6"
+__version__ = "1.0.7"
 __maintainer__ = ["Ondrej Budik", "Vojtech Barnat"]
 __email__ = ["obudik@prf.jcu.cz", "Vojtech.Barnat@fs.cvut.cz"]
 __status__ = "Beta"
@@ -49,7 +49,12 @@ try:
     # Import custom scripts
     import dataprocess as dp
     import uploader as up
+
+    # Import setting from config
+    from config import MIN_USERNAME_LENGTH
+
 except ModuleNotFoundError:
+    # If there are missing libraries, install those.
     print("There are some libraries missing... Installing...")
     import subprocess
     import sys
@@ -61,7 +66,7 @@ except ModuleNotFoundError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "ipywidgets"])
     subprocess.check_call([sys.executable, "-m", "pip", "install", "unicatdb==2.2b1"])
     print("Instalation finished.")
-finally:
+
     import threading
     import numpy as np
     from ipywidgets import Button, Dropdown, Text, HBox, VBox, HTML, FloatProgress, Layout
@@ -75,21 +80,36 @@ finally:
 class GUI():
     """
     Jupyter GUI constructor and executor. Constructs uploader GUI for UniCatDB.
-    Uses ipywidgets that even non coders will be able to upload their folders in
-    the database.
+    Uses ipywidgets with which even non-coders will be able to upload their
+    folders of images in the database.
     """
     def __init__(self):
         """
-        Constructor of GUI class. For documentation do see class docstring
+        Jupyter GUI constructor and executor. Constructs uploader GUI for UniCatDB.
+        Uses ipywidgets with which even non-coders will be able to upload their
+        folders of images in the database.
         """
+        # Ipywidgets
+        self.top_html = None
+        self.user = None
+        self.finder = None
+        self.path = None
+        self.origin = None
+        self.mode = None
+        self.butt = None
+        self.prog = None
+        self.uplo = None
+        self.bothtml = None
+        self.bot_html = None
+        # Create gui
         self.construct_gui()
         self.link_gui()
         self.running = False
+        # Class holders for progress bars
         self.pb_ar = np.zeros((0,))
         self.pb_up = np.zeros((0,))
         self.PATH = ""
         self.thread = None
-
 
     def construct_gui(self):
         """
@@ -104,10 +124,13 @@ class GUI():
         tophtml = "Welcome to jupyter notebook seed image uploader!"
         self.top_html = HTML(value=tophtml)
         # Username
-        self.user = Text(value="", placeholder="Personal user name", description="User name", disabled=False, layout=Layout(width="35%"))
+        self.user = Text(value="", placeholder="User name:", description="User name", disabled=False, layout=Layout(width="35%"))
+        # Path finder
+        self.finder = Button(description="Path:", buttonstyle="", tooltip="Select path with path finder", icon="folder", layout=Layout(width="15%"))
         # Path field
-        self.path = Text(value=".//to_be_uploaded", placeholder="Type path to file or folder", description="Path:", disabled=False, layout=Layout(width="65%"))
-
+        self.path = Text(value="", placeholder="Path to file or folder", description="", disabled=False, layout=Layout(width="65%"))
+        # Empty space
+        emptiness = HTML(value=" ")
         # Microscope origin dropdown
         self.origin = Dropdown(options=["Zeis", "Keyence"], value="Zeis", description="Microscope:", disabled=False, layout=Layout(width="50%"))
         # Select if uploader or preloader
@@ -120,13 +143,13 @@ class GUI():
         self.prog = FloatProgress(value=0, min=0, max=10, description="Total: ", barstyle="info", style={"bar_color": "#180cb3"}, orientation="horizontal", layout=Layout(width="95%"))
 
         # Upload bar - shown only when in uploader or AiO mode
-        self.uplo = FloatProgress(value=0, min=0, max=10, description="Upload: ", barstyle="info", style={"bar_color":'#32A718'}, orientation="horizontal", layout=Layout(width="95%"))
+        self.uplo = FloatProgress(value=0, min=0, max=10, description="Upload: ", barstyle="info", style={"bar_color":'#32A718'}, orientation="horizontal", layout=Layout(width="95%", visibility="hidden"))
 
         # Html GUI bottom
         self.bothtml = f"<br>GUI version: {__version__} | Data processing version: {dp.__version__} | Image processing version: {dp.ip.__version__} | Uploader version: {up.__version__}"
         self.bot_html = HTML(value=self.bothtml)
         #Layout setting
-        top = HBox([self.user, self.path])
+        top = HBox([self.user, emptiness, self.finder, emptiness, self.path])
         middle = HBox([self.origin, self.mode])
         bars = VBox([self.prog, self.uplo], layout=Layout(width='90%', overflow='hidden'))
         bottom = HBox([self.butt, bars])
@@ -185,27 +208,36 @@ class GUI():
             self.butt.icon = 'fa-times'
             self.butt.tooltip = "Stop running task"
             # Start propper processing depending on mode in seperate thread (for GUI reasons)
-            if mode == "Uploader":
-                # Check if target path leads to json
-                if not self.PATH.lower().endswith(".json"):
-                    self.bot_html.value("<b style='color:green;'> Expected path has to lead to json. Change path and try again.</b>" + self.bothtml)
+            try:
+                if mode == "Uploader":
+                    # Check if target path leads to json
+                    if not self.PATH.lower().endswith(".json"):
+                        self.bot_html.value("<b style='color:green;'> Expected path has to lead to json. Change path and try again.</b>" + self.bothtml)
+                    else:
+                        self.bot_html.value = "<b style='color:green;'>Processing started</b>" + self.bothtml
+                    self.thread = threading.Thread(target=up.Connector().commit_all, args=(self.PATH,),
+                                                   kwargs={'progresshandler':self.__progressbar__,
+                                                           'uploaderhandler':self.__uploadbar__,
+                                                           'user':self.user.value})
+                    self.thread.start()
+                elif mode == "Pre Loader":
+                    self.thread = threading.Thread(target=dp.preload_data, args=(self.PATH, origin,),
+                                                   kwargs={'progresshandler':self.__progressbar__,
+                                                           'relative':True,
+                                                           'save':True})
+                    self.thread.start()
+                elif mode == "All-in-One":
+                    raise NotImplementedError("We are not there yet")
                 else:
-                    self.bot_html.value = "<b style='color:green;'>Processing started</b>" + self.bothtml
-                self.thread = threading.Thread(target=up.Connector().commit_all, args=(self.PATH,),
-                                               kwargs={'progresshandler':self.__progressbar__,
-                                                       'uploaderhandler':self.__uploadbar__,
-                                                       'user':self.user.value})
-                self.thread.start()
-            elif mode == "Pre Loader":
-                self.thread = threading.Thread(target=dp.preload_data, args=(self.PATH, origin,),
-                                               kwargs={'progresshandler':self.__progressbar__,
-                                                       'relative':True,
-                                                       'save':True})
-                self.thread.start()
-            elif mode == "All-in-One":
-                raise NotImplementedError("We are not there yet")
-            else:
-                raise NotImplementedError("Desired mode is not implemented.")
+                    raise NotImplementedError("Desired mode is not implemented.")
+            except Exception as e:
+                self.bot_html.value = "<b style='color:red'>Exception:" + e + "</b>" + self.bothtml
+                self.__reseter__()
+
+    def __on_path_button__(self, ide):
+        """
+
+        """
 
     def __progressbar__(self, ct, ct_max=None, finished=False):
         """
@@ -226,14 +258,14 @@ class GUI():
         None.
 
         """
-
         if not finished:
             if self.pb_ar.shape[0] < 1:
                 if ct_max == None:
-                    nr = dp.get_amount_of_files(self.PATH)
+                    nr = dp.get_amount_of_files(self.PATH)+1
                 else:
                     nr = ct_max
                 self.pb_ar = np.linspace(self.prog.min, self.prog.max, nr)
+                self.prog.value = self.pb_ar[ct]
             else:
                 if self.pb_ar.shape[0] < ct:
                     print("Files have been modified since start! Corruption might occure.")
@@ -290,6 +322,24 @@ class GUI():
             self.uplo.value = self.uplo.max
             self.pb_up = np.zeros((0,))
 
+    def __reseter__(self):
+        """
+        Resets UI elements upon Exception.
+
+        Returns
+        -------
+        None.
+
+        """
+        self.prog.value = self.prog.min
+        self.uplo.value = self.uplo.min
+        self.pb_ar = np.zeros((0,))
+        self.pb_up = np.zeros((0,))
+        self.running = False
+        self.butt.description = 'Start'
+        self.butt.icon = 'check'
+        self.butt.tooltip = "Start task in given mode"
+
     def __user_entry_start__(self, change):
         """
         Upon begining of entering user name, enables start button. Locks if left empty
@@ -304,6 +354,25 @@ class GUI():
         else:
             self.butt.disabled = False
 
+    def __mode_observer__(self, change):
+        """
+        Changes UI elemets based on selected mode.
+
+        Parameters
+        ----------
+        change : str
+            Monitoring change of mode selector.
+
+        Returns
+        -------
+        None.
+
+        """
+        if self.mode.value == "Pre Loader":
+            self.uplo.layout.visibility = "hidden"
+        elif self.mode.value in ["Uploader", "All-in-One"]:
+            self.uplo.layout.visibility = "visible"
+
     def link_gui(self):
         """
         Links GUI elements with their associated functions.
@@ -314,6 +383,7 @@ class GUI():
         """
         self.butt.on_click(self.__on_button_click__)
         self.user.observe(self.__user_entry_start__, names='value')
+        self.mode.observe(self.__mode_observer__, names="value")
 
 if __name__ == "__main__":
     # Starts GUI in jupyter notebook

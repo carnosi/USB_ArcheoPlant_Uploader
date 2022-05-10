@@ -410,14 +410,14 @@ def preload_data(input_path, origin, output_path="", save=False, relative=False,
             output_holder.append(data)
             ct += 1
             if progresshandler:
-                progresshandler(ct)
+                progresshandler(ct, ct_max=None)
         except StopIteration:
             if consolecall:
                 print("All data have been processed.")
             break
     BREAK = False
     if progresshandler:
-        progresshandler(ct, finished=True)
+        progresshandler(ct, ct_max=None, finished=True)
     if save:
         if consolecall:
             print("Saving results...")

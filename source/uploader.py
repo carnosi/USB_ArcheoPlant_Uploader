@@ -142,7 +142,7 @@ class Connector(ConnectorFrame):
                 schema=(ResponseRelationshipOneToOne(
                     data=(RelationshipResourceIdentifier(
                         type="schemas",
-                        id="620a6d54303dcf57361dce6d"     # ID of schema 'Seeds - upload through python script'
+                        id="620a6d54303dcf57361dce6d"     # ID of schema 'ArcheoPlant - Seeds (Automatic upload)'
                     ))
                 ))
             )
