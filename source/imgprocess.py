@@ -298,7 +298,7 @@ def preproces_seed_image(img_path, downscale=0.05, autoload=True):
         try:
             avg_color[i] = int(sum_color[i] / total[i])
         except ZeroDivisionError:
-            print("ZeroDivisionError: Color processing failed on image:"+str(img_path)+"color set to 0. Assign it manually")
+            print("ZeroDivisionError: Color processing failed on image:"+str(img_path)+" color set to 0. Assign it manually")
             avg_color[i] = 0
 
     hex_color = rgb_to_hex(avg_color[0], avg_color[1], avg_color[2])
