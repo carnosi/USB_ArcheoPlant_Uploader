@@ -19,40 +19,8 @@
       "y": 1.0952380952380954e-06,
       "z": 2.175e-05
     },
-    "timestamp": 1652170760.595718,
-    "species_name": "Achillea Millefolium",
-    "type": [
-      "Diaspore"
-    ],
-    "x_length": 1857.5238095238099,
-    "y_length": 499.42857142857144,
-    "area": 650403.8571428572,
-    "bound_seed_ratio": 0.7010925221816846,
-    "hex_color": "#908482",
-    "img_path": "test/Achillea millefolium/diaspore/ach mil_1--01_c1.tif"
-  },
-  {
-    "focusmethod": "Widefield",
-    "texturemethod": "Wavelets",
-    "topographymethod": "Centroid",
-    "model": "Axiocam305c",
-    "adapter": "0.63x Camera Adapter",
-    "objective": "EC Epiplan 5x/0.13 HD M27",
-    "pixelaccuracy": 0.000244140625,
-    "pixeldistance": [
-      3.45,
-      3.45
-    ],
-    "totalmagnification": 3.15,
-    "scalingunit": "\u00b5m",
-    "sdk": "1.78",
-    "scaling": {
-      "x": 1.0952380952380954e-06,
-      "y": 1.0952380952380954e-06,
-      "z": 2.175e-05
-    },
-    "timestamp": 1652107443.6080768,
-    "species_name": "Achillea Millefolium",
+    "timestamp": 1652276858.690705,
+    "species_name": "Achillea Millefolium_2979",
     "type": [
       "Seed"
     ],
@@ -61,7 +29,7 @@
     "area": 650403.8571428572,
     "bound_seed_ratio": 0.7010925221816846,
     "hex_color": "#908482",
-    "img_path": "test/Achillea millefolium/ach mil_1--01_c1.tif"
+    "img_path": "C:/Users/anonn/Downloads/2021-09-07/Achillea millefolium_2979/ach mil_1--01_c1.tif"
   },
   {
     "focusmethod": "Widefield",
@@ -83,8 +51,8 @@
       "y": 1.0952380952380954e-06,
       "z": 2.175e-05
     },
-    "timestamp": 1652170754.535011,
-    "species_name": "Achillea Millefolium",
+    "timestamp": 1652276858.757585,
+    "species_name": "Achillea Millefolium_2979",
     "type": [
       "Seed"
     ],
@@ -93,6 +61,230 @@
     "area": 769828.6190476192,
     "bound_seed_ratio": 0.6725609390192209,
     "hex_color": "#9D9189",
-    "img_path": "test/Achillea millefolium/ach mil_1--02_c1.tif"
+    "img_path": "C:/Users/anonn/Downloads/2021-09-07/Achillea millefolium_2979/ach mil_1--02_c1.tif"
+  },
+  {
+    "focusmethod": "Widefield",
+    "texturemethod": "Wavelets",
+    "topographymethod": "Centroid",
+    "model": "Axiocam305c",
+    "adapter": "0.63x Camera Adapter",
+    "objective": "EC Epiplan 5x/0.13 HD M27",
+    "pixelaccuracy": 0.000244140625,
+    "pixeldistance": [
+      3.45,
+      3.45
+    ],
+    "totalmagnification": 3.15,
+    "scalingunit": "\u00b5m",
+    "sdk": "1.78",
+    "scaling": {
+      "x": 1.0952380952380954e-06,
+      "y": 1.0952380952380954e-06,
+      "z": 2.175e-05
+    },
+    "timestamp": 1652276858.8140824,
+    "species_name": "Achillea Millefolium_2979",
+    "type": [
+      "Seed"
+    ],
+    "x_length": 1868.4761904761908,
+    "y_length": 407.4285714285715,
+    "area": 545261.0000000001,
+    "bound_seed_ratio": 0.7162512393351408,
+    "hex_color": "#8E837F",
+    "img_path": "C:/Users/anonn/Downloads/2021-09-07/Achillea millefolium_2979/ach mil_1--03_c1.tif"
+  },
+  {
+    "focusmethod": "Widefield",
+    "texturemethod": "Wavelets",
+    "topographymethod": "Centroid",
+    "model": "Axiocam305c",
+    "adapter": "0.63x Camera Adapter",
+    "objective": "EC Epiplan 5x/0.13 HD M27",
+    "pixelaccuracy": 0.000244140625,
+    "pixeldistance": [
+      3.45,
+      3.45
+    ],
+    "totalmagnification": 3.15,
+    "scalingunit": "\u00b5m",
+    "sdk": "1.78",
+    "scaling": {
+      "x": 1.0952380952380954e-06,
+      "y": 1.0952380952380954e-06,
+      "z": 2.175e-05
+    },
+    "timestamp": 1652276858.8160834,
+    "species_name": "Achillea Millefolium_2979",
+    "type": [
+      "Seed"
+    ],
+    "x_length": 1869.5714285714287,
+    "y_length": 613.3333333333335,
+    "area": 733041.761904762,
+    "bound_seed_ratio": 0.6392784824635134,
+    "hex_color": "#938982",
+    "img_path": "C:/Users/anonn/Downloads/2021-09-07/Achillea millefolium_2979/ach mil_1--04_c1.tif"
+  },
+  {
+    "focusmethod": "Widefield",
+    "texturemethod": "Wavelets",
+    "topographymethod": "Centroid",
+    "model": "Axiocam305c",
+    "adapter": "0.63x Camera Adapter",
+    "objective": "EC Epiplan 5x/0.13 HD M27",
+    "pixelaccuracy": 0.000244140625,
+    "pixeldistance": [
+      3.45,
+      3.45
+    ],
+    "totalmagnification": 3.15,
+    "scalingunit": "\u00b5m",
+    "sdk": "1.78",
+    "scaling": {
+      "x": 1.0952380952380954e-06,
+      "y": 1.0952380952380954e-06,
+      "z": 2.175e-05
+    },
+    "timestamp": 1652276858.8973029,
+    "species_name": "Achillea Millefolium_2979",
+    "type": [
+      "Seed"
+    ],
+    "x_length": 1900.2380952380954,
+    "y_length": 739.2857142857143,
+    "area": 950369.8571428573,
+    "bound_seed_ratio": 0.6765070375475086,
+    "hex_color": "#B3A992",
+    "img_path": "C:/Users/anonn/Downloads/2021-09-07/Achillea millefolium_2979/ach mil_10--01_c1.tif"
+  },
+  {
+    "focusmethod": "Widefield",
+    "texturemethod": "Wavelets",
+    "topographymethod": "Centroid",
+    "model": "Axiocam305c",
+    "adapter": "0.63x Camera Adapter",
+    "objective": "EC Epiplan 5x/0.13 HD M27",
+    "pixelaccuracy": 0.000244140625,
+    "pixeldistance": [
+      3.45,
+      3.45
+    ],
+    "totalmagnification": 3.15,
+    "scalingunit": "\u00b5m",
+    "sdk": "1.78",
+    "scaling": {
+      "x": 1.0952380952380954e-06,
+      "y": 1.0952380952380954e-06,
+      "z": 2.175e-05
+    },
+    "timestamp": 1652276858.980882,
+    "species_name": "Achillea Millefolium_2979",
+    "type": [
+      "Seed"
+    ],
+    "x_length": 1889.2857142857144,
+    "y_length": 497.2380952380953,
+    "area": 663525.9047619049,
+    "bound_seed_ratio": 0.7063108016954939,
+    "hex_color": "#9E9588",
+    "img_path": "C:/Users/anonn/Downloads/2021-09-07/Achillea millefolium_2979/ach mil_10--02_c1.tif"
+  },
+  {
+    "focusmethod": "Widefield",
+    "texturemethod": "Wavelets",
+    "topographymethod": "Centroid",
+    "model": "Axiocam305c",
+    "adapter": "0.63x Camera Adapter",
+    "objective": "EC Epiplan 5x/0.13 HD M27",
+    "pixelaccuracy": 0.000244140625,
+    "pixeldistance": [
+      3.45,
+      3.45
+    ],
+    "totalmagnification": 3.15,
+    "scalingunit": "\u00b5m",
+    "sdk": "1.78",
+    "scaling": {
+      "x": 1.0952380952380954e-06,
+      "y": 1.0952380952380954e-06,
+      "z": 2.175e-05
+    },
+    "timestamp": 1652276859.0231187,
+    "species_name": "Achillea Millefolium_2979",
+    "type": [
+      "Seed"
+    ],
+    "x_length": 1902.4285714285716,
+    "y_length": 754.6190476190477,
+    "area": 956003.761904762,
+    "bound_seed_ratio": 0.6659221770180808,
+    "hex_color": "#9B9386",
+    "img_path": "C:/Users/anonn/Downloads/2021-09-07/Achillea millefolium_2979/ach mil_10--03_c1.tif"
+  },
+  {
+    "focusmethod": "Widefield",
+    "texturemethod": "Wavelets",
+    "topographymethod": "Centroid",
+    "model": "Axiocam305c",
+    "adapter": "0.63x Camera Adapter",
+    "objective": "EC Epiplan 5x/0.13 HD M27",
+    "pixelaccuracy": 0.000244140625,
+    "pixeldistance": [
+      3.45,
+      3.45
+    ],
+    "totalmagnification": 3.15,
+    "scalingunit": "\u00b5m",
+    "sdk": "1.78",
+    "scaling": {
+      "x": 1.0952380952380954e-06,
+      "y": 1.0952380952380954e-06,
+      "z": 2.175e-05
+    },
+    "timestamp": 1652276859.0249104,
+    "species_name": "Achillea Millefolium_2979",
+    "type": [
+      "Seed"
+    ],
+    "x_length": 1898.0476190476193,
+    "y_length": 501.6190476190477,
+    "area": 537696.1904761905,
+    "bound_seed_ratio": 0.5647494755256821,
+    "hex_color": "#8D837A",
+    "img_path": "C:/Users/anonn/Downloads/2021-09-07/Achillea millefolium_2979/ach mil_10--04_c1.tif"
+  },
+  {
+    "focusmethod": "Widefield",
+    "texturemethod": "Wavelets",
+    "topographymethod": "Centroid",
+    "model": "Axiocam305c",
+    "adapter": "0.63x Camera Adapter",
+    "objective": "EC Epiplan 5x/0.13 HD M27",
+    "pixelaccuracy": 0.000244140625,
+    "pixeldistance": [
+      3.45,
+      3.45
+    ],
+    "totalmagnification": 3.15,
+    "scalingunit": "\u00b5m",
+    "sdk": "1.78",
+    "scaling": {
+      "x": 1.0952380952380954e-06,
+      "y": 1.0952380952380954e-06,
+      "z": 2.175e-05
+    },
+    "timestamp": 1652276859.1059933,
+    "species_name": "Achillea Millefolium_2979",
+    "type": [
+      "Seed"
+    ],
+    "x_length": 1964.8571428571431,
+    "y_length": 948.4761904761906,
+    "area": 926821.142857143,
+    "bound_seed_ratio": 0.4973229706680332,
+    "hex_color": "#ADA596",
+    "img_path": "C:/Users/anonn/Downloads/2021-09-07/Achillea millefolium_2979/ach mil_2--01_c1.tif"
   }
 ]

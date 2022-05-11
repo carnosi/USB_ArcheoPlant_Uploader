@@ -413,7 +413,10 @@ class GUI():
         """
         if self.fc == None:
             # Init Layout of file chooser
-            self.fc = FileChooser(dp.rcwd)
+            if self.path.value == "":
+                self.fc = FileChooser(dp.rcwd)
+            else:
+                self.fc = FileChooser(self.path.value)
             # Set up file chooser for selected more
             if self.mode.value == "Uploader":
                 self.fc.title = '<b>Select preprocessed json file</b>'
