@@ -427,7 +427,6 @@ def preload_data(input_path, origin, output_path="", save=False, relative=False,
     else:
         return output_holder
 
-
 if __name__ == "__main__":
     # Runs this script in current working directory. Looks for folder
     # named to_be_uploaded

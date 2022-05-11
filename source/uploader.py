@@ -43,8 +43,6 @@ from datetime import datetime
 from pathlib import Path
 import json
 
-import numpy as np
-
 from uploader_frame import ConnectorFrame, dtformating
 from dataprocess import resolve_path
 
@@ -87,7 +85,9 @@ class Connector(ConnectorFrame):
         None.
 
         """
-        #print(data)
+        # Check if uploadhandler has been specified
+        if not uploaderhandler:
+            uploaderhandler = self.__dummy_uploadhandler__
         # Create a new finding in schema 'Seeds - upload through python script'
         with unicatdb.Client(self.config) as client:
             new_finding = Finding(
@@ -199,7 +199,7 @@ class Connector(ConnectorFrame):
                 uploader.upload()
 
             except Exception as e:
-                print("Error occured when uploading related image to current finding: " + e.__str__())
+                print("Error occured when uploading: " + e.__str__())
 
     def commit_all(self, PATH_TO_JSON, user="Test Script", progresshandler=None, uploaderhandler=None, consolecall=None):
         """
@@ -248,7 +248,7 @@ class Connector(ConnectorFrame):
                 if not Path(payload['img_path']).is_absolute():
                     abspath = PARENT / Path(payload['img_path'])
                     payload['img_path'] = abspath.as_posix()
-                    payload['user'] = user
+                payload['user'] = user
                 # Upload all elements one by one
                 self.commit_one(payload, uploaderhandler)
                 # increment loop and progress bar
@@ -264,6 +264,12 @@ class Connector(ConnectorFrame):
         if progresshandler:
             progresshandler(ct, ct_max=ct_max, finished=True)
 
+    def __dummy_uploadhandler__(self, msg, file_size, chunk=0, nr_chunks=0):
+        """
+        Dummy for uploadhandler
+        """
+        print(msg)
+
 
 if __name__ == "__main__":
     connector = Connector()
@@ -274,5 +280,3 @@ if __name__ == "__main__":
     one_j['user'] = "Test Script"
     #connector.commit_one(one_j)
     connector.commit_all('../preload_data.json')
-
-#log_func=uploaderhandler if uploaderhandler != None else lambda msg: print(msg)
