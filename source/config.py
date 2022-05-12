@@ -6,7 +6,7 @@
 """
 # Database upload presets for given batch of data. Change these accoring to
 # your liking, otherway script writes some defaults.
-DOCUMENT_SET = "NABIAM - CZ/DE - 2021-09-07"
+DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2021-09-07"
 MIN_USERNAME_LENGTH = 3
 LOCATION_DESCRIPTION = "Uploaded from University Southern Bohemia"
 NOTE = None

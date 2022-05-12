@@ -32,7 +32,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.5"
+__version__ = "1.0.6"
 __maintainer__ = ["Ondrej Budik", "Vojtech Barnat"]
 __email__ = ["obudik@prf.jcu.cz", "Vojtech.Barnat@fs.cvut.cz"]
 __status__ = "Beta"
@@ -348,6 +348,7 @@ def main(path, origin, save=False, consolecall=False):
                 data['bound_seed_ratio'] = data['area'] / (data['x_length'] * data['y_length'])
                 data['hex_color'] = "#"+hex_color
                 data['img_path'] = imag
+                data['meta_path'] = meta
                 yield data
 
 def preload_data(input_path, origin, output_path="", save=False, relative=False, consolecall=False, progresshandler=None):
@@ -403,10 +404,13 @@ def preload_data(input_path, origin, output_path="", save=False, relative=False,
             if relative:
                 try:
                     data['img_path'] = data['img_path'].relative_to(rcwd).as_posix()
+                    data['meta_path'] = data['meta_path'].relative_to(rcwd).as_posix()
                 except ValueError:
                     data['img_path'] = data['img_path'].as_posix()
+                    data['meta_path'] = data['meta_path'].as_posix()
             else:
                 data['img_path'] = data['img_path'].as_posix()
+                data['meta_path'] = data['meta_path'].as_posix()
             output_holder.append(data)
             ct += 1
             if progresshandler:

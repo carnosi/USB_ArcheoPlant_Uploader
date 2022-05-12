@@ -31,7 +31,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky", "Jakub Geyer"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 __maintainer__ = ["Ondrej Budik", "Vojtech Barnat"]
 __email__ = ["obudik@prf.jcu.cz", "Vojtech.Barnat@fs.cvut.cz"]
 __status__ = "Beta"
@@ -92,7 +92,7 @@ class Connector(ConnectorFrame):
         with unicatdb.Client(self.config) as client:
             new_finding = Finding(
                 document_name=data["species_name"],
-                amount=1,
+                amount=2,
                 document_set=self.setup["document_set"],
                 date=self.setup['date'].split("T")[0],
                 person=data["user"],
@@ -174,7 +174,7 @@ class Connector(ConnectorFrame):
                 # add custom error handling code her
                 print("Error occured when insering new finding: " + e.__str__())
 
-            # Upload image
+            # Upload image and meta data
             try:
                 finding_id = insert_result.data.id
 
@@ -182,6 +182,7 @@ class Connector(ConnectorFrame):
                 tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
                 # File size
                 file_size = Path(data['img_path']).stat().st_size
+                data['meta_path'] = data['meta_path'].as_posix()
                 # Number of chunks
                 nr_chunks = -(-file_size // chunk)
                 # create uploader for our file, don't forget to provide required metadata
@@ -194,7 +195,18 @@ class Connector(ConnectorFrame):
                     chunk_size=chunk,   # set chunk size in Bytes (1MB is the default)
                     log_func= lambda msg: uploaderhandler(msg, file_size, chunk=chunk, nr_chunks=nr_chunks) ## print the progress to console or to GUI upload handler
                 )
-                # Uploads the entire file.
+                uploader.upload()
+                # create uploader for our file, don't forget to provide required metadata
+                tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
+                uploader = tus_client.uploader(
+                    data['meta_path'],
+                    metadata={
+                        "fileName": data['meta_path'].split('/')[-1],
+                        "contentType": "text/"+data['meta_path'].split(".")[-1]
+                    },
+                    chunk_size=chunk   # set chunk size in Bytes (1MB is the default)
+                    )
+                # Uploads the entire image file and meta data
                 # This uploads chunk by chunk.
                 uploader.upload()
 
@@ -248,6 +260,10 @@ class Connector(ConnectorFrame):
                 if not Path(payload['img_path']).is_absolute():
                     abspath = PARENT / Path(payload['img_path'])
                     payload['img_path'] = abspath.as_posix()
+                if not Path(payload['meta_path']).is_absolute():
+                    abspath = PARENT / Path(payload['meta_path'])
+                    payload['meta_path'] = abspath.as_posix()
+
                 payload['user'] = user
                 # Upload all elements one by one
                 self.commit_one(payload, uploaderhandler)

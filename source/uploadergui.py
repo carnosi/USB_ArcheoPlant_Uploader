@@ -196,6 +196,7 @@ class GUI():
             # Change global for another thread to stop
             dp.BREAK = True
             up.BREAK = True
+            aio.BREAK = True
             # Let user know something is going on
             self.bot_html.value = "<b style='color:orange;'>Stopping...</b>" + self.bothtml
             # Prepare class for another start
@@ -218,6 +219,10 @@ class GUI():
             self.origin.disabled = False
 
         else:
+            # Make sure all modes are ready to work
+            dp.BREAK = False
+            up.BREAK = False
+            aio.BREAK = False
             # Extract settings from GUI
             self.PATH = self.path.value
             origin = self.origin.value
@@ -264,7 +269,7 @@ class GUI():
                                                            'user':self.user.value})
                     self.thread.start()
                 else:
-                    raise NotImplementedError("Desired mode is not implemented.")
+                    raise NotImplementedError("Desired mode is not implemented. How did you even get here?")
             except Exception as e:
                 self.bot_html.value = "<b style='color:red;'>Exception - "+str(e.__class__.__name__)+"</b>: "+ str(e) + self.bothtml
                 self.__reseter__(exception=True)
