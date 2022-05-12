@@ -17,7 +17,7 @@ IMAGE_SUFFIX_NAMES = ["_c1", "_c2", "_c3"]
 
 # additional pad border size for better contour detection
 # in percent of original width
-BORDER_SIZE = 0.01
+BORDER_SIZE = 0.15
 
 # Thresholds for bcgrnd removal using HUE difference
 L_THRESH = 80
@@ -29,3 +29,12 @@ H_AREA = 4000000
 
 # Uploader settings
 CHUNK_SIZE = 1000000
+
+COLOR_SAMPLE_SIZE = 50
+THRESHOLD_PAD = 20
+COLOR_CNT_PAD = 2
+
+#erode and dilatate
+KERNEL_SIZE = 4
+E_ITERS = 3
+D_ITERS = 8

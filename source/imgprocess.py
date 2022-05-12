@@ -44,8 +44,10 @@ __python__ = "3.8.0"
 import numpy as np
 import cv2 as cv2
 from scipy.spatial.distance import pdist, squareform
+from imutils import rotate
+import matplotlib.pyplot as plt
+from config import BORDER_SIZE, L_THRESH, H_THRESH, L_AREA, H_AREA, COLOR_SAMPLE_SIZE, THRESHOLD_PAD, KERNEL_SIZE, E_ITERS, D_ITERS, COLOR_CNT_PAD
 
-from config import BORDER_SIZE, L_THRESH, H_THRESH, L_AREA, H_AREA
 
 def rotate_point(origin, point, angle):
     """
@@ -175,133 +177,140 @@ def preproces_seed_image(img_path, downscale=0.05, autoload=True):
     hex_color : str
         average color of found seed in hex format
     """
-    # Load img from given img path
-    if autoload:
-        img = cv2.imread(str(img_path))
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    else:
-        img = img_path
+    try:
+        # Load img from given img path
+        if autoload:
+            img = cv2.imread(str(img_path))
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        else:
+            img = img_path
 
-    w = img.shape[1]
-    h = img.shape[0]
+        # Convert image to HSV - (hue, saturation, value)
+        img_hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
 
-    # make border
-    bs = int(BORDER_SIZE * w)
-    r = int(img[0][0][0])
-    g = int(img[0][0][1])
-    b = int(img[0][0][2])
-    img = cv2.copyMakeBorder(img, top=bs, bottom=bs, left=bs, right=bs, borderType=cv2.BORDER_CONSTANT, value=[r,g,b])
+        sample_hsv = [h, s, v] = [ int(np.mean(img_hsv[0:COLOR_SAMPLE_SIZE, 0:COLOR_SAMPLE_SIZE, i])) for i in range(3) ]
 
-    # Convert image to HSV - (hue, saturation, value)
-    img_hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+        #make border
+        bs = int(BORDER_SIZE * img.shape[1])
+        img_hsv = cv2.copyMakeBorder(img_hsv, top=bs, bottom=bs, left=bs, right=bs, borderType=cv2.BORDER_CONSTANT, value=sample_hsv)
+        img = cv2.copyMakeBorder(img, top=bs, bottom=bs, left=bs, right=bs, borderType=cv2.BORDER_CONSTANT, value=[0,0,0])
 
-    #take just H - hue
-    img_h = img_hsv[:,:,0]
+        #take just H - hue
+        img_h = img_hsv[:,:,0]
 
-    # de-noising
-    kernel = np.ones((5,5),np.uint8)
-    img_h = cv2.erode(img_h, kernel, iterations = 2)
-    img_h = cv2.dilate(img_h, kernel, iterations = 2)
+        #dynamic thresholding
+        l_thresh = h - THRESHOLD_PAD
+        h_thresh = h + THRESHOLD_PAD
+        img_bin = cv2.inRange(img_h, l_thresh, h_thresh) 
 
-    #thresholding
-    img_bin = cv2.inRange(img_h, L_THRESH, H_THRESH)
+        img_bin = (255-img_bin)
 
-    #edge detection
-    img_edge = edge_detector_gray(img_bin)
+        kernel = np.ones((KERNEL_SIZE,KERNEL_SIZE),np.uint8)
+        img_bin = cv2.erode(img_bin, kernel, iterations = E_ITERS)
+        img_bin = cv2.dilate(img_bin, kernel, iterations = D_ITERS)
 
-    #find contours
-    contours, hierarchy = cv2.findContours(img_edge, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+        # #edge detection
+        img_edge = edge_detector_gray(img_bin)
 
-    #sort contours acording to area
-    cntsSorted = sorted(contours, key=lambda x: cv2.contourArea(x), reverse=True)
+        #find contours
+        contours, hierarchy = cv2.findContours(img_edge, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    #pick largest
-    large_contours = []
-    for contour in cntsSorted:
-        area = cv2.contourArea(contour)
-        if (area > L_AREA) & (area < H_AREA):
-            large_contours.append(contour)
+        #sort contours acording to area
+        cntsSorted = sorted(contours, key=lambda x: cv2.contourArea(x), reverse=True)
 
-    picked_contour = large_contours[0]
-    area = cv2.contourArea(picked_contour)
-    contour = picked_contour[:,0,:]
+        #pick largest
+        large_contours = []
+        for contour in cntsSorted:
+            area = cv2.contourArea(contour)
+            if (area > L_AREA) & (area < H_AREA):
+                large_contours.append(contour)
 
-    #calculate distances between points in contour
-    dist = pdist(contour)
-    dist = squareform(dist)
-    #find furthest apart points
-    max_x_dist, [i_1, i_2] = np.nanmax(dist), np.unravel_index(np.argmax(dist), dist.shape)
-    point1 = contour[i_1]
-    point2 = contour[i_2]
-    #calculate vector and its angle
-    vector = point2 - point1
-    angle = np.arctan(vector[1] / vector[0])
-    angle = angle * 360 / 2 / np.pi
+        picked_contour = large_contours[0]
+        area = cv2.contourArea(picked_contour)
+        contour = picked_contour[:,0,:]
 
-    #rotate contour points acording to found angle
-    rotated_contour = np.zeros((picked_contour.shape), dtype=int)
+        #calculate distances between points in contour
+        dist = pdist(contour)
+        dist = squareform(dist)
+        #find furthest apart points
+        max_x_dist, [i_1, i_2] = np.nanmax(dist), np.unravel_index(np.argmax(dist), dist.shape)
+        point1 = contour[i_1]
+        point2 = contour[i_2]
+        #calculate vector and its angle
+        vector = point2 - point1
+        angle = np.arctan(vector[1] / vector[0])
+        angle = angle * 360 / 2 / np.pi
 
-    #origin of rotation = center if img
-    ox, oy = int(w/2), int(h/2)
+        #rotate contour points acording to found angle
+        #prepare array
+        rotated_contour = np.zeros((picked_contour.shape), dtype=np.int)
 
-    #for each point rotate
-    for i, point in enumerate(picked_contour):
-        new_x, new_y = rotate_point([ox, oy], point[0], -np.radians(angle))
-        rotated_contour[i][0][0] = new_x
-        rotated_contour[i][0][1] = new_y
+        w = img.shape[1]
+        h = img.shape[0]
 
-    #rotate furthest apart points
-    rotated_point1 = rotate_point([ox, oy], point1, -np.radians(angle))
-    rotated_point2 = rotate_point([ox, oy], point2, -np.radians(angle))
+        #origin of rotation = center if img
+        ox, oy = int(w/2), int(h/2)
 
-    #Find the maximum y distance between points in contour
-    max_y_index = np.argmax(rotated_contour[:,0,1])
-    min_y_index = np.argmin(rotated_contour[:,0,1])
-    max_y_dist_point1 = rotated_contour[max_y_index,0,:]
-    max_y_dist_point2 = rotated_contour[min_y_index,0,:]
-    max_y_dist = rotated_contour[max_y_index,0,1] - rotated_contour[min_y_index,0,1]
+        img = rotate(img, angle, [ox, oy])
 
-    #bounding box from 4 points"
-    p1 = rotated_point1
-    p2 = rotated_point2
-    p3 = max_y_dist_point1
-    p4 = max_y_dist_point2
-    #crop
-    x, y, w, h = cv2.boundingRect(np.array([[p1[0], p3[1]],[p2[0], p4[1]]]))
-    cropped = img[y:y+h, x:x+w]
+        #for each point rotate
+        for i, point in enumerate(picked_contour):
+            rotated_contour[i][0] = rotate_point([ox, oy], point[0], -np.radians(angle))
 
-    # lower number of points in contour for speed
-    approx_contour = cv2.approxPolyDP(rotated_contour, epsilon=10, closed=True)
+        #rotate furthest apart points
+        rotated_point1 = rotate_point([ox, oy], point1, -np.radians(angle))
+        rotated_point2 = rotate_point([ox, oy], point2, -np.radians(angle))
+        
+        #Find the maximum y distance between points in contour
+        max_y_index = np.argmax(rotated_contour[:,0,1])
+        min_y_index = np.argmin(rotated_contour[:,0,1])
+        max_y_dist_point1 = rotated_contour[max_y_index,0,:]
+        max_y_dist_point2 = rotated_contour[min_y_index,0,:]
+        max_y_dist = rotated_contour[max_y_index,0,1] - rotated_contour[min_y_index,0,1]
+        max_y_dist_point2[0] = max_y_dist_point1[0]
 
-    #downscale for speed
-    img = cv2.resize(cropped, (0,0), fx=downscale, fy=downscale)
-    approx_contour[:, :, 0] = (approx_contour[:, :, 0] -  x) * downscale
-    approx_contour[:, :, 1] = (approx_contour[:, :,  1] - y) * downscale
+        #bounding box from 4 points"
+        p1 = rotated_point1
+        p2 = rotated_point2
+        p3 = max_y_dist_point1
+        p4 = max_y_dist_point2
+      
+        #crop
+        x, y, w, h = cv2.boundingRect(np.array([[p1[0], p3[1]],[p2[0], p4[1]]]))
+        cropped = img[y:y+h, x:x+w]
 
-    #find average color inside of contour
-    raw_dist = np.empty((img.shape[0], img.shape[1]), dtype=np.float32)
-    for i in range(img.shape[0]):
-        for j in range(img.shape[1]):
-            raw_dist[i,j] = cv2.pointPolygonTest(approx_contour, (j,i), True)
+        approx_contour = cv2.approxPolyDP(rotated_contour, epsilon=10, closed=True)
 
-    sum_color = [0, 0, 0]
-    avg_color = [0, 0, 0]
-    total = [0, 0, 0]
-    for i in range(img.shape[0]):
-        for j in range(img.shape[1]):
-            for k in range(img.shape[2]):
-                if raw_dist[i,j] > 0:
-                    sum_color[k] += img[i,j,k]
-                    total[k] += 1
+        #downscale for speed
+        img = cv2.resize(cropped, (0,0), fx=downscale, fy=downscale)
+        approx_contour[:, :, 0] = (approx_contour[:, :, 0] -  x) * downscale
+        approx_contour[:, :, 1] = (approx_contour[:, :,  1] - y) * downscale
 
-    for i in range(3):
-        try:
+        #find average color inside of contour
+        raw_dist = np.empty((img.shape[0], img.shape[1]), dtype=np.float32)
+        for i in range(img.shape[0]):
+            for j in range(img.shape[1]):
+                raw_dist[i,j] = cv2.pointPolygonTest(approx_contour, (j,i), True)
+
+        sum_color = [0, 0, 0]
+        avg_color = [0, 0, 0]
+        total = [1, 1, 1]
+        for i in range(img.shape[0]):
+            for j in range(img.shape[1]):
+                for k in range(img.shape[2]):
+                    if raw_dist[i,j] > COLOR_CNT_PAD:
+                        sum_color[k] += img[i,j,k]
+                        total[k] += 1
+
+        for i in range(3):
             avg_color[i] = int(sum_color[i] / total[i])
-        except ZeroDivisionError:
-            print("ZeroDivisionError: Color processing failed on image:"+str(img_path)+" color set to 0. Assign it manually")
-            avg_color[i] = 0
-
-    hex_color = rgb_to_hex(avg_color[0], avg_color[1], avg_color[2])
+            
+        hex_color = rgb_to_hex(avg_color[0], avg_color[1], avg_color[2])
+    
+    except Exception as e:
+        print("preproces failed")
+        print(e)
+        return np.NaN, np.NaN, np.NaN, '000000'
 
     return int(max_x_dist), int(max_y_dist), int(area), hex_color
 
@@ -315,17 +324,17 @@ if __name__ == "__main__":
     from glob import glob
     import os
 
+    src_dir = "database\\completed_database"
+    subfolders_src = [ f.path for f in os.scandir(src_dir) if f.is_dir() ]
 
-    subfolders_src = [ f.path for f in os.scandir("test") if f.is_dir() ]
-
-    foldernames = []
-    for subfolder_src in subfolders_src:
-        foldernames.append(subfolder_src.split("\\")[1])
-
-    class_num = len(foldernames)
-    for i, foldername in enumerate(foldernames):
-        print("\n" + foldername)
-        filenames = glob(os.path.join("to_be_uploaded", foldername,"*.tif"))
+    class_num = len(subfolders_src)
+    for i, subfolder_src in enumerate(subfolders_src):
+        print("\n" + subfolder_src)
+        filenames = glob(os.path.join(subfolder_src,"*.tif"))
+        if not filenames:
+            filenames = glob(os.path.join(subfolder_src,"*.jpg"))
+        if not filenames:
+            filenames = glob(os.path.join(subfolder_src,"*.png"))
 
         max_x_dist, max_y_dist, area, hex_color = preproces_seed_image(filenames[0])
 
@@ -333,3 +342,16 @@ if __name__ == "__main__":
         print("size_y = " + str(max_y_dist) + " pix")
         print("area = " + str(area) + " pix^2")
         print("color = #" + hex_color)
+        
+        avg_color = hex_to_rgb(hex_color)
+
+        color_img = np.ones((100,100,3))
+        color_img[:,:,0] = avg_color[0]
+        color_img[:,:,1] = avg_color[1]
+        color_img[:,:,2] = avg_color[2]
+
+        plt.subplot(1,2,1)
+        plt.imshow(cv2.cvtColor(cv2.imread(filenames[0]), cv2.COLOR_BGR2RGB))
+        plt.subplot(1,2,2)
+        plt.imshow(color_img.astype('uint8'))
+        plt.show()
