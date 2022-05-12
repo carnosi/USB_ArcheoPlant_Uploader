@@ -31,7 +31,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky", "Jakub Geyer"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __maintainer__ = ["Ondrej Budik", "Vojtech Barnat"]
 __email__ = ["obudik@prf.jcu.cz", "Vojtech.Barnat@fs.cvut.cz"]
 __status__ = "Beta"

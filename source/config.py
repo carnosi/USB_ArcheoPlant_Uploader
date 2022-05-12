@@ -1,5 +1,5 @@
 """
-    Configuration file for uploader.
+    Configuration file for uploadergui.
     Text values should start and end with " other way app wont be able to run.
     Image suffixes have to be separeted by , and each of the elements has to
     start and end with ".

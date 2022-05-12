@@ -78,7 +78,14 @@ class Connector(ConnectorFrame):
         ----------
         data : dict
             Dictionary of data to be uploaded. Schema should follow the dataprocess.py
-            syntaxe.
+            syntax otherway it will result in an error.
+        uploaderhandler : method, optional
+            Method of uploader progress report. Recieves message by TUS procotol which has to be processed
+            in accordance with ones liking (in out GUI it is processed onto progress bar). Defaults to None
+        consolecall : Bool, optional
+            Toggle if console callbacks are enabled / mostly usefull for debugging
+        chunk : int, optional
+            Size of chunks which should be uploaded. Current server limit is set around 10MB per request. Defaults to 1MB
 
         Returns
         -------
@@ -134,7 +141,6 @@ class Connector(ConnectorFrame):
                     "number-1652085136505-area-of-seed": data['area'],
                     "number-1652085164817-seed-to-bounding-box-ratio": data['bound_seed_ratio'],
                     "text-1644850436838-average-seed-color": data['hex_color']
-
                 })
             )
             # assign to schema
@@ -172,7 +178,7 @@ class Connector(ConnectorFrame):
 
             except Exception as e:
                 # add custom error handling code her
-                print("Error occured when insering new finding: " + e.__str__())
+                print("Error occured when insering new finding: " + str(e.__class__.__name__) + " " + e.__str__())
 
             # Upload image and meta data
             try:
@@ -195,6 +201,8 @@ class Connector(ConnectorFrame):
                     chunk_size=chunk,   # set chunk size in Bytes (1MB is the default)
                     log_func= lambda msg: uploaderhandler(msg, file_size, chunk=chunk, nr_chunks=nr_chunks) ## print the progress to console or to GUI upload handler
                 )
+                # Uploads the entire image file and meta data
+                # This uploads chunk by chunk.
                 uploader.upload()
                 # create uploader for our file, don't forget to provide required metadata
                 tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
@@ -211,7 +219,7 @@ class Connector(ConnectorFrame):
                 uploader.upload()
 
             except Exception as e:
-                print("Error occured when uploading: " + e.__str__())
+                print("Error occured when uploading: " + str(e.__class__.__name__) + " " + e.__str__())
 
     def commit_all(self, PATH_TO_JSON, user="Test Script", progresshandler=None, uploaderhandler=None, consolecall=None):
         """
@@ -231,11 +239,13 @@ class Connector(ConnectorFrame):
             Handler for attached GUI of its uploadbar. Defaults to None.
         consolecall : bool, optional
             Bool trigger for console prints for easier debugging. Defaults to False
+
         Returns
         -------
         None.
 
         """
+        # Global for interrupts
         global BREAK
 
         # Resolve paths for uploads
@@ -282,7 +292,7 @@ class Connector(ConnectorFrame):
 
     def __dummy_uploadhandler__(self, msg, file_size, chunk=0, nr_chunks=0):
         """
-        Dummy for uploadhandler
+        Dummy for uploadhandler, in case none is provided. Prints progress into console.
         """
         print(msg)
 
