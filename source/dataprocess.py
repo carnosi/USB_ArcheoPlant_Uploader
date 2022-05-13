@@ -82,7 +82,7 @@ def img_meta_pair(subfolder):
         else:
             temp_img_file = img_file
         # Append meta to path stem
-        meta_temp = temp_img_file + "_meta.xml"
+        meta_temp = str(temp_img_file) + "_meta.xml"
         meta_file = img_file.parent / meta_temp
         if not meta_file.is_file():
             print(f"\nFor image {img_file.stem} in {meta_file.parent} were no meta data found! File is excluded from upload.\n")
