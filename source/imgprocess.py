@@ -308,9 +308,9 @@ def preproces_seed_image(img_path, downscale=0.05, autoload=True):
         hex_color = rgb_to_hex(avg_color[0], avg_color[1], avg_color[2])
     
     except Exception as e:
-        print("preproces failed")
-        print(e)
-        return np.NaN, np.NaN, np.NaN, '000000'
+        print("Automatic image feature extraction failed! No data values are provided. Analyze the seed in path: " + img_path +" manually!")
+        print(str(e.__class__.__name__) + ": " + str(e))
+        return 0, 0, 0, '#000000'
 
     return int(max_x_dist), int(max_y_dist), int(area), hex_color
 

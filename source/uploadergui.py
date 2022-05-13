@@ -67,6 +67,7 @@ except ModuleNotFoundError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "xmltodict"])
     subprocess.check_call([sys.executable, "-m", "pip", "install", "ipywidgets"])
     subprocess.check_call([sys.executable, "-m", "pip", "install", "ipyfilechooser"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "imutils"])
     subprocess.check_call([sys.executable, "-m", "pip", "install", "unicatdb==2.2b1"])
     print("Instalation finished.")
 
@@ -117,7 +118,9 @@ class GUI():
         # Class holders for progress bars
         self.pb_ar = np.zeros((0,))
         self.pb_up = np.zeros((0,))
+        # Class shared path variable
         self.PATH = ""
+        # Multithreaded processing management 
         self.thread = None
 
     def construct_gui(self):
@@ -164,13 +167,13 @@ class GUI():
         self.bothtml = f"<br>GUI version: {__version__} | Data processing version: {dp.__version__} | Image processing version: {dp.ip.__version__} <br> Uploader version: {up.__version__} | All-in-One version: {aio.__version__} | UniCatDB version: {up.unicatdb.openapi_client.__version__}"
         self.bot_html = HTML(value=self.bothtml)
 
-        #Layout setting
+        # Layout setting
         top = HBox([self.user, emptiness, self.finder, emptiness, self.path])
         middle = HBox([self.origin, self.mode])
         bars = VBox([self.prog, self.uplo], layout=Layout(width='90%', overflow='hidden'))
         bottom = HBox([self.butt, bars])
         self.layout = VBox([self.top_html, top, middle, bottom, self.bot_html],  layout=Layout(width='80%', border='solid'))
-        # Showlayout
+        # Show layout
         display(self.layout)
 
     def __on_button_click__(self, ide):
@@ -199,7 +202,7 @@ class GUI():
             aio.BREAK = True
             # Let user know something is going on
             self.bot_html.value = "<b style='color:orange;'>Stopping...</b>" + self.bothtml
-            # Prepare class for another start
+            # Prepare progress bar array for another start
             self.pb_ar = np.zeros((0,))
             # Wait for thread to finish and exit safely
             self.thread.join()
@@ -341,7 +344,7 @@ class GUI():
             Integer value used as index to iterate over prepared progression bar steps.
             Ct increases after each image which get successfuly processed.
         bitmax: int
-            Size of image to be uploaded for progression array preparation. Each image gets its own
+            Size of image to be uploaded for progression array preparation. Each image gets its own. (Depraceted! Direct file access is used)
         finished : Bool, optional
             Trigger for last tread task update. The default is False.
 
