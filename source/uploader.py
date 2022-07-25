@@ -130,7 +130,7 @@ class Connector(ConnectorFrame):
                 attachment_note="Automatic script upload",
                 dynamic_data=({
                     "number-1657784374772-average-max-lenght-m": self.get_average_length(group),
-                    "select-1658750400227-type": self.setup['type'],
+                    "select-1658738801093-type": self.setup['type'],
                     "text-1657785026284-collection-organization": self.setup['organization'],
                     "text-1657784892422-internal-number": self.get_internal_number(data['species_name']),
                     "number-1657784595002-shape-number-by": -1,
@@ -142,7 +142,7 @@ class Connector(ConnectorFrame):
                 schema=(ResponseRelationshipOneToOne(
                     data=(RelationshipResourceIdentifier(
                         type="schemas",
-                        id="62cfc8e56b1ba989d26fa296"     # ID of schema 'ArcheoPlant - Seeds (Automatic upload)'
+                        id="62d1defa50d7c51fb431dba0"     # ID of schema 'Seed2'
                     ))
                 ))
             )
@@ -156,7 +156,7 @@ class Connector(ConnectorFrame):
             ))
             #print(create_finding_request)
             # workspace ID
-            workspace_id = "61c1a8c84904bdceecf50f65"
+            workspace_id = "62435c37272ae85863de4758"
 
             # Commit finding
             try:

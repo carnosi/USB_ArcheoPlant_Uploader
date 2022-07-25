@@ -7,10 +7,10 @@
 # Database upload presets for given batch of data. Change these accoring to your liking. Keep the required fields occupied! Type dends on DB settings.
 
 # Target server. Predefined are: "local", "test", "live". If other adress is provided it takes it as target
-SERVER = "test"
+SERVER = "live"
 
 # Document set name. Eg: "ArcheoPlant - CZ/DE - 2021-09-09"
-DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2021-09-09"
+DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2021-09-07"
 
 # Specifies type of the seed. Valid DB options are Recent and Archeo
 TYPE = "Recent"

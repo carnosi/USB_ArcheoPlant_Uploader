@@ -153,3 +153,4 @@ cython_debug/
 
 # API token (we dont want that freely on the internet, right?)
 api.token
+source/api_test_bcp.token

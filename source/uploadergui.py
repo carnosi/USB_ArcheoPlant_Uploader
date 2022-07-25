@@ -88,7 +88,7 @@ except ModuleNotFoundError:
 # Check if custom scripts have correct version
 from version_check import check_version
 check_version(dp.__version__, [1, 1, 0], "dataprocess.py")
-check_version(up.__version__, [1, 0, 1], "uploader.py")
+check_version(up.__version__, [1, 1, 0], "uploader.py")
 check_version(aio.__version__, [1, 0, 2], "all_in_one.py")
 
 class GUI():
@@ -126,7 +126,7 @@ class GUI():
         self.pb_up = np.zeros((0,))
         # Class shared path variable
         self.PATH = ""
-        # Multithreaded processing management 
+        # Multithreaded processing management
         self.thread = None
 
     def construct_gui(self):
