@@ -32,9 +32,9 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.9"
-__maintainer__ = ["Ondrej Budik", "Vojtech Barnat"]
-__email__ = ["obudik@prf.jcu.cz", "Vojtech.Barnat@fs.cvut.cz"]
+__version__ = "1.1.0"
+__maintainer__ = ["Ondrej Budik"]
+__email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
 
 __python__ = "3.8.0"
@@ -84,6 +84,12 @@ except ModuleNotFoundError:
 
     # Import setting from config
     from config import MIN_USERNAME_LENGTH
+
+# Check if custom scripts have correct version
+from version_check import check_version
+check_version(dp.__version__, [1, 1, 0], "dataprocess.py")
+check_version(up.__version__, [1, 0, 1], "uploader.py")
+check_version(aio.__version__, [1, 0, 2], "all_in_one.py")
 
 class GUI():
     """

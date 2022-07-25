@@ -31,9 +31,9 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky", "Jakub Geyer"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.1"
-__maintainer__ = ["Ondrej Budik", "Vojtech Barnat"]
-__email__ = ["obudik@prf.jcu.cz", "Vojtech.Barnat@fs.cvut.cz"]
+__version__ = "1.0.2"
+__maintainer__ = ["Ondrej Budik"]
+__email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
 
 __python__ = "3.8.0"
@@ -74,10 +74,10 @@ class ConnectorFrame:
         """
         Constructor of Connector class. For full documentation do see class doc.
         """
-        self.config = None
-        self.configuration()
         self.setup = {}
         self.load_setup()
+        self.config = None
+        self.configuration()
 
     def configuration(self):
         """
@@ -93,9 +93,18 @@ class ConnectorFrame:
         # Can be edited with text editor.
         with open("api.token", "r") as token:
             token = token.read()
-
-        self.config = unicatdb.Configuration(access_token=token,
-                                             server=unicatdb.Servers.TEST_UNICATDB_ORG)
+        if self.setup['server'].lower() == "test":
+            self.config = unicatdb.Configuration(access_token=token,
+                                                 server=unicatdb.Servers.TEST_UNICATDB_ORG)
+        elif self.setup['server'].lower() == "live":
+             self.config = unicatdb.Configuration(access_token=token,
+                                                 server=unicatdb.Servers.UNICATDB_ORG)
+        elif self.setup['server'].lower() == "local":
+            self.config = unicatdb.Configuration(access_token=token,
+                                                 server=unicatdb.Servers.LOCALHOST)
+        else:
+            self.config = unicatdb.Configuration(access_token=token,
+                                                 server=self.setup['server'])
 
     def load_setup(self):
         """
@@ -106,16 +115,20 @@ class ConnectorFrame:
         -------
         None.
         """
-        from config import DOCUMENT_SET, LOCATION_DESCRIPTION, NOTE, TAGS
+        from config import DOCUMENT_SET, LOCATION_DESCRIPTION, TYPE, NOTE, TAGS, COLLECTION_ORGANIZATION, INTERNAL_NUMBER, SERVER
         self.setup["document_set"] = DOCUMENT_SET
         self.setup["date"] = dtformating(datetime.now())
         self.setup["loc_desc"] = LOCATION_DESCRIPTION
+        self.setup["type"] = TYPE.capitalize()
         self.setup["note"] = NOTE
         self.setup["tags"] = TAGS
+        self.setup["organization"] = COLLECTION_ORGANIZATION
+        self.setup["internal_number"] = INTERNAL_NUMBER
+        self.setup["server"] = SERVER
 
-    def commit_one(self, data):
+    def commit_one_group(self, group):
         """
-        Commit one of child class.
+        Commit one group of child class
         """
         pass
 
