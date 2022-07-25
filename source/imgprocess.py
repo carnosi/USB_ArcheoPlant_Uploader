@@ -32,7 +32,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Ondrej Budik", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.4"
+__version__ = "1.0.5"
 __maintainer__ = ["Vojtech Barnat", "Ondrej Budik"]
 __email__ = ["Vojtech.Barnat@fs.cvut.cz", "obudik@prf.jcu.cz"]
 __status__ = "Beta"
@@ -308,7 +308,7 @@ def preproces_seed_image(img_path, downscale=0.05, autoload=True):
         hex_color = rgb_to_hex(avg_color[0], avg_color[1], avg_color[2])
     
     except Exception as e:
-        print("Automatic image feature extraction failed! No data values are provided. Analyze the seed in path: " + img_path +" manually!")
+        print("Automatic image feature extraction failed! No data values are provided. Analyze the seed in path: " + str(img_path) +" manually!")
         print(str(e.__class__.__name__) + ": " + str(e))
         return 0, 0, 0, '#000000'
 

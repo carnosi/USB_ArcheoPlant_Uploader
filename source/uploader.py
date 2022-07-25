@@ -31,9 +31,9 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky", "Jakub Geyer"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.4"
-__maintainer__ = ["Ondrej Budik", "Vojtech Barnat"]
-__email__ = ["obudik@prf.jcu.cz", "Vojtech.Barnat@fs.cvut.cz"]
+__version__ = "1.1.0"
+__maintainer__ = ["Ondrej Budik"]
+__email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
 
 __python__ = "3.8.0"
@@ -41,6 +41,7 @@ __python__ = "3.8.0"
 # Import required libs
 from datetime import datetime
 from pathlib import Path
+import numpy as np
 import json
 
 from uploader_frame import ConnectorFrame, dtformating
@@ -51,6 +52,11 @@ from unicatdb.openapi_client import FindingSingleResponse, FindingResourceObject
     NewFindingRequestBody, RelationshipResourceIdentifier, ResponseRelationshipOneToOne, \
     FindingResourceObjectRelationships, TaxonomyName, Finding
 from pprint import pprint
+
+# Check if uploader frame has correct version
+from uploader_frame import __version__ as __upv__
+from version_check import check_version
+check_version(__upv__, [1, 0, 2], "uploader_frame.py")
 
 # Global for interupting the script
 BREAK = False
@@ -69,7 +75,7 @@ class Connector(ConnectorFrame):
         # init parent
         super(Connector, self).__init__()
 
-    def commit_one(self, data, uploaderhandler=None, consolecall=False, chunk=unicatdb.Constants.DEFAULT_CHUNK_SIZE):
+    def commit_one_group(self, group, uploaderhandler=None, consolecall=False, chunk=unicatdb.Constants.DEFAULT_CHUNK_SIZE):
         """
         Commits one finding for given json data. List of findings should use
         commit_all method, here it will end in an exception.
@@ -81,7 +87,7 @@ class Connector(ConnectorFrame):
             syntax otherway it will result in an error.
         uploaderhandler : method, optional
             Method of uploader progress report. Recieves message by TUS procotol which has to be processed
-            in accordance with ones liking (in out GUI it is processed onto progress bar). Defaults to None
+            in accordance with ones liking (in our GUI it is processed onto progress bar). Defaults to None
         consolecall : Bool, optional
             Toggle if console callbacks are enabled / mostly usefull for debugging
         chunk : int, optional
@@ -95,14 +101,16 @@ class Connector(ConnectorFrame):
         # Check if uploadhandler has been specified
         if not uploaderhandler:
             uploaderhandler = self.__dummy_uploadhandler__
-        # Create a new finding in schema 'Seeds - upload through python script'
+        # Get common data from group for entire upload
+        data = group[0]
+        # Create a new finding in defined schema'
         with unicatdb.Client(self.config) as client:
             new_finding = Finding(
                 document_name=data["species_name"],
-                amount=2,
+                amount=len(group),
                 document_set=self.setup["document_set"],
                 date=self.setup['date'].split("T")[0],
-                person=data["user"],
+                person=data["user"] if "user" in data.keys() else "Raw Script",
                 location_description=self.setup["loc_desc"],
                 location_gps_point=None,
                 location_gps_area=None,
@@ -121,34 +129,20 @@ class Connector(ConnectorFrame):
                 )),
                 attachment_note="Automatic script upload",
                 dynamic_data=({
-                    "date-1644848282666-acquisition-date-and-time": dtformating(datetime.fromtimestamp(data['timestamp'])),
-                    "text-1644848104897-focus-method": data['focusmethod'],
-                    "text-1644848180434-texture-method": data['texturemethod'],
-                    "text-1644848333876-topography-method": data['topographymethod'],
-                    "checkbox-group-1645518756057-diaspore-or-seed": data['type'][0],
-                    "text-1644848387883-detector-model": data['model'],
-                    "text-1644848392167-adapter-model": data['adapter'],
-                    "text-1644848396217-objective-model": data['objective'],
-                    "number-1652084725954-camera-pixel-accuracy": data['pixelaccuracy'],
-                    "text-1644849051111-camera-pixel-distances": str(data['pixeldistance']),
-                    "number-1652084729470-total-magnification": data['totalmagnification'],
-                    "text-1644849422898-default-scaling-unit": data['scalingunit'],
-                    "text-1644849131230-sdk-version": data['sdk'],
-                    "number-1652084954836-pixel-to-m-in-x": data['scaling']['x'],
-                    "number-1652084976082-pixel-to-m-in-y": data['scaling']['y'],
-                    "number-1652085036155-size-of-normalized-seed-in-x": data['x_length'],
-                    "number-1652085109693-size-of-normalized-seed-in-y": data['y_length'],
-                    "number-1652085136505-area-of-seed": data['area'],
-                    "number-1652085164817-seed-to-bounding-box-ratio": data['bound_seed_ratio'],
-                    "text-1644850436838-average-seed-color": data['hex_color']
-                })
+                    "number-1657784374772-average-max-lenght-m": self.get_average_length(group),
+                    "select-1658750400227-type": self.setup['type'],
+                    "text-1657785026284-collection-organization": self.setup['organization'],
+                    "text-1657784892422-internal-number": self.get_internal_number(data['species_name']),
+                    "number-1657784595002-shape-number-by": -1,
+                    "nested-1657785596588-imagemetadata": self.create_dynamic_group(group)
+                  })
             )
             # assign to schema
             new_finding_relationships = FindingResourceObjectRelationships(
                 schema=(ResponseRelationshipOneToOne(
                     data=(RelationshipResourceIdentifier(
                         type="schemas",
-                        id="620a6d54303dcf57361dce6d"     # ID of schema 'ArcheoPlant - Seeds (Automatic upload)'
+                        id="62cfc8e56b1ba989d26fa296"     # ID of schema 'ArcheoPlant - Seeds (Automatic upload)'
                     ))
                 ))
             )
@@ -187,43 +181,138 @@ class Connector(ConnectorFrame):
                 # get prepared TUS protocol for uplading files
                 tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
                 # File size
-                file_size = Path(data['img_path']).stat().st_size
-                data['meta_path'] = data['meta_path'].as_posix()
-                # Number of chunks
-                nr_chunks = -(-file_size // chunk)
-                # create uploader for our file, don't forget to provide required metadata
-                uploader = tus_client.uploader(
-                    data['img_path'],
-                    metadata={
-                        "fileName": data['img_path'].split('/')[-1],
-                        "contentType": "image/"+data['img_path'].split(".")[-1]
-                    },
-                    chunk_size=chunk,   # set chunk size in Bytes (1MB is the default)
-                    log_func= lambda msg: uploaderhandler(msg, file_size, chunk=chunk, nr_chunks=nr_chunks) ## print the progress to console or to GUI upload handler
-                )
-                # Uploads the entire image file and meta data
-                # This uploads chunk by chunk.
-                uploader.upload()
-                # create uploader for our file, don't forget to provide required metadata
-                tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
-                uploader = tus_client.uploader(
-                    data['meta_path'],
-                    metadata={
-                        "fileName": data['meta_path'].split('/')[-1],
-                        "contentType": "text/"+data['meta_path'].split(".")[-1]
-                    },
-                    chunk_size=chunk   # set chunk size in Bytes (1MB is the default)
+                for data in group:
+                    file_size = Path(data['img_path']).stat().st_size
+                    #data['meta_path'] = data['meta_path'].as_posix()
+                    # Number of chunks
+                    nr_chunks = -(-file_size // chunk)
+                    # create uploader for our file, don't forget to provide required metadata
+                    uploader = tus_client.uploader(
+                        data['img_path'],
+                        metadata={
+                            "fileName": data['img_path'].split('/')[-1],
+                            "contentType": "image/"+data['img_path'].split(".")[-1]
+                        },
+                        chunk_size=chunk,   # set chunk size in Bytes (1MB is the default)
+                        log_func= lambda msg: uploaderhandler(msg, file_size, chunk=chunk, nr_chunks=nr_chunks) ## print the progress to console or to GUI upload handler
                     )
-                # Uploads the entire image file and meta data
-                # This uploads chunk by chunk.
-                uploader.upload()
+                    # Uploads the entire image file and meta data
+                    # This uploads chunk by chunk.
+                    uploader.upload()
+                    # create uploader for our file, don't forget to provide required metadata
+                    tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
+                    uploader = tus_client.uploader(
+                        data['meta_path'],
+                        metadata={
+                            "fileName": data['meta_path'].split('/')[-1],
+                            "contentType": "text/"+data['meta_path'].split(".")[-1]
+                        },
+                        chunk_size=chunk   # set chunk size in Bytes (1MB is the default)
+                        )
+                    # Uploads the entire image file and meta data
+                    # This uploads chunk by chunk.
+                    uploader.upload()
 
             except Exception as e:
                 print("Error occured when uploading: " + str(e.__class__.__name__) + " " + e.__str__())
 
-    def commit_all(self, PATH_TO_JSON, user="Test Script", progresshandler=None, uploaderhandler=None, consolecall=None):
+    def get_internal_number(self, species):
+        """Gets internal number from setup (config) for given seed. If no internal number is known,
+        sets value to predefined "none" in config.
+
+        Parameters
+        ----------
+        species : str
+            Name of seed for which internal number should be obtained
+
+        Returns
+        -------
+        str
+            internal number if specified in config
         """
-        Commits all files preloaded in given json to database. Commits uploads one by one.
+        species = species.lower()
+        int_numbers_set = self.setup["internal_number"][self.setup["organization"].upper()]
+
+        if species in int_numbers_set.keys():
+            int_number = int_numbers_set[species]
+        else:
+            int_number = int_numbers_set["none"]
+
+        return str(int_number)
+
+    def create_dynamic_group(self, group):
+        """Creates dynamic group list for upload. Group means all images of one seed.
+        Groups are assigned automatically by dataprocessor. Groups are assigned by file names, thefore human error might be a problem.
+
+        Parameters
+        ----------
+        group : list of dicts
+            List of dictionaries containing all processed info about target image files.
+
+        Returns
+        -------
+        list of dictionaries
+            list containing all dynamic data for given upload task
+        """
+        # Get dynamic group holder
+        group_holder = []
+        for data in group:
+            temp = {
+                "text-1657788134621-filename": data['img_path'].split('/')[-1],
+                "select-1657785726708-select": data['type'][0],
+                "date-1657785708118-acquisition-date-and-time": dtformating(datetime.fromtimestamp(data['timestamp'])),
+                "text-1657785710793-focus-method": data['focusmethod'],
+                "text-1657785712782-texture-method": data['texturemethod'],
+                "text-1657785714605-topography-method": data['topographymethod'],
+                "text-1657786114201-detector-vendor": data['vendor'],
+                "text-1657786238783-detector-model": data['model'],
+                "text-1657786116651-adapter-model": data['adapter'],
+                "text-1657786116236-objective-model": data['objective'],
+                "select-1657786839385-default-scaling-unit": data['scalingunit'],
+                "number-1657786456044-pixel-accuracy": data['pixelaccuracy'],
+                "text-1657786573752-pixel-distances": str(data['pixeldistance']),
+                "number-1657786783357-total-magnification": data['totalmagnification'],
+                "text-1657787250718-sdk-version": data['sdk'],
+                "number-1657787350620-pixel-to-m-in-x": data['scaling']['x'],
+                "number-1657787355145-pixel-to-m-in-y": data['scaling']['y'],
+                "number-1657787354751-size-of-normalized-seed-in-x-m": data['x_length'],
+                "number-1657787354379-size-of-normalized-seed-in-y-m": data['y_length'],
+                "number-1657787354016-area-of-seed-m": data['area'],
+                "number-1657787353571-seed-to-bounding-box-ratio": data['bound_seed_ratio'],
+                "text-1657787521336-average-seed-color-hex": data['hex_color']
+            }
+            group_holder.append(temp)
+        return group_holder
+
+    def get_average_length(self, group):
+        """Calculates maximal average length for X and Y axis
+
+        Parameters
+        ----------
+        group : list of dicts
+            List of dictionarias which contain processed metadata about images
+
+        Returns
+        -------
+        numeric
+            Maximal average length of given seed
+        """
+
+        # Get holders for X and Y. (Preprocessing should always keep X as the longest value, but lets be sure)
+        x_length = []
+        y_length = []
+
+        for data in group:
+            x_length.append(data['x_length'])
+            y_length.append(data['y_length'])
+
+        # Always get the highest value
+        length_out = np.max([np.mean(x_length), np.mean(y_length)])
+        return length_out
+
+    def commit_all(self, PATH_TO_JSON, user="Test Script in uploader", progresshandler=None, uploaderhandler=None, consolecall=None):
+        """
+        Commits all files preloaded in given json to database. Commits uploads group by group.
         Tries to finish running upload even on interrupt.
 
         Parameters
@@ -257,38 +346,40 @@ class Connector(ConnectorFrame):
             file = json.loads(f.read())
 
         # Get amount of files to process for progression bar vizualization
-        ct_max = len(file)+1
-        ct = 0
+        progress_counter_max = sum([len(listElem) for listElem in file])+1
+        progress_counter = 0
 
         if progresshandler:
-            progresshandler(ct, ct_max=ct_max)
+            progresshandler(progress_counter, ct_max=progress_counter_max)
 
-        while not BREAK:
-            try:
-                payload = file[ct]
-                # Resolve path for payload
-                if not Path(payload['img_path']).is_absolute():
-                    abspath = PARENT / Path(payload['img_path'])
-                    payload['img_path'] = abspath.as_posix()
-                if not Path(payload['meta_path']).is_absolute():
-                    abspath = PARENT / Path(payload['meta_path'])
-                    payload['meta_path'] = abspath.as_posix()
-
-                payload['user'] = user
-                # Upload all elements one by one
-                self.commit_one(payload, uploaderhandler)
-                # increment loop and progress bar
-                ct += 1
-                if progresshandler:
-                    progresshandler(ct, ct_max=ct_max)
-
-            except IndexError:
-                if consolecall:
-                    print("All data have been uploaded")
+        for group in file:
+            if BREAK:
                 break
+            try:
+                for pair in group:
+                    # Resolve path for payload
+                    if not Path(pair['img_path']).is_absolute():
+                        abspath = PARENT / Path(pair['img_path'])
+                        pair['img_path'] = abspath.as_posix()
+                    if not Path(pair['meta_path']).is_absolute():
+                        abspath = PARENT / Path(pair['meta_path'])
+                        pair['meta_path'] = abspath.as_posix()
+
+                    pair['user'] = user
+                # Upload all elements one by one
+                self.commit_one_group(group, uploaderhandler)
+                # increment loop and progress bar
+                progress_counter += len(group)
+                if progresshandler:
+                    progresshandler(progress_counter, ct_max=progress_counter_max)
+
+            except Exception as e:
+                print("Undefined Error in commit all occured:" + str(e.__class__.__name__) + " " + e.__str__())
+                break
+        print("All data have been uploaded.")
         BREAK = False
         if progresshandler:
-            progresshandler(ct, ct_max=ct_max, finished=True)
+            progresshandler(progress_counter, ct_max=progress_counter_max, finished=True)
 
     def __dummy_uploadhandler__(self, msg, file_size, chunk=0, nr_chunks=0):
         """

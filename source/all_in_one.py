@@ -31,9 +31,9 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky", "Jakub Geyer"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.1"
-__maintainer__ = ["Ondrej Budik", "Vojtech Barnat"]
-__email__ = ["obudik@prf.jcu.cz", "Vojtech.Barnat@fs.cvut.cz"]
+__version__ = "1.0.2"
+__maintainer__ = ["Ondrej Budik"]
+__email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
 
 __python__ = "3.8.0"
@@ -45,10 +45,15 @@ from pathlib import Path
 import dataprocess as dp
 import uploader as up
 
+# Check if uploader and dataprocess has correct versions
+from version_check import check_version
+check_version(dp.__version__, [1, 1, 0], "dataprocess.py")
+check_version(up.__version__, [1, 1, 0], "uploader.py")
+
 # Global for interupting the script
 BREAK = False
 
-def all_in_one(path, origin, user="Test User", progresshandler=None, uploaderhandler=None, consolecall=False):
+def all_in_one(path, origin, user="Test User In AiO", progresshandler=None, uploaderhandler=None, consolecall=False):
     """
     Script which uses dataprocessing and uploader to automatically process data in given folder
     and upload them to UniCatDB. Does not save any metadata of processed folders!
@@ -78,7 +83,7 @@ def all_in_one(path, origin, user="Test User", progresshandler=None, uploaderhan
     global BREAK
 
     # Init data generator
-    data_generator = dp.main(path, origin=origin, consolecall=False)
+    data_generator = dp.main(path, origin=origin, consolecall=False, generator=True)
 
     # Get amount of files for progress bar and init it
     nr = dp.get_amount_of_files(path)+1
@@ -92,23 +97,33 @@ def all_in_one(path, origin, user="Test User", progresshandler=None, uploaderhan
     while not BREAK:
         try:
             # Load data
-            data = next(data_generator)
+            group = next(data_generator)
             # Change path to str for upload
-            data['img_path'] = data['img_path'].as_posix()
+            temp_group = []
+            for data in group:
+                data['img_path'] = data['img_path'].as_posix()
+                data['meta_path'] = data['meta_path'].as_posix()
 
-            # Update progress bar for processing part
-            ct += 1
-            if progresshandler:
-                progresshandler(ct)
+                # Update progress bar for processing part
+                ct += 1
+                if progresshandler:
+                    progresshandler(ct)
 
-            # Resolve path for data
-            if not Path(data['img_path']).is_absolute():
-                abspath = dp.rcwd / Path(data['img_path'])
-                data['img_path'] = abspath.as_posix()
-            data['user'] = user
+                # Resolve path for data
+                if not Path(data['img_path']).is_absolute():
+                    abs_data_path = dp.rcwd / Path(data['img_path'])
+                    data['img_path'] = abs_data_path.as_posix()
+                # Resolve path for meta
+                if not Path(data['meta_path']).is_absolute():
+                    abs_meta_path = dp.rcwd / Path(data['meta_path'])
+                    data['meta_path'] = abs_meta_path.as_posix()
 
-            # Upload processed data
-            uploader.commit_one(data, uploaderhandler)
+                # Add user to data
+                data['user'] = user
+                # Append to temp group
+                temp_group.append(data)
+            # Upload processed group
+            uploader.commit_one_group(temp_group, uploaderhandler)
 
             # Increment progress bar
             ct += 1
@@ -123,7 +138,6 @@ def all_in_one(path, origin, user="Test User", progresshandler=None, uploaderhan
         progresshandler(ct, finished=True)
 
 if __name__ == "__main__":
-    # Runs this script in current working directory. Looks for folder
-    # named to_be_uploaded
+    # Runs this script in specified PATH. Uploads all species within that folder.
     PATH = ".//test"
     file = all_in_one(PATH, 'zeis')

@@ -1,0 +1,1849 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImageMetadata>
+  <Experiment Version="1.1">
+    <RunMode>,OptimizeBeforePerformEnabled,ValidateAndAdaptBeforePerformEnabled</RunMode>
+    <BeforeHardwareSetting>BeforeHardwareSetting</BeforeHardwareSetting>
+    <ExperimentBlockIndex>0</ExperimentBlockIndex>
+    <IsSegmented>false</IsSegmented>
+    <IsStandardMode>true</IsStandardMode>
+    <ImageName>C:\Users\Axio Imager.M2m\AppData\Local\Carl Zeiss\ZENCore\Pictures\Experiment-24919.czi</ImageName>
+    <ImageTransferMode>MemoryMappedAndFileStream</ImageTransferMode>
+    <AutoSave IsActivated="false" EnableSingleFileSave="false">
+      <StorageFolder>C:\Users\Axio Imager.M2m\AppData\Local\Temp\Zeiss\ZENCore\SavingPath</StorageFolder>
+      <Name>New</Name>
+      <IsAutoSubFolder>true</IsAutoSubFolder>
+      <IsAutoSubFolderExternal>true</IsAutoSubFolderExternal>
+      <IsClosedOnCompletion>false</IsClosedOnCompletion>
+      <SingleFileSaveFormat>JPG</SingleFileSaveFormat>
+      <ConvertTo8Bit>false</ConvertTo8Bit>
+      <AddXmlMetadata>false</AddXmlMetadata>
+      <ApplyDisplayMappings>false</ApplyDisplayMappings>
+      <SaveOriginalData>true</SaveOriginalData>
+      <UseChannelNames>false</UseChannelNames>
+      <Quality>90</Quality>
+      <CompressionMethod>None</CompressionMethod>
+      <SingleFileSaveDestinationFolder>C:\Users\Axio Imager.M2m\AppData\Local\Temp\Zeiss\ZENCore\SavingPath</SingleFileSaveDestinationFolder>
+      <SingleFileName>New</SingleFileName>
+    </AutoSave>
+    <Scripting IsActivated="false">
+      <RunMacroBeforeExperiment>false</RunMacroBeforeExperiment>
+      <MacroBeforeExperiment></MacroBeforeExperiment>
+      <ErrorActionBeforeExperiment>ErrorAction_Continue</ErrorActionBeforeExperiment>
+      <RunMacroAfterExperiment>false</RunMacroAfterExperiment>
+      <MacroAfterExperiment></MacroAfterExperiment>
+      <ErrorActionAfterExperiment>ErrorAction_Continue</ErrorActionAfterExperiment>
+    </Scripting>
+    <BlockExecutionOrder>1</BlockExecutionOrder>
+    <LoopDefinitions />
+    <ExperimentBlocks>
+      <AcquisitionBlock IsActivated="true" BlockReference="637835514617830974">
+        <RunMode>ComponentUpdateEnabled,StateUpdateEnabled,PauseAcquisitionOnProcessingGraphOverload</RunMode>
+        <SubDimensionSetups>
+          <PanoramaSetup IsActivated="false">
+            <SubDimensionSetups />
+          </PanoramaSetup>
+          <RegionsSetup IsActivated="false">
+            <SampleHolder>
+              <Overlap>0.1</Overlap>
+              <ScanMode>Meander</ScanMode>
+              <PositionedRegionsScanMode>FirstYThenX</PositionedRegionsScanMode>
+              <TemplateShapesScanMode>Meander</TemplateShapesScanMode>
+              <IsConstantTiles>false</IsConstantTiles>
+              <TileRegionAnchorMode>Center</TileRegionAnchorMode>
+              <StageReferencePoint>0,0</StageReferencePoint>
+              <UseStageBacklashCorrection>true</UseStageBacklashCorrection>
+              <UseFocusBacklashCorrection>true</UseFocusBacklashCorrection>
+              <IsOptimizedPositionedRegionsSorting>true</IsOptimizedPositionedRegionsSorting>
+              <IsOptimizedTemplateShapesSorting>true</IsOptimizedTemplateShapesSorting>
+              <UseStageContinualSpeed>false</UseStageContinualSpeed>
+              <StageContinualSpeed>0.8</StageContinualSpeed>
+              <UseStageContinualAcceleration>false</UseStageContinualAcceleration>
+              <StageContinualAcceleration>0.5</StageContinualAcceleration>
+              <MoveToLoadPositionBetweenRegions>false</MoveToLoadPositionBetweenRegions>
+              <MoveToLoadPositionBetweenShapes>false</MoveToLoadPositionBetweenShapes>
+              <SplitScenesInSeparateFiles>false</SplitScenesInSeparateFiles>
+              <TileRegionCoveringMode>AlignedToLocalTileRegion</TileRegionCoveringMode>
+              <TemplateShapesFillMode>FillGrade</TemplateShapesFillMode>
+              <TemplateShapesFillGrade>0.25</TemplateShapesFillGrade>
+              <TemplateShapesFillWidth>10</TemplateShapesFillWidth>
+              <TemplateShapesFillHeight>10</TemplateShapesFillHeight>
+              <IsOnlineStitchingEnabled>false</IsOnlineStitchingEnabled>
+              <IsOnlinePyramidEnabled>true</IsOnlinePyramidEnabled>
+              <GlobalInterpolationExpansionDegree>2</GlobalInterpolationExpansionDegree>
+              <LocalInterpolationExpansionDegree>2</LocalInterpolationExpansionDegree>
+              <IsFocusSurfaceOutlierRemovingEnabled>true</IsFocusSurfaceOutlierRemovingEnabled>
+              <FocusSurfaceOutlierExpansionDegree>1</FocusSurfaceOutlierExpansionDegree>
+              <FocusSurfaceOutlierThresholdSigma>2.75</FocusSurfaceOutlierThresholdSigma>
+              <DelayAfterStageMove>0</DelayAfterStageMove>
+              <OnlineStitchingParameter>
+                <UseFocusReferenceChannel>true</UseFocusReferenceChannel>
+                <ReferenceChannelId>0</ReferenceChannelId>
+              </OnlineStitchingParameter>
+              <AllowedScanArea IsActivated="false">
+                <ContourType>Rectangle</ContourType>
+                <Center>0,0</Center>
+                <Size>0,0</Size>
+              </AllowedScanArea>
+              <TileRegions />
+              <SingleTileRegions />
+              <SingleTileRegionArrays />
+            </SampleHolder>
+            <SubDimensionSetups />
+          </RegionsSetup>
+          <TilesSetup IsActivated="false">
+            <SubDimensionSetups />
+          </TilesSetup>
+          <HalfPupilSetup IsActivated="false">
+            <IsContainerAdaptionEnabled>true</IsContainerAdaptionEnabled>
+            <StartAngle>0</StartAngle>
+            <SubDimensionSetups />
+          </HalfPupilSetup>
+          <LiveSetup IsActivated="false">
+            <SubDimensionSetups />
+          </LiveSetup>
+          <TimeSeriesSetup IsActivated="false">
+            <IsInteractive>true</IsInteractive>
+            <IsLongAsPossible>false</IsLongAsPossible>
+            <IsBurstMode>false</IsBurstMode>
+            <Duration>
+              <Cycles>10</Cycles>
+            </Duration>
+            <IsFastAsPossible>false</IsFastAsPossible>
+            <Interval>
+              <TimeSpan>
+                <Value>0</Value>
+                <DefaultUnitFormat>s</DefaultUnitFormat>
+              </TimeSpan>
+            </Interval>
+            <StartMode>
+              <Manual>
+                <DigitalIn>None</DigitalIn>
+                <DigitalOut>None</DigitalOut>
+                <TimeSpan>
+                  <Value>0.001</Value>
+                  <DefaultUnitFormat>ms</DefaultUnitFormat>
+                </TimeSpan>
+                <DateTime>
+                  <Seconds>0</Seconds>
+                  <Minutes>0</Minutes>
+                  <Hours>0</Hours>
+                </DateTime>
+                <Interval>0</Interval>
+                <MarkerDescription />
+              </Manual>
+            </StartMode>
+            <StopMode>
+              <Manual>
+                <DigitalIn>None</DigitalIn>
+                <DigitalOut>None</DigitalOut>
+                <TimeSpan>
+                  <Value>0.001</Value>
+                  <DefaultUnitFormat>ms</DefaultUnitFormat>
+                </TimeSpan>
+                <DateTime>
+                  <Seconds>0</Seconds>
+                  <Minutes>0</Minutes>
+                  <Hours>0</Hours>
+                </DateTime>
+                <Interval>0</Interval>
+                <MarkerDescription />
+              </Manual>
+            </StopMode>
+            <PauseBeginMode>
+              <Manual>
+                <DigitalIn>None</DigitalIn>
+                <DigitalOut>None</DigitalOut>
+                <TimeSpan>
+                  <Value>0.001</Value>
+                  <DefaultUnitFormat>ms</DefaultUnitFormat>
+                </TimeSpan>
+                <DateTime>
+                  <Seconds>0</Seconds>
+                  <Minutes>0</Minutes>
+                  <Hours>0</Hours>
+                </DateTime>
+                <Interval>0</Interval>
+                <MarkerDescription />
+              </Manual>
+            </PauseBeginMode>
+            <PauseEndMode>
+              <Manual>
+                <DigitalIn>None</DigitalIn>
+                <DigitalOut>None</DigitalOut>
+                <TimeSpan>
+                  <Value>0.001</Value>
+                  <DefaultUnitFormat>ms</DefaultUnitFormat>
+                </TimeSpan>
+                <DateTime>
+                  <Seconds>0</Seconds>
+                  <Minutes>0</Minutes>
+                  <Hours>0</Hours>
+                </DateTime>
+                <Interval>0</Interval>
+                <MarkerDescription />
+              </Manual>
+            </PauseEndMode>
+            <StartNextTimeSliceMode>
+              <Manual>
+                <DigitalIn>None</DigitalIn>
+                <DigitalOut>None</DigitalOut>
+                <TimeSpan>
+                  <Value>0.001</Value>
+                  <DefaultUnitFormat>ms</DefaultUnitFormat>
+                </TimeSpan>
+                <DateTime>
+                  <Seconds>0</Seconds>
+                  <Minutes>0</Minutes>
+                  <Hours>0</Hours>
+                </DateTime>
+                <Interval>0</Interval>
+                <MarkerDescription />
+              </Manual>
+            </StartNextTimeSliceMode>
+            <TimeSeriesTriggerIntervalModeCollection />
+            <TimeSeriesTriggerMarkerModeCollection />
+            <SetupExtensions />
+            <SubDimensionSetups />
+          </TimeSeriesSetup>
+          <ZStackSetup IsActivated="true">
+            <IsCenterMode>false</IsCenterMode>
+            <IsIntervalKept>true</IsIntervalKept>
+            <Offset>0</Offset>
+            <RefractiveIndexCorrection>1</RefractiveIndexCorrection>
+            <UseFocusBacklashCorrection>true</UseFocusBacklashCorrection>
+            <DelayAfterFocusMove>0</DelayAfterFocusMove>
+            <EnforceOptimalZDistance>false</EnforceOptimalZDistance>
+            <First>
+              <Distance>
+                <Value>-0.0016490499999999998</Value>
+                <DefaultUnitFormat>um</DefaultUnitFormat>
+              </Distance>
+            </First>
+            <Last>
+              <Distance>
+                <Value>-0.00090595</Value>
+                <DefaultUnitFormat>um</DefaultUnitFormat>
+              </Distance>
+            </Last>
+            <Interval>
+              <Distance>
+                <Value>2.175E-05</Value>
+                <DefaultUnitFormat>um</DefaultUnitFormat>
+              </Distance>
+            </Interval>
+            <SetupExtensions>
+              <SetupExtension>
+                <ZStackSetupExtension IsActivated="true">
+                  <FocusMethod>Wavelets</FocusMethod>
+                  <TextureMethod>Wavelets</TextureMethod>
+                  <HighResolution>false</HighResolution>
+                  <TopographyMethod>Centroid</TopographyMethod>
+                  <StackAlignment>High</StackAlignment>
+                  <EDFLengthScale>7</EDFLengthScale>
+                  <EDFSmoothing>11</EDFSmoothing>
+                  <EDFReconstructionFactor>0.15</EDFReconstructionFactor>
+                  <DecayFlickerCorrection>false</DecayFlickerCorrection>
+                  <IsKeepZStack>false</IsKeepZStack>
+                </ZStackSetupExtension>
+              </SetupExtension>
+              <SetupExtension>
+                <ZStackSetupExtension IsActivated="true">
+                  <FocusMethod>Wavelets</FocusMethod>
+                  <TextureMethod>Wavelets</TextureMethod>
+                  <HighResolution>false</HighResolution>
+                  <TopographyMethod>Centroid</TopographyMethod>
+                  <StackAlignment>High</StackAlignment>
+                  <EDFLengthScale>7</EDFLengthScale>
+                  <EDFSmoothing>11</EDFSmoothing>
+                  <EDFReconstructionFactor>0.15</EDFReconstructionFactor>
+                  <DecayFlickerCorrection>false</DecayFlickerCorrection>
+                  <IsKeepZStack>false</IsKeepZStack>
+                </ZStackSetupExtension>
+              </SetupExtension>
+            </SetupExtensions>
+            <SubDimensionSetups>
+              <MultiTrackSetup IsActivated="true">
+                <IsTIRFAngleSynchronized>true</IsTIRFAngleSynchronized>
+                <ImagingDepth>0</ImagingDepth>
+                <Track IsActivated="true" IsSelected="true">
+                  <DetectionModeSetup>
+                    <Zeiss.Micro.Acquisition.WfTrackDetectionMode />
+                  </DetectionModeSetup>
+                  <BeforeHardwareSetting></BeforeHardwareSetting>
+                  <AfterHardwareSetting></AfterHardwareSetting>
+                  <Channels>
+                    <Channel IsActivated="true" IsSelected="true" ChannelSetupId="637835514617880944" Name="C1" Description="">
+                      <Color>#00FFFFFF</Color>
+                      <PixelShiftX>0</PixelShiftX>
+                      <PixelShiftY>0</PixelShiftY>
+                      <TemplateName>DisplaySetting</TemplateName>
+                      <Gamma>0.45</Gamma>
+                      <Low>0</Low>
+                      <High>0.0625</High>
+                      <LowerBestFit>2</LowerBestFit>
+                      <UpperBestFit>0.01</UpperBestFit>
+                      <UseDisplayValues>true</UseDisplayValues>
+                      <BitCountRange>12</BitCountRange>
+                      <PixelType>Bgr48</PixelType>
+                      <IsAutoApplyEnabled>false</IsAutoApplyEnabled>
+                      <AutoApplyMode>MinMax</AutoApplyMode>
+                      <DataGrabberSetup>
+                        <CameraFrameSetup Id="MTBCamera_MTBTube_Cameraport.Axiocam305c">
+                          <ExposureTime IsActivated="true">27.269</ExposureTime>
+                          <Adjust IsActivated="true">0.9166731087521</Adjust>
+                          <AutoExposure IsActivated="true">false</AutoExposure>
+                          <ShadingReferenceSource IsActivated="true">1</ShadingReferenceSource>
+                        </CameraFrameSetup>
+                      </DataGrabberSetup>
+                      <AdditionalDyeInformation>
+                        <ShortName>C1</ShortName>
+                        <IlluminationType>None</IlluminationType>
+                      </AdditionalDyeInformation>
+                      <ContrastMethod>
+                        <Name>C1</Name>
+                        <ShortName>C1</ShortName>
+                        <Description />
+                        <IlluminationType>None</IlluminationType>
+                        <ContrastMethods>Unknown</ContrastMethods>
+                        <ContrastTypes>Unknown</ContrastTypes>
+                        <Color>#00FFFFFF</Color>
+                      </ContrastMethod>
+                    </Channel>
+                  </Channels>
+                  <IsExtendedSetupModificationWarningShown>false</IsExtendedSetupModificationWarningShown>
+                  <ZStackMode>Yes</ZStackMode>
+                  <UseZStackCenter>true</UseZStackCenter>
+                  <ZStackSliceIndex>1</ZStackSliceIndex>
+                  <IsDisabledForApoTome>false</IsDisabledForApoTome>
+                  <FocusOffset>0</FocusOffset>
+                  <DirectDevice>Standard</DirectDevice>
+                </Track>
+                <SubDimensionSetups />
+              </MultiTrackSetup>
+            </SubDimensionSetups>
+          </ZStackSetup>
+          <ApoTomeAcquisitionSetup IsActivated="false">
+            <PhaseCount>0</PhaseCount>
+            <IsOnlineProcessing>false</IsOnlineProcessing>
+            <SubDimensionSetups />
+          </ApoTomeAcquisitionSetup>
+          <CPMPixelSourceSetup IsActivated="false">
+            <SubDimensionSetups />
+          </CPMPixelSourceSetup>
+          <CorrelativeSetup IsActivated="false">
+            <HolderDocument>
+              <Image />
+              <Delta1To2>
+                <X>0</X>
+                <Y>0</Y>
+              </Delta1To2>
+              <Delta2To3>
+                <X>0</X>
+                <Y>0</Y>
+              </Delta2To3>
+              <HolderName></HolderName>
+              <IsReadOnly>false</IsReadOnly>
+              <Calibration>
+                <Marker1>
+                  <X>NaN</X>
+                  <Y>NaN</Y>
+                  <Z>NaN</Z>
+                </Marker1>
+                <Marker2>
+                  <X>NaN</X>
+                  <Y>NaN</Y>
+                  <Z>NaN</Z>
+                </Marker2>
+                <Marker3>
+                  <X>NaN</X>
+                  <Y>NaN</Y>
+                  <Z>NaN</Z>
+                </Marker3>
+                <StageRotation>NaN</StageRotation>
+                <CorrectedMarkerDeltas>
+                  <Delta1To2>
+                    <X>NaN</X>
+                    <Y>NaN</Y>
+                  </Delta1To2>
+                  <Delta2To3>
+                    <X>NaN</X>
+                    <Y>NaN</Y>
+                  </Delta2To3>
+                </CorrectedMarkerDeltas>
+              </Calibration>
+              <IsHolderEnabled>true</IsHolderEnabled>
+              <HolderNumber></HolderNumber>
+            </HolderDocument>
+            <SubDimensionSetups />
+          </CorrelativeSetup>
+        </SubDimensionSetups>
+        <HelperSetups>
+          <AcquisitionModeSetup IsActivated="true">
+            <SelectedDetector>MTBCamera_MTBTube_Cameraport.Axiocam305c</SelectedDetector>
+            <Detectors>
+              <Camera Id="MTBCamera_MTBTube_Cameraport.Axiocam305c">
+                <ApplyCameraProfile Status="Valid">false</ApplyCameraProfile>
+                <ApplyImageOrientation Status="Valid">true</ApplyImageOrientation>
+                <ExposureTime Status="Valid">27.269</ExposureTime>
+                <Frame Status="Valid">0,0,2448,2054</Frame>
+                <ImageOrientation Status="Valid">0</ImageOrientation>
+                <ContinuousAcquisitionSafeMode Status="Valid">true</ContinuousAcquisitionSafeMode>
+                <EnableSignalsForFastAcq Status="Valid"></EnableSignalsForFastAcq>
+                <ShadingReference Status="Valid">false</ShadingReference>
+                <ShadingReferenceSource Status="Valid">1</ShadingReferenceSource>
+                <ShadingReferenceSourceVisibility Status="Valid">true</ShadingReferenceSourceVisibility>
+                <Resolution Status="Valid">0</Resolution>
+                <BinningList Status="Valid">0</BinningList>
+                <ColorMode Status="Valid">1</ColorMode>
+                <WhiteBalance Status="Valid">0.38476792921453,0.85664389941012,0.40667</WhiteBalance>
+                <WhiteBalanceOffset Status="Valid">0</WhiteBalanceOffset>
+                <ColorSaturation Status="Valid">0.5</ColorSaturation>
+                <AnalogGainModeList Status="Valid">0</AnalogGainModeList>
+                <LiveSpeed Status="Valid">0</LiveSpeed>
+                <SoftwareBinningList Status="Valid">0</SoftwareBinningList>
+                <ResamplingParameterKey Status="Valid">1</ResamplingParameterKey>
+                <ResamplingModeParameterKey Status="Valid">0</ResamplingModeParameterKey>
+                <PixelClock Status="Valid">0</PixelClock>
+                <ImageDeliveryBufferCount Status="Valid">4</ImageDeliveryBufferCount>
+                <Adjust Status="Valid">0.9166731087521</Adjust>
+                <AdjustFrameRate Status="Valid">true</AdjustFrameRate>
+                <AutoExposure Status="Valid">false</AutoExposure>
+                <AutoExposureFrame Status="Valid">Empty</AutoExposureFrame>
+                <Binning Status="Valid">1,1</Binning>
+                <AdaptExposureByBinningChange Status="Valid">true</AdaptExposureByBinningChange>
+                <BlackReference Status="Valid">false</BlackReference>
+                <DualCameraCalibration Status="Valid">false</DualCameraCalibration>
+                <DualCameraCalibrationId Status="Valid">None</DualCameraCalibrationId>
+                <ExposureDelay Status="Valid">0</ExposureDelay>
+                <FrameRateTarget Status="Valid">30</FrameRateTarget>
+                <HDRBits Status="Valid">2</HDRBits>
+                <NoiseFilter Status="Valid">false</NoiseFilter>
+                <NoiseFilterThreshold Status="Valid">1.5</NoiseFilterThreshold>
+                <ReferenceImageCount Status="Valid">3</ReferenceImageCount>
+                <SnapMode Status="Valid">0</SnapMode>
+                <ToneMappingFunction Status="Valid">0</ToneMappingFunction>
+                <EnhanceClipLimit Status="Valid">0.3</EnhanceClipLimit>
+                <EnhanceRegionSizePercentage Status="Valid">15</EnhanceRegionSizePercentage>
+                <UnsharpMask Status="Valid">false</UnsharpMask>
+                <UnsharpMaskState Status="Valid"></UnsharpMaskState>
+                <ImageCount Status="Valid">3</ImageCount>
+                <AcquisitionFrame Status="Valid">0,0,2464,2056</AcquisitionFrame>
+                <SDKVersion Status="Valid">1.78</SDKVersion>
+                <EnableLiveSpeed Status="Valid">true</EnableLiveSpeed>
+                <AbortOnMissedFrames Status="Valid">true</AbortOnMissedFrames>
+                <FrameTime Status="Valid">0</FrameTime>
+                <SnapWithSWTrigger Status="Valid">false</SnapWithSWTrigger>
+                <LineFlickerSuppression Status="Valid">2</LineFlickerSuppression>
+                <HighImageRateMode Status="Valid">true</HighImageRateMode>
+                <CameraSubsampling Status="Valid">0</CameraSubsampling>
+                <CameraBitsPerPixel Status="Valid">0</CameraBitsPerPixel>
+                <CameraLUT1 Status="Valid">0</CameraLUT1>
+                <CameraLUT2 Status="Valid">1</CameraLUT2>
+                <CameraGamma Status="Valid">1</CameraGamma>
+                <AutoCompression Status="Valid">0</AutoCompression>
+                <ContinuousAcquisitionMode Status="Valid">0</ContinuousAcquisitionMode>
+                <SequenceCount Status="Valid">0</SequenceCount>
+                <SequenceProgress Status="Valid">true</SequenceProgress>
+                <LEDIntensity Status="Valid">9</LEDIntensity>
+                <EasyHDR Status="Valid">true</EasyHDR>
+                <SuppressTemperatureWarnings Status="Valid">false</SuppressTemperatureWarnings>
+              </Camera>
+            </Detectors>
+            <Devices />
+          </AcquisitionModeSetup>
+          <AutoImmersionSetup IsActivated="false">
+            <ImmersionTimeInterval>0</ImmersionTimeInterval>
+            <ImmersionTravelDistance>0</ImmersionTravelDistance>
+            <IsBubbleEliminationMovementEnabled>false</IsBubbleEliminationMovementEnabled>
+            <BubbleEliminationMovementTargetX>20000</BubbleEliminationMovementTargetX>
+            <BubbleEliminationMovementTargetY>20000</BubbleEliminationMovementTargetY>
+          </AutoImmersionSetup>
+          <BleachingSetup IsActivated="false">
+            <BleachSettingsName>not defined</BleachSettingsName>
+            <BleachSettingsType></BleachSettingsType>
+          </BleachingSetup>
+          <DynamicsSetup IsActivated="false" GraphicScale="1" Id="637835514618120685" />
+          <ExperimentRegionsSetup IsActivated="false">
+            <FitFrameSizeToRegions>false</FitFrameSizeToRegions>
+            <UseStageCoordinates>false</UseStageCoordinates>
+            <Regions />
+          </ExperimentRegionsSetup>
+          <FocusSetup IsActivated="true">
+            <RepetitionSettingsMode>Standard</RepetitionSettingsMode>
+            <FocusStrategy IsActivated="true">
+              <StrategyMode>None</StrategyMode>
+              <ReferenceChannelId>0</ReferenceChannelId>
+              <FixedZPosition>0</FixedZPosition>
+              <UseZPositionFromTilesSetup>true</UseZPositionFromTilesSetup>
+              <ExecutionInTileRegionMode>CenterOfRegion</ExecutionInTileRegionMode>
+              <SupportPointsMode>FixedZPosition</SupportPointsMode>
+              <FocusZStackMode>FixedZ</FocusZStackMode>
+              <WaitPositionMode>CenterOfFirstRegion</WaitPositionMode>
+              <WaitPositionX>0</WaitPositionX>
+              <WaitPositionY>0</WaitPositionY>
+              <WaitPositionZ>0</WaitPositionZ>
+              <IsUpdatePositionedRegionsToClientEnabled>true</IsUpdatePositionedRegionsToClientEnabled>
+              <PositionedRegionsUpdateMode>CumulatedPositions</PositionedRegionsUpdateMode>
+              <BreakAfterSupportPointsDetermination>false</BreakAfterSupportPointsDetermination>
+              <ErrorNotificationHints>None</ErrorNotificationHints>
+              <AdditionalSupportPointOffset>0</AdditionalSupportPointOffset>
+            </FocusStrategy>
+          </FocusSetup>
+          <LinkamRampSetup IsActivated="false">
+            <Rate>10</Rate>
+            <Limit>50</Limit>
+            <HoldTime>0</HoldTime>
+            <RampType>TempSeries</RampType>
+          </LinkamRampSetup>
+          <RatioSetup IsActivated="false">
+            <IsRatioImageGenerated>false</IsRatioImageGenerated>
+            <SelectedColorMode>Palette</SelectedColorMode>
+            <Color>#00FFFFFF</Color>
+            <PaletteName>rainbow</PaletteName>
+            <RatioDisplayMinimum>0</RatioDisplayMinimum>
+            <RatioDisplayMaximum>10</RatioDisplayMaximum>
+            <RatioMethod>SingleWavelength</RatioMethod>
+            <SelectedReferenceIdChannel1>0</SelectedReferenceIdChannel1>
+            <SelectedReferenceIdChannel2>0</SelectedReferenceIdChannel2>
+            <RatioBackgroundCorrection>None</RatioBackgroundCorrection>
+            <BackgroundCorrectionChannel1>0</BackgroundCorrectionChannel1>
+            <BackgroundCorrectionChannel2>0</BackgroundCorrectionChannel2>
+            <BackgroundCorrectionFaktor1>1</BackgroundCorrectionFaktor1>
+            <BackgroundCorrectionFaktor2>1</BackgroundCorrectionFaktor2>
+            <AverageFrame>5</AverageFrame>
+            <Multiplicator>1</Multiplicator>
+            <IsOptionalThreshold>false</IsOptionalThreshold>
+            <OptionalThresholdChannel1>0</OptionalThresholdChannel1>
+            <OptionalThresholdChannel2>0</OptionalThresholdChannel2>
+            <ThresholdChannelOrderId1>0</ThresholdChannelOrderId1>
+            <ThresholdChannelOrderId2>0</ThresholdChannelOrderId2>
+            <IsRatioClipping>false</IsRatioClipping>
+            <RatioClipping>10</RatioClipping>
+            <IsRatioCalculationEnabled>true</IsRatioCalculationEnabled>
+            <IsRatioReferenceImageDefined>true</IsRatioReferenceImageDefined>
+            <AverageStartFrame>1</AverageStartFrame>
+            <AverageEndFrame>1</AverageEndFrame>
+          </RatioSetup>
+          <ResetDetectorSetup IsActivated="false">
+            <ResetDetectorsInTilesExperiment>false</ResetDetectorsInTilesExperiment>
+          </ResetDetectorSetup>
+          <TempSeriesSetup IsActivated="false">
+            <TemperatureStep>0</TemperatureStep>
+          </TempSeriesSetup>
+          <DisableBlankingSetup IsActivated="false" />
+          <VivaTome2AcquisitionSetup IsActivated="true">
+            <AcquisitionMode>OpticalSectioning</AcquisitionMode>
+            <IsShadingCorrection>true</IsShadingCorrection>
+            <IsNormalization>false</IsNormalization>
+            <Averaging>1</Averaging>
+            <Grid>Pattern1</Grid>
+            <AutomaticGridControl>false</AutomaticGridControl>
+            <IsOnlineProcessing>false</IsOnlineProcessing>
+          </VivaTome2AcquisitionSetup>
+          <CPMFocusSetup IsActivated="false">
+            <StrategyMode>None</StrategyMode>
+            <UseAutoBC>false</UseAutoBC>
+            <ScanSpeedForBCTraining>0</ScanSpeedForBCTraining>
+          </CPMFocusSetup>
+        </HelperSetups>
+        <ProcessingGraph FullTypeName="Zeiss.Micro.Acquisition.Processing.ProcessingGraph" Name="ProcessingFilterGraph" IsActive="true">
+          <Filters>
+            <Filter FullTypeName="Zeiss.Micro.Acquisition.Processing.PreviewFileSinkFilter" Name="PreviewFileSink" IsActive="true" IsUpdateEnabled="false">
+              <IsPreviewItemRequired>false</IsPreviewItemRequired>
+              <WritesZerosOnMoveXy>true</WritesZerosOnMoveXy>
+              <PreviewDimensions>
+                <Dimension>C</Dimension>
+                <Dimension>H</Dimension>
+              </PreviewDimensions>
+            </Filter>
+            <Filter FullTypeName="Zeiss.Micro.Acquisition.Processing.ProcessingItemSorterFilter" Name="Sorter" IsActive="true">
+              <Connections>
+                <Connection To="PreviewFileSink" />
+              </Connections>
+            </Filter>
+            <Filter FullTypeName="Zeiss.Micro.Acquisition.Processing.CziFileSinkFilter" Name="FileSink" IsActive="true" IsUpdateEnabled="false" IsSplitScenes="false" IsCompressWithJpegXr="false" IsJpegXrLossless="true" JpegXrQualityLevel="100" IsFlushAlwaysForced="false" />
+            <Filter FullTypeName="Zeiss.Micro.Acquisition.Processing.EdfFilter" Name="Edf" IsActive="true">
+              <Connections>
+                <Connection To="FileSink" />
+              </Connections>
+              <ExpectedBounds StartZ="0" SizeZ="35" StartC="0" />
+              <FunctionParameters>
+                <!-- Function Parameters for Wavelets -->
+                <StackAlignment>High</StackAlignment>
+                <!-- Function Parameters for Contrast and Variance -->
+                <EDFReconstructionFactor>0.15</EDFReconstructionFactor>
+                <EDFZStackAlignment>High</EDFZStackAlignment>
+                <EDFDecayFlickerCorrection>false</EDFDecayFlickerCorrection>
+                <EDFSmoothing>11</EDFSmoothing>
+                <EDFLengthScale>7</EDFLengthScale>
+                <!-- 
+        Function Parameters for MaximumProjection 
+              Use Maximum for dark field/fluorescence, and Minimum for bright field;
+              maybe we can set that automatically
+        -->
+                <Method>Maximum</Method>
+                <TextureMethod>Wavelets</TextureMethod>
+                <HighResolution>false</HighResolution>
+                <EDFTextureMethod>Wavelets</EDFTextureMethod>
+              </FunctionParameters>
+              <FusionMethod>Wavelets</FusionMethod>
+              <ProcessChannelsSeparately>false</ProcessChannelsSeparately>
+              <IsKeepZStack>false</IsKeepZStack>
+              <Modes />
+            </Filter>
+            <Filter FullTypeName="Zeiss.Micro.Acquisition.Processing.AlignZStackFilter" Name="AlignZStack" IsActive="true">
+              <Connections>
+                <Connection To="Edf" />
+              </Connections>
+            </Filter>
+            <Filter FullTypeName="Zeiss.Micro.Acquisition.Processing.FullFrameAggregatorFilter" Name="FullFrameAggregator" IsActive="true">
+              <Connections>
+                <Connection To="AlignZStack" />
+              </Connections>
+              <DimensionsToAggregate>
+                <Dimension>X</Dimension>
+                <Dimension>Y</Dimension>
+              </DimensionsToAggregate>
+            </Filter>
+            <Filter FullTypeName="Zeiss.Micro.Acquisition.Processing.PreviewRemovalFilter" Name="PreviewRemover" IsActive="true">
+              <Connections>
+                <Connection To="FullFrameAggregator" />
+              </Connections>
+            </Filter>
+            <Filter FullTypeName="Zeiss.Micro.Acquisition.Processing.RawDecodeImageFilter" Name="DecodeImage" IsActive="true">
+              <Connections>
+                <Connection To="PreviewRemover" />
+              </Connections>
+              <IsUsedForPreviewFileSink>false</IsUsedForPreviewFileSink>
+            </Filter>
+          </Filters>
+          <StopPriorities>
+            <StopPriority Name="PreviewFileSink" Value="0" />
+            <StopPriority Name="Sorter" Value="1" />
+            <StopPriority Name="FileSink" Value="2" />
+            <StopPriority Name="Edf" Value="8" />
+            <StopPriority Name="AlignZStack" Value="16" />
+            <StopPriority Name="FullFrameAggregator" Value="17" />
+            <StopPriority Name="PreviewRemover" Value="18" />
+            <StopPriority Name="DecodeImage" Value="20" />
+          </StopPriorities>
+        </ProcessingGraph>
+      </AcquisitionBlock>
+    </ExperimentBlocks>
+    <HardwareSettingsPool>
+      <HardwareSetting Name="BeforeHardwareSetting">
+        <ParameterCollection Id="MTBObjectiveChanger">
+          <Position Status="Valid" IsActivated="true">3</Position>
+          <PositionName Status="Valid" IsActivated="true">Objective.422030-9961-000</PositionName>
+        </ParameterCollection>
+      </HardwareSetting>
+    </HardwareSettingsPool>
+    <ExperimentFeedback />
+    <AdditionalSettings />
+  </Experiment>
+  <HardwareSetting>
+    <ParameterCollection Id="MTBMicroscopeManager">
+      <IsCondenserFocusing Status="Valid">false</IsCondenserFocusing>
+      <IsCurrentFeed Status="Valid">false</IsCurrentFeed>
+      <IsDazzleProtection Status="Valid">true</IsDazzleProtection>
+      <IsLightManagerTemporary Status="Valid">false</IsLightManagerTemporary>
+      <IsLoadWorkCoupling Status="Valid">false</IsLoadWorkCoupling>
+      <IsVignettingFreeModeTemporary Status="Valid">false</IsVignettingFreeModeTemporary>
+      <IsLaserSafety Status="Valid" IsReadOnly="true">false</IsLaserSafety>
+      <IsParfocalCorrection Status="Valid">true</IsParfocalCorrection>
+      <IsParfocalCorrectionSilentMode Status="Valid">false</IsParfocalCorrectionSilentMode>
+      <IsParcentralCorrection Status="Valid">false</IsParcentralCorrection>
+      <IsParcentralCorrectionSilentMode Status="Valid">false</IsParcentralCorrectionSilentMode>
+      <IsObjectiveCorrFocusCorrection Status="Valid" IsReadOnly="true">false</IsObjectiveCorrFocusCorrection>
+      <ContrastManagerContrastMethod Status="Valid">0</ContrastManagerContrastMethod>
+      <ContrastManagerMode Status="Valid">Off</ContrastManagerMode>
+      <LightManagerMode Status="Valid">Objective</LightManagerMode>
+      <ParfocalParcentralValues Status="Valid">
+        <ParfocalParcentralValues>
+          <ParfocalParcentralValue MTBObjectiveChanger="1">
+            <Parfocal>-560.8</Parfocal>
+            <ParcentralX>0</ParcentralX>
+            <ParcentralY>0</ParcentralY>
+          </ParfocalParcentralValue>
+          <ParfocalParcentralValue MTBObjectiveChanger="2">
+            <Parfocal>62.875</Parfocal>
+            <ParcentralX>0</ParcentralX>
+            <ParcentralY>0</ParcentralY>
+          </ParfocalParcentralValue>
+          <ParfocalParcentralValue MTBObjectiveChanger="3">
+            <Parfocal>6.9</Parfocal>
+            <ParcentralX>0</ParcentralX>
+            <ParcentralY>0</ParcentralY>
+          </ParfocalParcentralValue>
+          <ParfocalParcentralValue MTBObjectiveChanger="4">
+            <Parfocal>12.75</Parfocal>
+            <ParcentralX>0</ParcentralX>
+            <ParcentralY>0</ParcentralY>
+          </ParfocalParcentralValue>
+          <ParfocalParcentralValue MTBObjectiveChanger="5">
+            <Parfocal>9.65</Parfocal>
+            <ParcentralX>0</ParcentralX>
+            <ParcentralY>0</ParcentralY>
+          </ParfocalParcentralValue>
+          <ParfocalParcentralValue MTBObjectiveChanger="6">
+            <Parfocal>-1.725</Parfocal>
+            <ParcentralX>0</ParcentralX>
+            <ParcentralY>0</ParcentralY>
+          </ParfocalParcentralValue>
+          <ParfocalParcentralValue MTBObjectiveChanger="7">
+            <Parfocal>0</Parfocal>
+            <ParcentralX>0</ParcentralX>
+            <ParcentralY>0</ParcentralY>
+          </ParfocalParcentralValue>
+        </ParfocalParcentralValues>
+      </ParfocalParcentralValues>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBCamera_MTBTube_Cameraport.Axiocam305c">
+      <ExposureTime Status="Valid">27.269</ExposureTime>
+      <Frame Status="Valid">0,0,2448,2054</Frame>
+      <ImageByteSize Status="Valid" IsReadOnly="true">30169152</ImageByteSize>
+      <ImageFrame Status="Valid" IsReadOnly="true">0,0,2448,2054</ImageFrame>
+      <LiveFrame Status="Valid" IsReadOnly="true">0,0,2448,2054</LiveFrame>
+      <LiveImageByteSize Status="Valid" IsReadOnly="true">30169152</LiveImageByteSize>
+      <LiveImageFrame Status="Valid" IsReadOnly="true">0,0,2448,2054</LiveImageFrame>
+      <WhiteBalance Status="Valid">0.38476792921453,0.85664389941012,0.40667</WhiteBalance>
+      <Adjust Status="Valid">0.9166731087521</Adjust>
+      <CameraDisplayName Status="Valid" IsReadOnly="true">Axiocam 305</CameraDisplayName>
+      <ApplyCameraProfile Status="Valid">false</ApplyCameraProfile>
+      <ApplyCameraProfile.Type Status="Valid" IsReadOnly="true">BoolType</ApplyCameraProfile.Type>
+      <ApplyCameraProfile.Default Status="Valid" IsReadOnly="true">false</ApplyCameraProfile.Default>
+      <ApplyImageOrientation Status="Valid">true</ApplyImageOrientation>
+      <ApplyImageOrientation.Type Status="Valid" IsReadOnly="true">BoolType</ApplyImageOrientation.Type>
+      <ApplyImageOrientation.Default Status="Valid" IsReadOnly="true">true</ApplyImageOrientation.Default>
+      <CalculateExposureTimeResult Status="Valid" IsReadOnly="true"></CalculateExposureTimeResult>
+      <CalculateExposureTimeResult.Type Status="Valid" IsReadOnly="true">StringType</CalculateExposureTimeResult.Type>
+      <CalculateExposureTimeResult.Default Status="Valid" IsReadOnly="true"></CalculateExposureTimeResult.Default>
+      <CameraBias Status="Valid" IsReadOnly="true">16</CameraBias>
+      <CameraBias.Type Status="Valid" IsReadOnly="true">IntegerType</CameraBias.Type>
+      <CameraBias.Default Status="Valid" IsReadOnly="true">0</CameraBias.Default>
+      <CameraOrientation Status="Valid" IsReadOnly="true">0</CameraOrientation>
+      <CameraOrientation.Type Status="Valid" IsReadOnly="true">IntegerType</CameraOrientation.Type>
+      <CameraOrientation.ListItems Status="Valid" IsReadOnly="true">0|Original|Original,1|Flip|Flip Horizontally,2|Reverse|Flip Vertically,4|Rotate|Rotate 90 CW,7|FlipReverseRotate|Rotate 90 CCW,3|FlipReverse|Rotate 180,6|ReverseRotate|Mirror at +45 Diagonal,5|FlipRotate|Mirror at -45 Diagonal</CameraOrientation.ListItems>
+      <CameraPixelAccuracy Status="Valid" IsReadOnly="true">0.000244140625</CameraPixelAccuracy>
+      <CameraPixelAccuracy.Type Status="Valid" IsReadOnly="true">DoubleType</CameraPixelAccuracy.Type>
+      <CameraPixelAccuracy.Default Status="Valid" IsReadOnly="true">0.00390625</CameraPixelAccuracy.Default>
+      <CameraPixelDistances Status="Valid" IsReadOnly="true">3.45,3.45</CameraPixelDistances>
+      <CameraPixelDistances.Type Status="Valid" IsReadOnly="true">SizeType</CameraPixelDistances.Type>
+      <CameraPixelMaximum Status="Valid" IsReadOnly="true">4095</CameraPixelMaximum>
+      <CameraPixelMaximum.Type Status="Valid" IsReadOnly="true">IntegerType</CameraPixelMaximum.Type>
+      <CameraPixelMaximum.Default Status="Valid" IsReadOnly="true">255</CameraPixelMaximum.Default>
+      <CameraPixelMinimum Status="Valid" IsReadOnly="true">0</CameraPixelMinimum>
+      <CameraPixelMinimum.Type Status="Valid" IsReadOnly="true">IntegerType</CameraPixelMinimum.Type>
+      <CameraPixelMinimum.Default Status="Valid" IsReadOnly="true">0</CameraPixelMinimum.Default>
+      <CameraPixelType Status="Valid" IsReadOnly="true">Bgr48</CameraPixelType>
+      <CameraPixelType.Type Status="Valid" IsReadOnly="true">IntegerType</CameraPixelType.Type>
+      <CameraPixelType.Default Status="Valid" IsReadOnly="true">0</CameraPixelType.Default>
+      <CameraStatus Status="Valid" IsReadOnly="true"></CameraStatus>
+      <CameraStatus.Type Status="Valid" IsReadOnly="true">StringType</CameraStatus.Type>
+      <CameraStatus.Default Status="Valid" IsReadOnly="true"></CameraStatus.Default>
+      <ExposureTime.Type Status="Valid" IsReadOnly="true">DoubleType</ExposureTime.Type>
+      <ExposureTime.Default Status="Valid" IsReadOnly="true">20</ExposureTime.Default>
+      <ExposureTime.Min Status="Valid" IsReadOnly="true">0.1</ExposureTime.Min>
+      <ExposureTime.Max Status="Valid" IsReadOnly="true">4000</ExposureTime.Max>
+      <ExposureTime.Increment Status="Valid" IsReadOnly="true">0.001</ExposureTime.Increment>
+      <ExposureTime.GuiHint Status="Valid" IsReadOnly="true">GuiLogSlider</ExposureTime.GuiHint>
+      <Frame.Type Status="Valid" IsReadOnly="true">RectType</Frame.Type>
+      <Frame.Max Status="Valid" IsReadOnly="true">0,0,2464,2056</Frame.Max>
+      <Frame.GuiHint Status="Valid" IsReadOnly="true">GuiRect</Frame.GuiHint>
+      <ImageByteSize.Type Status="Valid" IsReadOnly="true">IntegerType</ImageByteSize.Type>
+      <ImageByteSize.Default Status="Valid" IsReadOnly="true">0</ImageByteSize.Default>
+      <ImageFrame.Type Status="Valid" IsReadOnly="true">RectType</ImageFrame.Type>
+      <ImageFrame.Max Status="Valid" IsReadOnly="true">0,0,2464,2056</ImageFrame.Max>
+      <ImageOrientation Status="Valid">0</ImageOrientation>
+      <ImageOrientation.Type Status="Valid" IsReadOnly="true">IntegerType</ImageOrientation.Type>
+      <ImageOrientation.ListItems Status="Valid" IsReadOnly="true">0|Original|Original,1|Flip|Flip Horizontally,2|Reverse|Flip Vertically,4|Rotate|Rotate 90 CW,7|FlipReverseRotate|Rotate 90 CCW,3|FlipReverse|Rotate 180,6|ReverseRotate|Mirror at +45 Diagonal,5|FlipRotate|Mirror at -45 Diagonal</ImageOrientation.ListItems>
+      <ImageOrientation.Default Status="Valid" IsReadOnly="true">0</ImageOrientation.Default>
+      <ImageOrientation.Label Status="Valid" IsReadOnly="true">Orientation</ImageOrientation.Label>
+      <ImageOrientation.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</ImageOrientation.GuiHint>
+      <ImagePixelAccuracy Status="Valid" IsReadOnly="true">0.000244140625</ImagePixelAccuracy>
+      <ImagePixelAccuracy.Type Status="Valid" IsReadOnly="true">DoubleType</ImagePixelAccuracy.Type>
+      <ImagePixelAccuracy.Default Status="Valid" IsReadOnly="true">0.00390625</ImagePixelAccuracy.Default>
+      <ImagePixelDistances Status="Valid" IsReadOnly="true">3.45,3.45</ImagePixelDistances>
+      <ImagePixelDistances.Type Status="Valid" IsReadOnly="true">SizeType</ImagePixelDistances.Type>
+      <ImagePixelType Status="Valid" IsReadOnly="true">Bgr48</ImagePixelType>
+      <ImagePixelType.Type Status="Valid" IsReadOnly="true">IntegerType</ImagePixelType.Type>
+      <ImagePixelType.Default Status="Valid" IsReadOnly="true">0</ImagePixelType.Default>
+      <LiveFrame.Type Status="Valid" IsReadOnly="true">RectType</LiveFrame.Type>
+      <LiveImageByteSize.Type Status="Valid" IsReadOnly="true">IntegerType</LiveImageByteSize.Type>
+      <LiveImageByteSize.Default Status="Valid" IsReadOnly="true">0</LiveImageByteSize.Default>
+      <LiveImageFrame.Type Status="Valid" IsReadOnly="true">RectType</LiveImageFrame.Type>
+      <LiveImagePixelAccuracy Status="Valid" IsReadOnly="true">0.000244140625</LiveImagePixelAccuracy>
+      <LiveImagePixelAccuracy.Type Status="Valid" IsReadOnly="true">DoubleType</LiveImagePixelAccuracy.Type>
+      <LiveImagePixelAccuracy.Default Status="Valid" IsReadOnly="true">0.00390625</LiveImagePixelAccuracy.Default>
+      <LiveImagePixelDistances Status="Valid" IsReadOnly="true">3.45,3.45</LiveImagePixelDistances>
+      <LiveImagePixelDistances.Type Status="Valid" IsReadOnly="true">SizeType</LiveImagePixelDistances.Type>
+      <LiveImagePixelType Status="Valid" IsReadOnly="true">Bgr48</LiveImagePixelType>
+      <LiveImagePixelType.Type Status="Valid" IsReadOnly="true">IntegerType</LiveImagePixelType.Type>
+      <LiveImagePixelType.Default Status="Valid" IsReadOnly="true">0</LiveImagePixelType.Default>
+      <LiveValidBits Status="Valid" IsReadOnly="true">12</LiveValidBits>
+      <LiveValidBits.Type Status="Valid" IsReadOnly="true">IntegerType</LiveValidBits.Type>
+      <LiveValidBits.Default Status="Valid" IsReadOnly="true">8</LiveValidBits.Default>
+      <ValidBits Status="Valid" IsReadOnly="true">12</ValidBits>
+      <ValidBits.Type Status="Valid" IsReadOnly="true">IntegerType</ValidBits.Type>
+      <ValidBits.Default Status="Valid" IsReadOnly="true">8</ValidBits.Default>
+      <ValidPixelMaximum Status="Valid" IsReadOnly="true">4095</ValidPixelMaximum>
+      <ValidPixelMaximum.Type Status="Valid" IsReadOnly="true">IntegerType</ValidPixelMaximum.Type>
+      <ValidPixelMaximum.Default Status="Valid" IsReadOnly="true">255</ValidPixelMaximum.Default>
+      <ContinuousAcquisitionSafeMode Status="Valid">true</ContinuousAcquisitionSafeMode>
+      <ContinuousAcquisitionSafeMode.Type Status="Valid" IsReadOnly="true">BoolType</ContinuousAcquisitionSafeMode.Type>
+      <ContinuousAcquisitionSafeMode.Default Status="Valid" IsReadOnly="true">true</ContinuousAcquisitionSafeMode.Default>
+      <ContinuousAcquisitionSafeMode.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</ContinuousAcquisitionSafeMode.GuiHint>
+      <ContinuousAcquisitionSafeMode.Mode Status="Valid" IsReadOnly="true">Debug</ContinuousAcquisitionSafeMode.Mode>
+      <ContinuousAcquisitionSafeMode.Enabled Status="Valid" IsReadOnly="true">true</ContinuousAcquisitionSafeMode.Enabled>
+      <EnableSignalsForFastAcq Status="Valid"></EnableSignalsForFastAcq>
+      <EnableSignalsForFastAcq.Type Status="Valid" IsReadOnly="true">BoolType</EnableSignalsForFastAcq.Type>
+      <EnableSignalsForFastAcq.Default Status="Valid" IsReadOnly="true"></EnableSignalsForFastAcq.Default>
+      <EnableSignalsForFastAcq.GuiHint Status="Valid" IsReadOnly="true">GuiNone</EnableSignalsForFastAcq.GuiHint>
+      <EnableSignalsForFastAcq.Mode Status="Valid" IsReadOnly="true">Debug</EnableSignalsForFastAcq.Mode>
+      <ShadingReference Status="Valid">false</ShadingReference>
+      <ShadingReference.Type Status="Valid" IsReadOnly="true">BoolType</ShadingReference.Type>
+      <ShadingReference.Default Status="Valid" IsReadOnly="true">false</ShadingReference.Default>
+      <ShadingReference.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</ShadingReference.GuiHint>
+      <ShadingReferenceSource Status="Valid">1</ShadingReferenceSource>
+      <ShadingReferenceSource.Type Status="Valid" IsReadOnly="true">IntegerType</ShadingReferenceSource.Type>
+      <ShadingReferenceSource.ListItems Status="Valid" IsReadOnly="true">0|Global|Global,1|Specific|Specific,2|CellDiscoverer|CellDiscoverer</ShadingReferenceSource.ListItems>
+      <ShadingReferenceSource.Default Status="Valid" IsReadOnly="true">1</ShadingReferenceSource.Default>
+      <ShadingReferenceSource.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</ShadingReferenceSource.GuiHint>
+      <ShadingReferenceSourceVisibility Status="Valid">true</ShadingReferenceSourceVisibility>
+      <ShadingReferenceSourceVisibility.Type Status="Valid" IsReadOnly="true">BoolType</ShadingReferenceSourceVisibility.Type>
+      <ShadingReferenceSourceVisibility.Default Status="Valid" IsReadOnly="true">true</ShadingReferenceSourceVisibility.Default>
+      <ShadingReferenceSourceVisibility.GuiHint Status="Valid" IsReadOnly="true">GuiNone</ShadingReferenceSourceVisibility.GuiHint>
+      <ShadingReferenceSourceVisibility.Mode Status="Valid" IsReadOnly="true">NoPersist</ShadingReferenceSourceVisibility.Mode>
+      <ShadingReference.Enabled Status="Valid" IsReadOnly="true">false</ShadingReference.Enabled>
+      <Resolution Status="Valid">0</Resolution>
+      <Resolution.Type Status="Valid" IsReadOnly="true">IntegerType</Resolution.Type>
+      <Resolution.ListItems Status="Valid" IsReadOnly="true">0|Fast|Fast,1|High|High</Resolution.ListItems>
+      <Resolution.Default Status="Valid" IsReadOnly="true">1</Resolution.Default>
+      <Resolution.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</Resolution.GuiHint>
+      <BinningList Status="Valid">0</BinningList>
+      <BinningList.Type Status="Valid" IsReadOnly="true">IntegerType</BinningList.Type>
+      <BinningList.ListItems Status="Valid" IsReadOnly="true">0|1x1|1x1,1|2x2|2x2,2|3x3|3x3,3|4x4|4x4,4|5x5|5x5</BinningList.ListItems>
+      <BinningList.Default Status="Valid" IsReadOnly="true">0</BinningList.Default>
+      <BinningList.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</BinningList.GuiHint>
+      <Resolution.Label Status="Valid" IsReadOnly="true">IP Quality</Resolution.Label>
+      <ColorMode Status="Valid">1</ColorMode>
+      <ColorMode.Type Status="Valid" IsReadOnly="true">IntegerType</ColorMode.Type>
+      <ColorMode.ListItems Status="Valid" IsReadOnly="true">0|0|Monochrome,1|1|Color</ColorMode.ListItems>
+      <ColorMode.Default Status="Valid" IsReadOnly="true">1</ColorMode.Default>
+      <ColorMode.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</ColorMode.GuiHint>
+      <WhiteBalance.Type Status="Valid" IsReadOnly="true">StringType</WhiteBalance.Type>
+      <WhiteBalance.Default Status="Valid" IsReadOnly="true">1,1,1</WhiteBalance.Default>
+      <WhiteBalance.GuiHint Status="Valid" IsReadOnly="true">GuiWhiteBalanceValues</WhiteBalance.GuiHint>
+      <WhiteBalanceOffset Status="Valid">0</WhiteBalanceOffset>
+      <WhiteBalanceOffset.Type Status="Valid" IsReadOnly="true">DoubleType</WhiteBalanceOffset.Type>
+      <WhiteBalanceOffset.Default Status="Valid" IsReadOnly="true">0</WhiteBalanceOffset.Default>
+      <WhiteBalanceOffset.Min Status="Valid" IsReadOnly="true">-3</WhiteBalanceOffset.Min>
+      <WhiteBalanceOffset.Max Status="Valid" IsReadOnly="true">3</WhiteBalanceOffset.Max>
+      <WhiteBalanceOffset.Increment Status="Valid" IsReadOnly="true">0.1</WhiteBalanceOffset.Increment>
+      <WhiteBalanceOffset.GuiHint Status="Valid" IsReadOnly="true">GuiSlider</WhiteBalanceOffset.GuiHint>
+      <ColorSaturation Status="Valid">0.5</ColorSaturation>
+      <ColorSaturation.Type Status="Valid" IsReadOnly="true">DoubleType</ColorSaturation.Type>
+      <ColorSaturation.Default Status="Valid" IsReadOnly="true">0.5</ColorSaturation.Default>
+      <ColorSaturation.Min Status="Valid" IsReadOnly="true">0</ColorSaturation.Min>
+      <ColorSaturation.Max Status="Valid" IsReadOnly="true">1</ColorSaturation.Max>
+      <ColorSaturation.Increment Status="Valid" IsReadOnly="true">0.1</ColorSaturation.Increment>
+      <ColorSaturation.GuiHint Status="Valid" IsReadOnly="true">GuiSlider</ColorSaturation.GuiHint>
+      <ColorMode.Enabled Status="Valid" IsReadOnly="true">true</ColorMode.Enabled>
+      <WhiteBalance.Enabled Status="Valid" IsReadOnly="true">true</WhiteBalance.Enabled>
+      <WhiteBalanceOffset.Enabled Status="Valid" IsReadOnly="true">true</WhiteBalanceOffset.Enabled>
+      <ColorSaturation.Enabled Status="Valid" IsReadOnly="true">true</ColorSaturation.Enabled>
+      <WhiteBalance.ListItems Status="Valid" IsReadOnly="true">0|0.66098&amp;comma;1&amp;comma;0.40667|3200K,1|0.45050752&amp;comma;1&amp;comma;0.571064|5500K</WhiteBalance.ListItems>
+      <ExposureTime.Enabled Status="Valid" IsReadOnly="true">true</ExposureTime.Enabled>
+      <AnalogGainModeList Status="Valid">0</AnalogGainModeList>
+      <AnalogGainModeList.Type Status="Valid" IsReadOnly="true">IntegerType</AnalogGainModeList.Type>
+      <AnalogGainModeList.ListItems Status="Valid" IsReadOnly="true">0|1x (min)|1x (min),1|2x|2x,2|4x (opt)|4x (opt),3|8x|8x,4|16x (max)|16x (max)</AnalogGainModeList.ListItems>
+      <AnalogGainModeList.Default Status="Valid" IsReadOnly="true">0</AnalogGainModeList.Default>
+      <AnalogGainModeList.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</AnalogGainModeList.GuiHint>
+      <AnalogGainModeList.Enabled Status="Valid" IsReadOnly="true">true</AnalogGainModeList.Enabled>
+      <LiveBinning Status="Valid" IsReadOnly="true">1,1</LiveBinning>
+      <LiveBinning.Type Status="Valid" IsReadOnly="true">SizeType</LiveBinning.Type>
+      <LiveBinning.GuiHint Status="Valid" IsReadOnly="true">GuiNone</LiveBinning.GuiHint>
+      <LiveSpeed Status="Valid">0</LiveSpeed>
+      <LiveSpeed.Type Status="Valid" IsReadOnly="true">IntegerType</LiveSpeed.Type>
+      <LiveSpeed.Default Status="Valid" IsReadOnly="true">0</LiveSpeed.Default>
+      <LiveSpeed.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</LiveSpeed.GuiHint>
+      <LiveSpeed.Enabled Status="Valid" IsReadOnly="true">true</LiveSpeed.Enabled>
+      <LiveSpeed.ListItems Status="Valid" IsReadOnly="true">0|Slow|Slow,1|Medium|Medium,2|Fast|Fast</LiveSpeed.ListItems>
+      <SoftwareBinningList Status="Valid">0</SoftwareBinningList>
+      <SoftwareBinningList.Type Status="Valid" IsReadOnly="true">IntegerType</SoftwareBinningList.Type>
+      <SoftwareBinningList.ListItems Status="Valid" IsReadOnly="true">0|0|1x1,1|1|2x2,2|2|3x3,3|3|4x4,4|4|5x5</SoftwareBinningList.ListItems>
+      <SoftwareBinningList.Default Status="Valid" IsReadOnly="true">0</SoftwareBinningList.Default>
+      <SoftwareBinningList.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</SoftwareBinningList.GuiHint>
+      <SoftwareBinningList.Label Status="Valid" IsReadOnly="true">Post Processing|SW Subsampling</SoftwareBinningList.Label>
+      <SoftwareBinningList.Enabled Status="Valid" IsReadOnly="true">true</SoftwareBinningList.Enabled>
+      <ResamplingParameterKey Status="Valid">1</ResamplingParameterKey>
+      <ResamplingParameterKey.Type Status="Valid" IsReadOnly="true">DoubleType</ResamplingParameterKey.Type>
+      <ResamplingParameterKey.Default Status="Valid" IsReadOnly="true">1</ResamplingParameterKey.Default>
+      <ResamplingParameterKey.Min Status="Valid" IsReadOnly="true">0.001</ResamplingParameterKey.Min>
+      <ResamplingParameterKey.Max Status="Valid" IsReadOnly="true">500</ResamplingParameterKey.Max>
+      <ResamplingParameterKey.Increment Status="Valid" IsReadOnly="true">1E-06</ResamplingParameterKey.Increment>
+      <ResamplingParameterKey.Label Status="Valid" IsReadOnly="true">Post Processing|Resample</ResamplingParameterKey.Label>
+      <ResamplingParameterKey.GuiHint Status="Valid" IsReadOnly="true">GuiSlider</ResamplingParameterKey.GuiHint>
+      <ResamplingParameterKey.Enabled Status="Valid" IsReadOnly="true">true</ResamplingParameterKey.Enabled>
+      <ResamplingParameterKey.Mode Status="Valid" IsReadOnly="true">Debug</ResamplingParameterKey.Mode>
+      <ResamplingModeParameterKey Status="Valid">0</ResamplingModeParameterKey>
+      <ResamplingModeParameterKey.Type Status="Valid" IsReadOnly="true">IntegerType</ResamplingModeParameterKey.Type>
+      <ResamplingModeParameterKey.Default Status="Valid" IsReadOnly="true">0</ResamplingModeParameterKey.Default>
+      <ResamplingModeParameterKey.Label Status="Valid" IsReadOnly="true">Post Processing|Resample Mode</ResamplingModeParameterKey.Label>
+      <ResamplingModeParameterKey.ListItems Status="Valid" IsReadOnly="true">0|Nearest Neighbour|Nearest Neighbour,1|Linear|Linear</ResamplingModeParameterKey.ListItems>
+      <ResamplingModeParameterKey.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</ResamplingModeParameterKey.GuiHint>
+      <ResamplingModeParameterKey.Enabled Status="Valid" IsReadOnly="true">true</ResamplingModeParameterKey.Enabled>
+      <ResamplingModeParameterKey.Mode Status="Valid" IsReadOnly="true">Debug</ResamplingModeParameterKey.Mode>
+      <PixelClock Status="Valid">0</PixelClock>
+      <PixelClock.Type Status="Valid" IsReadOnly="true">IntegerType</PixelClock.Type>
+      <PixelClock.Default Status="Valid" IsReadOnly="true">0</PixelClock.Default>
+      <PixelClock.Label Status="Valid" IsReadOnly="true">Acquire|Readout Speed (MHz)</PixelClock.Label>
+      <PixelClock.ListItems Status="Valid" IsReadOnly="true">0|37|37</PixelClock.ListItems>
+      <PixelClock.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</PixelClock.GuiHint>
+      <PixelClock.Enabled Status="Valid" IsReadOnly="true">true</PixelClock.Enabled>
+      <CameraDisplayName.Type Status="Valid" IsReadOnly="true">StringType</CameraDisplayName.Type>
+      <CameraDisplayName.Default Status="Valid" IsReadOnly="true"></CameraDisplayName.Default>
+      <CameraDisplayName.GuiHint Status="Valid" IsReadOnly="true">GuiNone</CameraDisplayName.GuiHint>
+      <CameraDisplayName.Mode Status="Valid" IsReadOnly="true">Expert, NoPersist</CameraDisplayName.Mode>
+      <ImageDeliveryBufferCount Status="Valid">4</ImageDeliveryBufferCount>
+      <ImageDeliveryBufferCount.Type Status="Valid" IsReadOnly="true">IntegerType</ImageDeliveryBufferCount.Type>
+      <ImageDeliveryBufferCount.Default Status="Valid" IsReadOnly="true">4</ImageDeliveryBufferCount.Default>
+      <ImageDeliveryBufferCount.GuiHint Status="Valid" IsReadOnly="true">GuiNone</ImageDeliveryBufferCount.GuiHint>
+      <Adjust.Type Status="Valid" IsReadOnly="true">DoubleType</Adjust.Type>
+      <Adjust.Default Status="Valid" IsReadOnly="true">1</Adjust.Default>
+      <Adjust.Min Status="Valid" IsReadOnly="true">0.05</Adjust.Min>
+      <Adjust.Max Status="Valid" IsReadOnly="true">2</Adjust.Max>
+      <Adjust.Increment Status="Valid" IsReadOnly="true">0.05</Adjust.Increment>
+      <Adjust.GuiHint Status="Valid" IsReadOnly="true">GuiSlider</Adjust.GuiHint>
+      <Adjust.Enabled Status="Valid" IsReadOnly="true">true</Adjust.Enabled>
+      <AdjustFrameRate Status="Valid">true</AdjustFrameRate>
+      <AdjustFrameRate.Type Status="Valid" IsReadOnly="true">BoolType</AdjustFrameRate.Type>
+      <AdjustFrameRate.Default Status="Valid" IsReadOnly="true">true</AdjustFrameRate.Default>
+      <AdjustFrameRate.Label Status="Valid" IsReadOnly="true">Acquire|Adjust Live Frame Rate</AdjustFrameRate.Label>
+      <AdjustFrameRate.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</AdjustFrameRate.GuiHint>
+      <AdjustFrameRate.Mode Status="Valid" IsReadOnly="true">Expert</AdjustFrameRate.Mode>
+      <AdjustFrameRate.Enabled Status="Valid" IsReadOnly="true">true</AdjustFrameRate.Enabled>
+      <AdjustFrameRate.DisplayOrder Status="Valid" IsReadOnly="true">201</AdjustFrameRate.DisplayOrder>
+      <AutoExposure Status="Valid">true</AutoExposure>
+      <AutoExposure.Type Status="Valid" IsReadOnly="true">BoolType</AutoExposure.Type>
+      <AutoExposure.Default Status="Valid" IsReadOnly="true">false</AutoExposure.Default>
+      <AutoExposure.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</AutoExposure.GuiHint>
+      <AutoExposure.Enabled Status="Valid" IsReadOnly="true">true</AutoExposure.Enabled>
+      <AutoExposureFrame Status="Valid">Empty</AutoExposureFrame>
+      <AutoExposureFrame.Type Status="Valid" IsReadOnly="true">RectType</AutoExposureFrame.Type>
+      <AutoExposureFrame.Default Status="Valid" IsReadOnly="true">Empty</AutoExposureFrame.Default>
+      <AutoExposureFrame.GuiHint Status="Valid" IsReadOnly="true">GuiNone</AutoExposureFrame.GuiHint>
+      <AutoExposureFrame.Enabled Status="Valid" IsReadOnly="true">true</AutoExposureFrame.Enabled>
+      <Binning Status="Valid">1,1</Binning>
+      <Binning.Type Status="Valid" IsReadOnly="true">SizeType</Binning.Type>
+      <Binning.Default Status="Valid" IsReadOnly="true">1,1</Binning.Default>
+      <Binning.GuiHint Status="Valid" IsReadOnly="true">GuiNone</Binning.GuiHint>
+      <BinningExposureDependency Status="Valid" IsReadOnly="true">0</BinningExposureDependency>
+      <BinningExposureDependency.Type Status="Valid" IsReadOnly="true">IntegerType</BinningExposureDependency.Type>
+      <BinningExposureDependency.Default Status="Valid" IsReadOnly="true">2</BinningExposureDependency.Default>
+      <BinningExposureDependency.Label Status="Valid" IsReadOnly="true">Binning Exposure Dependency</BinningExposureDependency.Label>
+      <BinningExposureDependency.GuiHint Status="Valid" IsReadOnly="true">GuiTextBox</BinningExposureDependency.GuiHint>
+      <BinningExposureDependency.Mode Status="Valid" IsReadOnly="true">Debug, NoPersist</BinningExposureDependency.Mode>
+      <AdaptExposureByBinningChange Status="Valid">true</AdaptExposureByBinningChange>
+      <AdaptExposureByBinningChange.Type Status="Valid" IsReadOnly="true">BoolType</AdaptExposureByBinningChange.Type>
+      <AdaptExposureByBinningChange.Default Status="Valid" IsReadOnly="true">true</AdaptExposureByBinningChange.Default>
+      <AdaptExposureByBinningChange.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</AdaptExposureByBinningChange.GuiHint>
+      <AdaptExposureByBinningChange.Label Status="Valid" IsReadOnly="true">Binning-independent Brightness</AdaptExposureByBinningChange.Label>
+      <AdaptExposureByBinningChange.Enabled Status="Valid" IsReadOnly="true">true</AdaptExposureByBinningChange.Enabled>
+      <BlackReference Status="Valid">false</BlackReference>
+      <BlackReference.Type Status="Valid" IsReadOnly="true">BoolType</BlackReference.Type>
+      <BlackReference.Default Status="Valid" IsReadOnly="true">false</BlackReference.Default>
+      <BlackReference.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</BlackReference.GuiHint>
+      <BlackReference.Enabled Status="Valid" IsReadOnly="true">false</BlackReference.Enabled>
+      <DualCameraCalibration Status="Valid">false</DualCameraCalibration>
+      <DualCameraCalibration.Type Status="Valid" IsReadOnly="true">BoolType</DualCameraCalibration.Type>
+      <DualCameraCalibration.Default Status="Valid" IsReadOnly="true">false</DualCameraCalibration.Default>
+      <DualCameraCalibration.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</DualCameraCalibration.GuiHint>
+      <DualCameraCalibrationId Status="Valid">None</DualCameraCalibrationId>
+      <DualCameraCalibration.Enabled Status="Valid" IsReadOnly="true">false</DualCameraCalibration.Enabled>
+      <ExposureDelay Status="Valid">0</ExposureDelay>
+      <ExposureDelay.Type Status="Valid" IsReadOnly="true">DoubleType</ExposureDelay.Type>
+      <ExposureDelay.Default Status="Valid" IsReadOnly="true">0</ExposureDelay.Default>
+      <ExposureDelay.GuiHint Status="Valid" IsReadOnly="true">GuiNone</ExposureDelay.GuiHint>
+      <ExposureDelay.Max Status="Valid" IsReadOnly="true">1000</ExposureDelay.Max>
+      <FrameRate Status="Valid" IsReadOnly="true">30.4</FrameRate>
+      <FrameRate.Type Status="Valid" IsReadOnly="true">DoubleType</FrameRate.Type>
+      <FrameRate.Default Status="Valid" IsReadOnly="true">0</FrameRate.Default>
+      <FrameRate.Label Status="Valid" IsReadOnly="true">Acquire|Live Frame Rate</FrameRate.Label>
+      <FrameRate.GuiHint Status="Valid" IsReadOnly="true">GuiTextBox</FrameRate.GuiHint>
+      <FrameRate.Mode Status="Valid" IsReadOnly="true">Expert</FrameRate.Mode>
+      <FrameRate.DisplayOrder Status="Valid" IsReadOnly="true">203</FrameRate.DisplayOrder>
+      <FrameRateTarget Status="Valid">30</FrameRateTarget>
+      <FrameRateTarget.Type Status="Valid" IsReadOnly="true">DoubleType</FrameRateTarget.Type>
+      <FrameRateTarget.Default Status="Valid" IsReadOnly="true">30</FrameRateTarget.Default>
+      <FrameRateTarget.Min Status="Valid" IsReadOnly="true">1</FrameRateTarget.Min>
+      <FrameRateTarget.Max Status="Valid" IsReadOnly="true">100</FrameRateTarget.Max>
+      <FrameRateTarget.Increment Status="Valid" IsReadOnly="true">1</FrameRateTarget.Increment>
+      <FrameRateTarget.Label Status="Valid" IsReadOnly="true">Acquire|Live Frame Rate Max</FrameRateTarget.Label>
+      <FrameRateTarget.GuiHint Status="Valid" IsReadOnly="true">GuiSlider</FrameRateTarget.GuiHint>
+      <FrameRateTarget.Mode Status="Valid" IsReadOnly="true">Expert</FrameRateTarget.Mode>
+      <FrameRateTarget.Enabled Status="Valid" IsReadOnly="true">true</FrameRateTarget.Enabled>
+      <FrameRateTarget.DisplayOrder Status="Valid" IsReadOnly="true">202</FrameRateTarget.DisplayOrder>
+      <HDRBits Status="Valid">2</HDRBits>
+      <HDRBits.Type Status="Valid" IsReadOnly="true">IntegerType</HDRBits.Type>
+      <HDRBits.Default Status="Valid" IsReadOnly="true">2</HDRBits.Default>
+      <HDRBits.Min Status="Valid" IsReadOnly="true">2</HDRBits.Min>
+      <HDRBits.Max Status="Valid" IsReadOnly="true">6</HDRBits.Max>
+      <HDRBits.Increment Status="Valid" IsReadOnly="true">2</HDRBits.Increment>
+      <HDRBits.Mode Status="Valid" IsReadOnly="true">Expert</HDRBits.Mode>
+      <HDRBits.GuiHint Status="Valid" IsReadOnly="true">GuiNone</HDRBits.GuiHint>
+      <ImageOrientation.Enabled Status="Valid" IsReadOnly="true">true</ImageOrientation.Enabled>
+      <NoiseFilter Status="Valid">false</NoiseFilter>
+      <NoiseFilter.Type Status="Valid" IsReadOnly="true">BoolType</NoiseFilter.Type>
+      <NoiseFilter.Default Status="Valid" IsReadOnly="true">false</NoiseFilter.Default>
+      <NoiseFilter.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</NoiseFilter.GuiHint>
+      <NoiseFilterThreshold Status="Valid">1.5</NoiseFilterThreshold>
+      <NoiseFilterThreshold.Type Status="Valid" IsReadOnly="true">DoubleType</NoiseFilterThreshold.Type>
+      <NoiseFilterThreshold.Default Status="Valid" IsReadOnly="true">1.5</NoiseFilterThreshold.Default>
+      <NoiseFilterThreshold.Min Status="Valid" IsReadOnly="true">0</NoiseFilterThreshold.Min>
+      <NoiseFilterThreshold.Max Status="Valid" IsReadOnly="true">10</NoiseFilterThreshold.Max>
+      <NoiseFilterThreshold.Increment Status="Valid" IsReadOnly="true">0.1</NoiseFilterThreshold.Increment>
+      <NoiseFilterThreshold.GuiHint Status="Valid" IsReadOnly="true">GuiSlider</NoiseFilterThreshold.GuiHint>
+      <NoiseFilter.Enabled Status="Valid" IsReadOnly="true">true</NoiseFilter.Enabled>
+      <NoiseFilterThreshold.Enabled Status="Valid" IsReadOnly="true">true</NoiseFilterThreshold.Enabled>
+      <ReferenceImageCount Status="Valid">3</ReferenceImageCount>
+      <ReferenceImageCount.Type Status="Valid" IsReadOnly="true">IntegerType</ReferenceImageCount.Type>
+      <ReferenceImageCount.Default Status="Valid" IsReadOnly="true">3</ReferenceImageCount.Default>
+      <ReferenceImageCount.GuiHint Status="Valid" IsReadOnly="true">GuiNone</ReferenceImageCount.GuiHint>
+      <ReferenceImageCount.Label Status="Valid" IsReadOnly="true">Post Processing|Reference Image Count</ReferenceImageCount.Label>
+      <ReferenceImageCount.Enabled Status="Valid" IsReadOnly="true">true</ReferenceImageCount.Enabled>
+      <ReferenceImageCount.Min Status="Valid" IsReadOnly="true">1</ReferenceImageCount.Min>
+      <ReferenceImageCount.Max Status="Valid" IsReadOnly="true">5</ReferenceImageCount.Max>
+      <ReferenceImageCount.Increment Status="Valid" IsReadOnly="true">1</ReferenceImageCount.Increment>
+      <ReferenceImageCount.Mode Status="Valid" IsReadOnly="true">Expert</ReferenceImageCount.Mode>
+      <SnapMode Status="Valid">0</SnapMode>
+      <SnapMode.Type Status="Valid" IsReadOnly="true">IntegerType</SnapMode.Type>
+      <SnapMode.ListItems Status="Valid" IsReadOnly="true">0|Normal|Normal,2|Average|Average,6|Overview|Overview,8|Live|Live,10|Shading|Shading,3|HDR|HDR</SnapMode.ListItems>
+      <SnapMode.Default Status="Valid" IsReadOnly="true">0</SnapMode.Default>
+      <SnapMode.GuiHint Status="Valid" IsReadOnly="true">GuiNone</SnapMode.GuiHint>
+      <SnapMode.Label Status="Valid" IsReadOnly="true">Acquire|Snap Mode</SnapMode.Label>
+      <SnapMode.Mode Status="Valid" IsReadOnly="true">Expert, NoPersist</SnapMode.Mode>
+      <ToneMappingFunction Status="Valid">0</ToneMappingFunction>
+      <ToneMappingFunction.Type Status="Valid" IsReadOnly="true">IntegerType</ToneMappingFunction.Type>
+      <ToneMappingFunction.ListItems Status="Valid" IsReadOnly="true">0|None|None,2|Enhance Local Contrast|Enhance Local Contrast</ToneMappingFunction.ListItems>
+      <ToneMappingFunction.Default Status="Valid" IsReadOnly="true">0</ToneMappingFunction.Default>
+      <ToneMappingFunction.Label Status="Valid" IsReadOnly="true">Post Processing|Tone Mapping Function</ToneMappingFunction.Label>
+      <ToneMappingFunction.GuiHint Status="Valid" IsReadOnly="true">GuiNone</ToneMappingFunction.GuiHint>
+      <ToneMappingFunction.Enabled Status="Valid" IsReadOnly="true">true</ToneMappingFunction.Enabled>
+      <ToneMappingFunction.Mode Status="Valid" IsReadOnly="true">Expert, NoPersist</ToneMappingFunction.Mode>
+      <ToneMappingFunction.DisplayOrder Status="Valid" IsReadOnly="true">2000</ToneMappingFunction.DisplayOrder>
+      <EnhanceClipLimit Status="Valid">0.3</EnhanceClipLimit>
+      <EnhanceClipLimit.Type Status="Valid" IsReadOnly="true">DoubleType</EnhanceClipLimit.Type>
+      <EnhanceClipLimit.Default Status="Valid" IsReadOnly="true">0.3</EnhanceClipLimit.Default>
+      <EnhanceClipLimit.Min Status="Valid" IsReadOnly="true">0</EnhanceClipLimit.Min>
+      <EnhanceClipLimit.Max Status="Valid" IsReadOnly="true">10</EnhanceClipLimit.Max>
+      <EnhanceClipLimit.Increment Status="Valid" IsReadOnly="true">0.05</EnhanceClipLimit.Increment>
+      <EnhanceClipLimit.Label Status="Valid" IsReadOnly="true">Post Processing|Enhance Clip Limit</EnhanceClipLimit.Label>
+      <EnhanceClipLimit.Enabled Status="Valid" IsReadOnly="true">false</EnhanceClipLimit.Enabled>
+      <EnhanceClipLimit.Mode Status="Valid" IsReadOnly="true">Expert, NoPersist</EnhanceClipLimit.Mode>
+      <EnhanceClipLimit.DisplayOrder Status="Valid" IsReadOnly="true">2001</EnhanceClipLimit.DisplayOrder>
+      <EnhanceClipLimit.GuiHint Status="Valid" IsReadOnly="true">GuiNone</EnhanceClipLimit.GuiHint>
+      <EnhanceRegionSizePercentage Status="Valid">15</EnhanceRegionSizePercentage>
+      <EnhanceRegionSizePercentage.Type Status="Valid" IsReadOnly="true">IntegerType</EnhanceRegionSizePercentage.Type>
+      <EnhanceRegionSizePercentage.Default Status="Valid" IsReadOnly="true">15</EnhanceRegionSizePercentage.Default>
+      <EnhanceRegionSizePercentage.Min Status="Valid" IsReadOnly="true">0</EnhanceRegionSizePercentage.Min>
+      <EnhanceRegionSizePercentage.Max Status="Valid" IsReadOnly="true">100</EnhanceRegionSizePercentage.Max>
+      <EnhanceRegionSizePercentage.Increment Status="Valid" IsReadOnly="true">1</EnhanceRegionSizePercentage.Increment>
+      <EnhanceRegionSizePercentage.Label Status="Valid" IsReadOnly="true">Post Processing|Enhance Region Size</EnhanceRegionSizePercentage.Label>
+      <EnhanceRegionSizePercentage.Enabled Status="Valid" IsReadOnly="true">false</EnhanceRegionSizePercentage.Enabled>
+      <EnhanceRegionSizePercentage.Mode Status="Valid" IsReadOnly="true">Expert, NoPersist</EnhanceRegionSizePercentage.Mode>
+      <EnhanceRegionSizePercentage.DisplayOrder Status="Valid" IsReadOnly="true">2002</EnhanceRegionSizePercentage.DisplayOrder>
+      <EnhanceRegionSizePercentage.GuiHint Status="Valid" IsReadOnly="true">GuiNone</EnhanceRegionSizePercentage.GuiHint>
+      <UnsharpMask Status="Valid">false</UnsharpMask>
+      <UnsharpMask.Type Status="Valid" IsReadOnly="true">BoolType</UnsharpMask.Type>
+      <UnsharpMask.Default Status="Valid" IsReadOnly="true">false</UnsharpMask.Default>
+      <UnsharpMask.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</UnsharpMask.GuiHint>
+      <UnsharpMaskState Status="Valid"></UnsharpMaskState>
+      <UnsharpMaskState.Type Status="Valid" IsReadOnly="true">StringType</UnsharpMaskState.Type>
+      <UnsharpMaskState.Default Status="Valid" IsReadOnly="true"></UnsharpMaskState.Default>
+      <UnsharpMask.Enabled Status="Valid" IsReadOnly="true">true</UnsharpMask.Enabled>
+      <ImageCount Status="Valid">3</ImageCount>
+      <ImageCount.Type Status="Valid" IsReadOnly="true">IntegerType</ImageCount.Type>
+      <ImageCount.Default Status="Valid" IsReadOnly="true">3</ImageCount.Default>
+      <ImageCount.Min Status="Valid" IsReadOnly="true">2</ImageCount.Min>
+      <ImageCount.Max Status="Valid" IsReadOnly="true">32</ImageCount.Max>
+      <ImageCount.Increment Status="Valid" IsReadOnly="true">1</ImageCount.Increment>
+      <ImageCount.Mode Status="Valid" IsReadOnly="true">Expert</ImageCount.Mode>
+      <AcquisitionFrame Status="Valid">0,0,2464,2056</AcquisitionFrame>
+      <AcquisitionFrame.Type Status="Valid" IsReadOnly="true">RectType</AcquisitionFrame.Type>
+      <AcquisitionFrame.Max Status="Valid" IsReadOnly="true">0,0,2464,2056</AcquisitionFrame.Max>
+      <SDKVersion Status="Valid">1.78</SDKVersion>
+      <SDKVersion.Type Status="Valid" IsReadOnly="true">StringType</SDKVersion.Type>
+      <SDKVersion.Default Status="Valid" IsReadOnly="true">1.78</SDKVersion.Default>
+      <SDKVersion.GuiHint Status="Valid" IsReadOnly="true">GuiNone</SDKVersion.GuiHint>
+      <EnableLiveSpeed Status="Valid">true</EnableLiveSpeed>
+      <EnableLiveSpeed.Type Status="Valid" IsReadOnly="true">BoolType</EnableLiveSpeed.Type>
+      <EnableLiveSpeed.Default Status="Valid" IsReadOnly="true">true</EnableLiveSpeed.Default>
+      <EnableLiveSpeed.Enabled Status="Valid" IsReadOnly="true">true</EnableLiveSpeed.Enabled>
+      <EnableLiveSpeed.Mode Status="Valid" IsReadOnly="true">Expert</EnableLiveSpeed.Mode>
+      <EnableLiveSpeed.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</EnableLiveSpeed.GuiHint>
+      <EnableLiveSpeed.Label Status="Valid" IsReadOnly="true">Enable Live Speed</EnableLiveSpeed.Label>
+      <AbortOnMissedFrames Status="Valid">true</AbortOnMissedFrames>
+      <AbortOnMissedFrames.Type Status="Valid" IsReadOnly="true">BoolType</AbortOnMissedFrames.Type>
+      <AbortOnMissedFrames.Default Status="Valid" IsReadOnly="true">true</AbortOnMissedFrames.Default>
+      <AbortOnMissedFrames.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</AbortOnMissedFrames.GuiHint>
+      <AbortOnMissedFrames.Mode Status="Valid" IsReadOnly="true">Expert</AbortOnMissedFrames.Mode>
+      <AbortOnMissedFrames.Label Status="Valid" IsReadOnly="true">Abort on missed frames</AbortOnMissedFrames.Label>
+      <AbortOnMissedFrames.Enabled Status="Valid" IsReadOnly="true">true</AbortOnMissedFrames.Enabled>
+      <VerifiedFrame Status="Valid" IsReadOnly="true">0,0,2464,2056</VerifiedFrame>
+      <VerifiedFrame.Type Status="Valid" IsReadOnly="true">RectType</VerifiedFrame.Type>
+      <VerifiedFrame.Label Status="Valid" IsReadOnly="true">Acquire|Verified Frame</VerifiedFrame.Label>
+      <VerifiedFrame.GuiHint Status="Valid" IsReadOnly="true">GuiNone</VerifiedFrame.GuiHint>
+      <FrameTime Status="Valid">0</FrameTime>
+      <FrameTime.Type Status="Valid" IsReadOnly="true">DoubleType</FrameTime.Type>
+      <FrameTime.Default Status="Valid" IsReadOnly="true">0</FrameTime.Default>
+      <FrameTime.Label Status="Valid" IsReadOnly="true">Acquire|Frame Time</FrameTime.Label>
+      <FrameTime.GuiHint Status="Valid" IsReadOnly="true">GuiSlider</FrameTime.GuiHint>
+      <FrameTime.Enabled Status="Valid" IsReadOnly="true">true</FrameTime.Enabled>
+      <FrameTime.Min Status="Valid" IsReadOnly="true">0</FrameTime.Min>
+      <FrameTime.Max Status="Valid" IsReadOnly="true">5000</FrameTime.Max>
+      <FrameTime.Mode Status="Valid" IsReadOnly="true">Expert</FrameTime.Mode>
+      <ReadoutTime Status="Valid" IsReadOnly="true">28</ReadoutTime>
+      <ReadoutTime.Type Status="Valid" IsReadOnly="true">DoubleType</ReadoutTime.Type>
+      <ReadoutTime.Default Status="Valid" IsReadOnly="true">0</ReadoutTime.Default>
+      <ReadoutTime.Label Status="Valid" IsReadOnly="true">Acquire|Readout Time</ReadoutTime.Label>
+      <ReadoutTime.GuiHint Status="Valid" IsReadOnly="true">GuiTextBox</ReadoutTime.GuiHint>
+      <ReadoutTime.Enabled Status="Valid" IsReadOnly="true">false</ReadoutTime.Enabled>
+      <ReadoutTime.Min Status="Valid" IsReadOnly="true">0</ReadoutTime.Min>
+      <ReadoutTime.Max Status="Valid" IsReadOnly="true">1000</ReadoutTime.Max>
+      <PowerStateCurrent Status="Valid" IsReadOnly="true">Active</PowerStateCurrent>
+      <PowerStateCurrent.Type Status="Valid" IsReadOnly="true">StringType</PowerStateCurrent.Type>
+      <PowerStateCurrent.Default Status="Valid" IsReadOnly="true"></PowerStateCurrent.Default>
+      <PowerStateCurrent.Label Status="Valid" IsReadOnly="true">Acquire|Cooling</PowerStateCurrent.Label>
+      <PowerStateCurrent.GuiHint Status="Valid" IsReadOnly="true">GuiTextBox</PowerStateCurrent.GuiHint>
+      <PowerStateCurrent.Enabled Status="Valid" IsReadOnly="true">false</PowerStateCurrent.Enabled>
+      <SnapWithSWTrigger Status="Valid">false</SnapWithSWTrigger>
+      <SnapWithSWTrigger.Type Status="Valid" IsReadOnly="true">BoolType</SnapWithSWTrigger.Type>
+      <SnapWithSWTrigger.Default Status="Valid" IsReadOnly="true">false</SnapWithSWTrigger.Default>
+      <SnapWithSWTrigger.Enabled Status="Valid" IsReadOnly="true">true</SnapWithSWTrigger.Enabled>
+      <SnapWithSWTrigger.Mode Status="Valid" IsReadOnly="true">Debug</SnapWithSWTrigger.Mode>
+      <SnapWithSWTrigger.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</SnapWithSWTrigger.GuiHint>
+      <SnapWithSWTrigger.Label Status="Valid" IsReadOnly="true">Snap with SW Trigger</SnapWithSWTrigger.Label>
+      <LineFlickerSuppression Status="Valid">2</LineFlickerSuppression>
+      <LineFlickerSuppression.Type Status="Valid" IsReadOnly="true">IntegerType</LineFlickerSuppression.Type>
+      <LineFlickerSuppression.ListItems Status="Valid" IsReadOnly="true">0|Off|Off,2|Bilinear|Bilinear</LineFlickerSuppression.ListItems>
+      <LineFlickerSuppression.Default Status="Valid" IsReadOnly="true">2</LineFlickerSuppression.Default>
+      <LineFlickerSuppression.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</LineFlickerSuppression.GuiHint>
+      <LineFlickerSuppression.Enabled Status="Valid" IsReadOnly="true">true</LineFlickerSuppression.Enabled>
+      <LineFlickerSuppression.Mode Status="Valid" IsReadOnly="true">Expert</LineFlickerSuppression.Mode>
+      <LineFlickerSuppression.Label Status="Valid" IsReadOnly="true">Line Flicker Suppression</LineFlickerSuppression.Label>
+      <HighImageRateMode Status="Valid">true</HighImageRateMode>
+      <HighImageRateMode.Type Status="Valid" IsReadOnly="true">BoolType</HighImageRateMode.Type>
+      <HighImageRateMode.Default Status="Valid" IsReadOnly="true">true</HighImageRateMode.Default>
+      <HighImageRateMode.Enabled Status="Valid" IsReadOnly="true">true</HighImageRateMode.Enabled>
+      <HighImageRateMode.GuiHint Status="Valid" IsReadOnly="true">GuiCheckBox</HighImageRateMode.GuiHint>
+      <HighImageRateMode.Mode Status="Valid" IsReadOnly="true">Expert</HighImageRateMode.Mode>
+      <HighImageRateMode.Label Status="Valid" IsReadOnly="true">High Image Rate Mode</HighImageRateMode.Label>
+      <CameraSubsampling Status="Valid">0</CameraSubsampling>
+      <CameraSubsampling.Type Status="Valid" IsReadOnly="true">IntegerType</CameraSubsampling.Type>
+      <CameraSubsampling.ListItems Status="Valid" IsReadOnly="true">0|1x1|1x1,1|2x2|2x2</CameraSubsampling.ListItems>
+      <CameraSubsampling.Default Status="Valid" IsReadOnly="true">0</CameraSubsampling.Default>
+      <CameraSubsampling.Enabled Status="Valid" IsReadOnly="true">true</CameraSubsampling.Enabled>
+      <CameraBitsPerPixel Status="Valid">0</CameraBitsPerPixel>
+      <CameraBitsPerPixel.Type Status="Valid" IsReadOnly="true">IntegerType</CameraBitsPerPixel.Type>
+      <CameraBitsPerPixel.ListItems Status="Valid" IsReadOnly="true">0|12|12,1|8|8</CameraBitsPerPixel.ListItems>
+      <CameraBitsPerPixel.Default Status="Valid" IsReadOnly="true">0</CameraBitsPerPixel.Default>
+      <CameraBitsPerPixel.Enabled Status="Valid" IsReadOnly="true">true</CameraBitsPerPixel.Enabled>
+      <CameraLUT1 Status="Valid">0</CameraLUT1>
+      <CameraLUT1.Type Status="Valid" IsReadOnly="true">DoubleType</CameraLUT1.Type>
+      <CameraLUT1.Default Status="Valid" IsReadOnly="true">0</CameraLUT1.Default>
+      <CameraLUT1.Min Status="Valid" IsReadOnly="true">0</CameraLUT1.Min>
+      <CameraLUT1.Max Status="Valid" IsReadOnly="true">1</CameraLUT1.Max>
+      <CameraLUT1.Increment Status="Valid" IsReadOnly="true">0.01</CameraLUT1.Increment>
+      <CameraLUT1.Enabled Status="Valid" IsReadOnly="true">false</CameraLUT1.Enabled>
+      <CameraLUT2 Status="Valid">1</CameraLUT2>
+      <CameraLUT2.Type Status="Valid" IsReadOnly="true">DoubleType</CameraLUT2.Type>
+      <CameraLUT2.Default Status="Valid" IsReadOnly="true">1</CameraLUT2.Default>
+      <CameraLUT2.Min Status="Valid" IsReadOnly="true">0</CameraLUT2.Min>
+      <CameraLUT2.Max Status="Valid" IsReadOnly="true">1</CameraLUT2.Max>
+      <CameraLUT2.Increment Status="Valid" IsReadOnly="true">0.01</CameraLUT2.Increment>
+      <CameraLUT2.Enabled Status="Valid" IsReadOnly="true">false</CameraLUT2.Enabled>
+      <CameraGamma Status="Valid">1</CameraGamma>
+      <CameraGamma.Type Status="Valid" IsReadOnly="true">DoubleType</CameraGamma.Type>
+      <CameraGamma.Default Status="Valid" IsReadOnly="true">1</CameraGamma.Default>
+      <CameraGamma.Min Status="Valid" IsReadOnly="true">0.25</CameraGamma.Min>
+      <CameraGamma.Max Status="Valid" IsReadOnly="true">4</CameraGamma.Max>
+      <CameraGamma.Increment Status="Valid" IsReadOnly="true">0.01</CameraGamma.Increment>
+      <CameraGamma.Enabled Status="Valid" IsReadOnly="true">false</CameraGamma.Enabled>
+      <Temperature Status="Valid" IsReadOnly="true">25</Temperature>
+      <Temperature.Type Status="Valid" IsReadOnly="true">DoubleType</Temperature.Type>
+      <Temperature.Default Status="Valid" IsReadOnly="true">-20</Temperature.Default>
+      <Temperature.GuiHint Status="Valid" IsReadOnly="true">GuiTextBox</Temperature.GuiHint>
+      <Temperature.Label Status="Valid" IsReadOnly="true">Temperature|Temperature</Temperature.Label>
+      <Temperature.Enabled Status="Valid" IsReadOnly="true">false</Temperature.Enabled>
+      <TemperatureState Status="Valid" IsReadOnly="true">Stable</TemperatureState>
+      <TemperatureState.Type Status="Valid" IsReadOnly="true">IntegerType</TemperatureState.Type>
+      <TemperatureState.ListItems Status="Valid" IsReadOnly="true">0|Stable|Stable,1|Unstable|Unstable,2|Cooling|Cooling,3|Heating|Heating</TemperatureState.ListItems>
+      <TemperatureState.Default Status="Valid" IsReadOnly="true">1</TemperatureState.Default>
+      <TemperatureState.GuiHint Status="Valid" IsReadOnly="true">GuiTextBox</TemperatureState.GuiHint>
+      <TemperatureState.Label Status="Valid" IsReadOnly="true">Temperature|Temperature State</TemperatureState.Label>
+      <TemperatureState.Enabled Status="Valid" IsReadOnly="true">true</TemperatureState.Enabled>
+      <AutoCompression Status="Valid">0</AutoCompression>
+      <AutoCompression.Type Status="Valid" IsReadOnly="true">IntegerType</AutoCompression.Type>
+      <AutoCompression.Default Status="Valid" IsReadOnly="true">0</AutoCompression.Default>
+      <AutoCompression.Label Status="Valid" IsReadOnly="true">Acquire|Bandwidth Management</AutoCompression.Label>
+      <AutoCompression.GuiHint Status="Valid" IsReadOnly="true">GuiComboBox</AutoCompression.GuiHint>
+      <AutoCompression.Enabled Status="Valid" IsReadOnly="true">true</AutoCompression.Enabled>
+      <AutoCompression.ListItems Status="Valid" IsReadOnly="true">0|Auto|Auto,1|On|On,2|Off|Off</AutoCompression.ListItems>
+      <AutoCompression.Mode Status="Valid" IsReadOnly="true">Expert</AutoCompression.Mode>
+      <ContinuousAcquisitionMode Status="Valid">0</ContinuousAcquisitionMode>
+      <ContinuousAcquisitionMode.Type Status="Valid" IsReadOnly="true">IntegerType</ContinuousAcquisitionMode.Type>
+      <ContinuousAcquisitionMode.ListItems Status="Valid" IsReadOnly="true">0|Normal|Normal,1|Burst|Burst,2|LineScan|LineScan,4|MultiSnap|MultiSnap</ContinuousAcquisitionMode.ListItems>
+      <ContinuousAcquisitionMode.Default Status="Valid" IsReadOnly="true">0</ContinuousAcquisitionMode.Default>
+      <SequenceCount Status="Valid">0</SequenceCount>
+      <SequenceCount.GuiHint Status="Valid" IsReadOnly="true">GuiNone</SequenceCount.GuiHint>
+      <SequenceCount.Mode Status="Valid" IsReadOnly="true">Expert, NoPersist</SequenceCount.Mode>
+      <SequenceProgress Status="Valid">true</SequenceProgress>
+      <SequenceProgress.Type Status="Valid" IsReadOnly="true">BoolType</SequenceProgress.Type>
+      <SequenceProgress.Default Status="Valid" IsReadOnly="true">true</SequenceProgress.Default>
+      <SequenceProgress.GuiHint Status="Valid" IsReadOnly="true">GuiNone</SequenceProgress.GuiHint>
+      <ContinuousAcquisitionMode.GuiHint Status="Valid" IsReadOnly="true">GuiNone</ContinuousAcquisitionMode.GuiHint>
+      <ContinuousAcquisitionMode.Mode Status="Valid" IsReadOnly="true">NoPersist</ContinuousAcquisitionMode.Mode>
+      <LEDIntensity Status="Valid">9</LEDIntensity>
+      <LEDIntensity.Type Status="Valid" IsReadOnly="true">IntegerType</LEDIntensity.Type>
+      <LEDIntensity.Default Status="Valid" IsReadOnly="true">9</LEDIntensity.Default>
+      <LEDIntensity.GuiHint Status="Valid" IsReadOnly="true">GuiSlider</LEDIntensity.GuiHint>
+      <LEDIntensity.Enabled Status="Valid" IsReadOnly="true">true</LEDIntensity.Enabled>
+      <LEDIntensity.Label Status="Valid" IsReadOnly="true">Main LED</LEDIntensity.Label>
+      <LEDIntensity.Min Status="Valid" IsReadOnly="true">0</LEDIntensity.Min>
+      <LEDIntensity.Max Status="Valid" IsReadOnly="true">9</LEDIntensity.Max>
+      <LEDIntensity.Mode Status="Valid" IsReadOnly="true">Expert</LEDIntensity.Mode>
+      <CameraIdentifier Status="Valid" IsReadOnly="true">Axiocam305c_S221</CameraIdentifier>
+      <CameraIdentifier.Type Status="Valid" IsReadOnly="true">StringType</CameraIdentifier.Type>
+      <CameraIdentifier.Default Status="Valid" IsReadOnly="true"></CameraIdentifier.Default>
+      <CameraIdentifier.GuiHint Status="Valid" IsReadOnly="true">GuiTextBox</CameraIdentifier.GuiHint>
+      <CameraIdentifier.DisplayOrder Status="Valid" IsReadOnly="true">-999</CameraIdentifier.DisplayOrder>
+      <CameraIdentifier.Label Status="Valid" IsReadOnly="true">Camera Identifier</CameraIdentifier.Label>
+      <EasyHDR Status="Valid">true</EasyHDR>
+      <EasyHDR.Type Status="Valid" IsReadOnly="true">BoolType</EasyHDR.Type>
+      <EasyHDR.Default Status="Valid" IsReadOnly="true">true</EasyHDR.Default>
+      <SuppressTemperatureWarnings Status="Valid">false</SuppressTemperatureWarnings>
+      <SuppressTemperatureWarnings.Type Status="Valid" IsReadOnly="true">BoolType</SuppressTemperatureWarnings.Type>
+      <SuppressTemperatureWarnings.Default Status="Valid" IsReadOnly="true">false</SuppressTemperatureWarnings.Default>
+      <SuppressTemperatureWarnings.Mode Status="Valid" IsReadOnly="true">NoPersist</SuppressTemperatureWarnings.Mode>
+      <Resolution.Enabled Status="Valid" IsReadOnly="true">true</Resolution.Enabled>
+      <BinningList.Enabled Status="Valid" IsReadOnly="true">true</BinningList.Enabled>
+      <Frame.Enabled Status="Valid" IsReadOnly="true">true</Frame.Enabled>
+      <LiveImageFrame.Max Status="Valid" IsReadOnly="true">0,0,2464,2056</LiveImageFrame.Max>
+      <EasyHDR.Enabled Status="Valid" IsReadOnly="true">false</EasyHDR.Enabled>
+      <HDRBits.Enabled Status="Valid" IsReadOnly="true">false</HDRBits.Enabled>
+      <ImageCount.Enabled Status="Valid" IsReadOnly="true">false</ImageCount.Enabled>
+      <TheoreticalTotalMagnification Status="Valid" IsActivated="true" IsReadOnly="true">3.15</TheoreticalTotalMagnification>
+      <TotalMagnification Status="Valid" IsActivated="true" IsReadOnly="true">3.15</TotalMagnification>
+      <DefaultScalingUnit Status="Valid" IsActivated="true" IsReadOnly="true">µm</DefaultScalingUnit>
+      <RoiCenterOffsetX Status="Valid" IsActivated="true" IsReadOnly="true">-8.762</RoiCenterOffsetX>
+      <RoiCenterOffsetY Status="Valid" IsActivated="true" IsReadOnly="true">-1.095</RoiCenterOffsetY>
+      <TotalAperture Status="Valid" IsActivated="true" IsReadOnly="true">0.13</TotalAperture>
+      <ShadingReferenceSource.Type.Readonly Status="Valid">true</ShadingReferenceSource.Type.Readonly>
+      <ShadingReferenceSource.ListItems.Readonly Status="Valid">true</ShadingReferenceSource.ListItems.Readonly>
+      <ShadingReferenceSource.Default.Readonly Status="Valid">true</ShadingReferenceSource.Default.Readonly>
+      <ShadingReferenceSource.GuiHint.Readonly Status="Valid">true</ShadingReferenceSource.GuiHint.Readonly>
+      <SequenceCount.GuiHint.Readonly Status="Valid">true</SequenceCount.GuiHint.Readonly>
+      <SequenceCount.Mode.Readonly Status="Valid">true</SequenceCount.Mode.Readonly>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBCameraAdapter_MTBTube_Cameraport">
+      <TheoreticalTotalMagnification Status="Valid" IsReadOnly="true">3.15</TheoreticalTotalMagnification>
+      <TotalAperture Status="Valid" IsReadOnly="true">0.13</TotalAperture>
+      <TotalMagnification Status="Valid" IsReadOnly="true">3.15</TotalMagnification>
+      <DefaultScalingUnit Status="Valid" IsReadOnly="true">µm</DefaultScalingUnit>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBEyePiece">
+      <TheoreticalTotalMagnification Status="Valid" IsReadOnly="true">50</TheoreticalTotalMagnification>
+      <TotalAperture Status="Valid" IsReadOnly="true">0.13</TotalAperture>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBFocus">
+      <Position Status="Valid" Unit="µm">-1649.05</Position>
+      <MeasurementPosition Status="Valid" IsReadOnly="true">-1649.05</MeasurementPosition>
+      <IsPrecise Status="Valid">false</IsPrecise>
+      <AxisSetPositionMode Status="Valid">Default</AxisSetPositionMode>
+      <Speed Status="Valid">0</Speed>
+      <ContinualSpeed Status="Valid">6000</ContinualSpeed>
+      <ContinualAcceleration Status="Valid">10000</ContinualAcceleration>
+      <IsHandwheelDeactivated Status="Valid">false</IsHandwheelDeactivated>
+      <IsLowerSWLimitEnabled Status="Valid" IsReadOnly="true">true</IsLowerSWLimitEnabled>
+      <LowerSWLimit Status="Valid" IsReadOnly="true">-25000</LowerSWLimit>
+      <IsUpperSWLimitEnabled Status="Valid" IsReadOnly="true">true</IsUpperSWLimitEnabled>
+      <UpperSWLimit Status="Valid" IsReadOnly="true">25000</UpperSWLimit>
+      <AxisCalibrationMode Status="Valid" IsReadOnly="true">NotCalibrated</AxisCalibrationMode>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBObjectiveChanger">
+      <Position Status="Valid">3</Position>
+      <PositionName Status="Valid">Objective.422030-9961-000</PositionName>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBReflectorChanger">
+      <Position Status="Valid">3</Position>
+      <PositionName Status="Valid">Reflector.424922-9901-000</PositionName>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBRLHalogenLamp">
+      <Intensity Status="Valid">11.1515625</Intensity>
+      <LampMode Status="Valid">Manual</LampMode>
+      <LampActive Status="Valid" IsReadOnly="true">true</LampActive>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBRLShutter">
+      <PositionName Status="Valid">Shutter.Open</PositionName>
+      <IsClosed Status="Valid">false</IsClosed>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBRLTLSwitch">
+      <Position Status="Valid">2</Position>
+      <PositionName Status="Valid">RLTLSwitch.RL</PositionName>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBTLHalogenLamp">
+      <Intensity Status="SuperValid">12.2</Intensity>
+      <LampMode Status="SuperValid">Standby</LampMode>
+      <LampActive Status="SuperValid" IsReadOnly="true">false</LampActive>
+    </ParameterCollection>
+    <ParameterCollection Id="MTBTubeVisCamChanger">
+      <Position Status="Valid">1</Position>
+      <PositionName Status="Valid">FotoTube.VIS_Cam_100/0</PositionName>
+    </ParameterCollection>
+    <ParameterCollection Id="SoftwareAutofocus">
+      <IsInitialized Status="Valid">true</IsInitialized>
+      <IsRunning Status="Valid">false</IsRunning>
+      <AutofocusResult Status="Valid">Undefined</AutofocusResult>
+      <AutofocusSignalQuality Status="Valid">0</AutofocusSignalQuality>
+    </ParameterCollection>
+    <ParameterCollection Id="Autofocus">
+      <IsInitialized Status="Valid">true</IsInitialized>
+      <IsRunning Status="Valid">false</IsRunning>
+      <AutofocusResult Status="Valid">Undefined</AutofocusResult>
+      <AutofocusSignalQuality Status="Valid">0</AutofocusSignalQuality>
+      <AutofocusStrategyMode Status="Valid">Software</AutofocusStrategyMode>
+      <AutofocusSignalQualityThreshold Status="Valid">50</AutofocusSignalQualityThreshold>
+    </ParameterCollection>
+    <Configuration>
+      <Device Id="Microscope" Name="Axio Imager.M2" UniqueName="ImagerM2.Stand" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="false" IsDetector="false" ConfigurationName="Epi Light">
+        <StandSpecification>
+          <StandCharacteristic Key="Upright" />
+        </StandSpecification>
+        <Devices>
+          <DeviceRef Id="MTBCameraAdapter_MTBTube_Cameraport" />
+          <DeviceRef Id="MTBEyePiece" />
+          <DeviceRef Id="MTBFocus" />
+          <DeviceRef Id="MTBMicroscopeManager" />
+          <DeviceRef Id="MTBObject" />
+          <DeviceRef Id="MTBObjectiveChanger" />
+          <DeviceRef Id="MTBReflectorChanger" />
+          <DeviceRef Id="MTBRLHalogenLamp" />
+          <DeviceRef Id="MTBRLShutter" />
+          <DeviceRef Id="MTBRLTLSwitch" />
+          <DeviceRef Id="MTBTLHalogenLamp" />
+          <DeviceRef Id="MTBTubeVisCamChanger" />
+          <DeviceRef Id="MTBObject" />
+          <DeviceRef Id="MTBCamera_MTBTube_Cameraport.Axiocam305c" />
+          <DeviceRef Id="SoftwareAutofocus" />
+          <DeviceRef Id="Autofocus" />
+        </Devices>
+        <BeamPaths>
+          <BeamPath Key="ObservationPath">
+            <BeamPathNode Id="MTBObject">
+              <Successors>
+                <BeamPathNode Id="MTBObjectiveChanger">
+                  <Successors>
+                    <BeamPathNode Id="MTBReflectorChanger">
+                      <Successors>
+                        <BeamPathNode Id="MTBTubeVisCamChanger">
+                          <Successors>
+                            <BeamPathNode Id="MTBCameraAdapter_MTBTube_Cameraport">
+                              <Successors>
+                                <BeamPathNode Id="MTBCamera_MTBTube_Cameraport.Axiocam305c">
+                                  <Successors />
+                                </BeamPathNode>
+                              </Successors>
+                            </BeamPathNode>
+                            <BeamPathNode Id="MTBEyePiece">
+                              <Successors />
+                            </BeamPathNode>
+                          </Successors>
+                        </BeamPathNode>
+                      </Successors>
+                    </BeamPathNode>
+                  </Successors>
+                </BeamPathNode>
+              </Successors>
+            </BeamPathNode>
+          </BeamPath>
+          <BeamPath Key="ReflectedLightPath">
+            <BeamPathNode Id="MTBObject">
+              <Successors>
+                <BeamPathNode Id="MTBObjectiveChanger">
+                  <Successors>
+                    <BeamPathNode Id="MTBReflectorChanger">
+                      <Successors>
+                        <BeamPathNode Id="MTBRLShutter">
+                          <Successors>
+                            <BeamPathNode Id="MTBRLHalogenLamp">
+                              <Successors />
+                            </BeamPathNode>
+                          </Successors>
+                        </BeamPathNode>
+                      </Successors>
+                    </BeamPathNode>
+                  </Successors>
+                </BeamPathNode>
+              </Successors>
+            </BeamPathNode>
+          </BeamPath>
+          <BeamPath Key="TransmittedLightPath">
+            <BeamPathNode Id="MTBObject">
+              <Successors>
+                <BeamPathNode Id="MTBTLHalogenLamp">
+                  <Successors />
+                </BeamPathNode>
+              </Successors>
+            </BeamPathNode>
+          </BeamPath>
+          <BeamPath Key="ObliqueLightPath">
+            <BeamPathNode Id="MTBObject">
+              <Successors />
+            </BeamPathNode>
+          </BeamPath>
+          <BeamPath Key="PreviewLightPath">
+            <BeamPathNode Id="MTBObject">
+              <Successors />
+            </BeamPathNode>
+          </BeamPath>
+        </BeamPaths>
+      </Device>
+      <Device Id="MTBCameraAdapter_MTBTube_Cameraport" Name="0.63x Camera Adapter" UniqueName="CameraAdapterAurox.0.63x" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="None" IsEmitter="false" IsDetector="false">
+        <Magnification>0.63</Magnification>
+        <TotalAperture>0</TotalAperture>
+        <CameraId></CameraId>
+      </Device>
+      <Device Id="MTBEyePiece" Name="10x Eyepiece SF23" UniqueName="Eyepiece.10x_23" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="None" IsEmitter="false" IsDetector="true">
+        <Magnification>10</Magnification>
+        <TotalAperture>0</TotalAperture>
+        <DepthOfField>38.131868131868131</DepthOfField>
+        <FieldOfView>23</FieldOfView>
+        <TotalFieldOfView>4.6</TotalFieldOfView>
+      </Device>
+      <Device Id="MTBFocus" Name="Motorized Basic Focus" UniqueName="ImagerM2.Focus_mot" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="false" IsDetector="false">
+        <MinPosition>-25000</MinPosition>
+        <MaxPosition>25000</MaxPosition>
+        <MaxDeviation>0.0125</MaxDeviation>
+        <TypicalDeviation>0.0125</TypicalDeviation>
+        <StepWidth>0.025</StepWidth>
+        <PositionUnit>µm</PositionUnit>
+        <SupportedUnits>µm|nm|</SupportedUnits>
+        <PositionRanges>
+          <Range Unit="µm">
+            <Minimum>-25000</Minimum>
+            <Maximum>25000</Maximum>
+          </Range>
+          <Range Unit="nm">
+            <Minimum>-25000000</Minimum>
+            <Maximum>25000000</Maximum>
+          </Range>
+        </PositionRanges>
+        <MinMoveSpeed>0.062</MinMoveSpeed>
+        <MaxMoveSpeed>6000</MaxMoveSpeed>
+        <SpeedUnit>µm/s</SpeedUnit>
+        <HasContinualSpeed>true</HasContinualSpeed>
+        <HasContinualStartSpeed>false</HasContinualStartSpeed>
+        <HasContinualAcceleration>true</HasContinualAcceleration>
+        <MinContinualSpeed>0.062</MinContinualSpeed>
+        <MaxContinualSpeed>6000</MaxContinualSpeed>
+        <ContinualSpeedUnit>µm/s</ContinualSpeedUnit>
+        <MinContinualAcceleration>0</MinContinualAcceleration>
+        <MaxContinualAcceleration>10000</MaxContinualAcceleration>
+        <ContinualAccelerationUnit>µm/s²</ContinualAccelerationUnit>
+        <CoordinateDirection>1</CoordinateDirection>
+        <HasLoadWork>true</HasLoadWork>
+        <HasLowerSWLimit>true</HasLowerSWLimit>
+        <HasUpperSWLimit>true</HasUpperSWLimit>
+        <IsAutomaticCalibrationSupported>true</IsAutomaticCalibrationSupported>
+        <IsManualCalibrationSupported>true</IsManualCalibrationSupported>
+        <HasHandwheelDeactivation>true</HasHandwheelDeactivation>
+        <IsPositiveDirectionAgainstGravity>true</IsPositiveDirectionAgainstGravity>
+        <IsPositiveDirectionTowardSpecimen>true</IsPositiveDirectionTowardSpecimen>
+      </Device>
+      <Device Id="MTBMicroscopeManager" Name="Microscope manager" UniqueName="ImagerZ2M2.MicroscopeManager" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="None" IsEmitter="false" IsDetector="false">
+        <ContrastManagerContrastMethods>0</ContrastManagerContrastMethods>
+        <ContrastManagerModes>Off, OnDemand, ContrastRetaining</ContrastManagerModes>
+        <LightManagerModes>Objective, Classic</LightManagerModes>
+        <UiControllerDialogs>Unknown</UiControllerDialogs>
+        <UiControllerPopups>Unknown</UiControllerPopups>
+        <IsCondenserFocusingAvailable>false</IsCondenserFocusingAvailable>
+        <IsCurrentFeedAvailable>false</IsCurrentFeedAvailable>
+        <IsDazzleProtectionAvailable>true</IsDazzleProtectionAvailable>
+        <IsLightManagerTemporaryAvailable>true</IsLightManagerTemporaryAvailable>
+        <IsParfocalCorrectionAvailable>true</IsParfocalCorrectionAvailable>
+        <IsParfocalCorrectionSilentModeOnOffAvailable>false</IsParfocalCorrectionSilentModeOnOffAvailable>
+        <IsParcentralCorrectionAvailable>false</IsParcentralCorrectionAvailable>
+        <IsParcentralCorrectionSilentModeOnOffAvailable>false</IsParcentralCorrectionSilentModeOnOffAvailable>
+        <IsLoadWorkCouplingOnOffAvailable>true</IsLoadWorkCouplingOnOffAvailable>
+        <IsVignettingFreeModeTemporaryAvailable>false</IsVignettingFreeModeTemporaryAvailable>
+        <IsLaserSafetyAvailable>false</IsLaserSafetyAvailable>
+        <SoftKeyCount>10</SoftKeyCount>
+        <HasSoftKeyLabeling>true</HasSoftKeyLabeling>
+        <IsObjectiveCorrFocusCorrectionAvailable>true</IsObjectiveCorrFocusCorrectionAvailable>
+      </Device>
+      <Device Id="MTBObject" Name="Object" UniqueName="Object" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="None" IsEmitter="false" IsDetector="false" />
+      <Device Id="MTBObjectiveChanger" Name="7x Coded Nosepiece" UniqueName="ImagerZ2M2.Nosepiece_7xcod" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Coded" IsEmitter="false" IsDetector="false">
+        <MinPosition>1</MinPosition>
+        <MaxPosition>7</MaxPosition>
+        <ChangerElements>
+          <Objective Name="EC Epiplan-Neofluar 1.25x/0.03 M27" Id="" UniqueName="Objective.422310-9901-000" Model="" IsMounted="true" Position="1" Type="Objective">
+            <ContrastMethods>BrightField, DarkField, RLBrightField, RLPol, TLPol</ContrastMethods>
+            <Features>Pol</Features>
+            <Immersions>Air</Immersions>
+            <Magnification>1.25</Magnification>
+            <NumericalAperture>0.03</NumericalAperture>
+            <WorkingDistance>4000</WorkingDistance>
+            <TIRFAngleCorrection>0</TIRFAngleCorrection>
+          </Objective>
+          <Objective Name="EC Epiplan-Neofluar 2,5x/0.06 HD M27" Id="" UniqueName="Objective.422320-9960-000" Model="" IsMounted="true" Position="2" Type="Objective">
+            <ContrastMethods>BrightField, DarkField, RLBrightField, RLDarkField, RLPol, TLPol</ContrastMethods>
+            <Features>Pol, HD</Features>
+            <Immersions>Air</Immersions>
+            <Magnification>2.5</Magnification>
+            <NumericalAperture>0.06</NumericalAperture>
+            <WorkingDistance>15050</WorkingDistance>
+            <TIRFAngleCorrection>0</TIRFAngleCorrection>
+          </Objective>
+          <Objective Name="EC Epiplan 5x/0.13 HD M27" Id="" UniqueName="Objective.422030-9961-000" Model="" IsMounted="true" Position="3" Type="Objective">
+            <ContrastMethods>BrightField, DarkField, RLBrightField, RLDarkField, RLDIC, RLCDIC1, RLTIC, RLPol, TLPol</ContrastMethods>
+            <Features>HD</Features>
+            <Immersions>Air</Immersions>
+            <Magnification>5</Magnification>
+            <NumericalAperture>0.13</NumericalAperture>
+            <WorkingDistance>11800</WorkingDistance>
+            <TIRFAngleCorrection>0</TIRFAngleCorrection>
+          </Objective>
+          <Objective Name="EC Epiplan 10x/0.25 HD M27" Id="" UniqueName="Objective.422040-9961-000" Model="" IsMounted="true" Position="4" Type="Objective">
+            <ContrastMethods>BrightField, DarkField, RLBrightField, RLDarkField, RLDIC, RLCDIC1, RLTIC, RLPol, TLPol</ContrastMethods>
+            <Features>HD</Features>
+            <Immersions>Air</Immersions>
+            <Magnification>10</Magnification>
+            <NumericalAperture>0.2</NumericalAperture>
+            <WorkingDistance>11000</WorkingDistance>
+            <TIRFAngleCorrection>0</TIRFAngleCorrection>
+          </Objective>
+          <Objective Name="EC Epiplan 20x/0.4 HD M27" Id="" UniqueName="Objective.422050-9961-000" Model="" IsMounted="true" Position="5" Type="Objective">
+            <ContrastMethods>BrightField, DarkField, RLBrightField, RLDarkField, RLDIC, RLCDIC1, RLTIC, RLPol, TLPol</ContrastMethods>
+            <Features>HD</Features>
+            <Immersions>Air</Immersions>
+            <Magnification>20</Magnification>
+            <NumericalAperture>0.4</NumericalAperture>
+            <WorkingDistance>3300</WorkingDistance>
+            <TIRFAngleCorrection>0</TIRFAngleCorrection>
+          </Objective>
+          <Objective Name="EC Epiplan 50x/0.7 HD M27" Id="" UniqueName="Objective.422070-9961-000" Model="" IsMounted="true" Position="6" Type="Objective">
+            <ContrastMethods>BrightField, DarkField, RLBrightField, RLDarkField, RLDIC, RLCDIC1, RLTIC, RLPol, TLPol</ContrastMethods>
+            <Features>HD</Features>
+            <Immersions>Air</Immersions>
+            <Magnification>50</Magnification>
+            <NumericalAperture>0.7</NumericalAperture>
+            <WorkingDistance>1000</WorkingDistance>
+            <TIRFAngleCorrection>0</TIRFAngleCorrection>
+          </Objective>
+          <Objective Name="EC Epiplan 100x/0.85 HD M27" Id="" UniqueName="Objective.422090-9961-000" Model="" IsMounted="true" Position="7" Type="Objective">
+            <ContrastMethods>BrightField, DarkField, RLBrightField, RLDarkField, RLDIC, RLCDIC1, RLTIC, RLPol, TLPol</ContrastMethods>
+            <Features>HD</Features>
+            <Immersions>Air</Immersions>
+            <Magnification>100</Magnification>
+            <NumericalAperture>0.8</NumericalAperture>
+            <WorkingDistance>900</WorkingDistance>
+            <TIRFAngleCorrection>0</TIRFAngleCorrection>
+          </Objective>
+        </ChangerElements>
+      </Device>
+      <Device Id="MTBReflectorChanger" Name="6x Motorized Reflector Changer" UniqueName="ImagerM2.ReflectorChanger_6xmot" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="false" IsDetector="false">
+        <MinPosition>1</MinPosition>
+        <MaxPosition>6</MaxPosition>
+        <ChangerElements>
+          <ChangerElement Name="none" Id="" UniqueName="Reflector.none" Model="" IsMounted="true" Position="1" Type="None" />
+          <Contrast Name="Brightfield Refl.light" Id="" UniqueName="Reflector.424928-9901-000" Model="" IsMounted="true" Position="2" Type="Contrast">
+            <ContrastMethods>RLBrightField</ContrastMethods>
+          </Contrast>
+          <Contrast Name="Darkfield Refl.light" Id="" UniqueName="Reflector.424922-9901-000" Model="" IsMounted="true" Position="3" Type="Contrast">
+            <ContrastMethods>RLDarkField</ContrastMethods>
+          </Contrast>
+          <Contrast Name="Analy. DIC Trans.light" Id="" UniqueName="Reflector.424921-9901-000" Model="" IsMounted="true" Position="4" Type="Contrast">
+            <ContrastMethods>AllTLDIC</ContrastMethods>
+          </Contrast>
+          <ChangerElement Name="none" Id="" UniqueName="Reflector.none" Model="" IsMounted="true" Position="5" Type="None" />
+          <ChangerElement Name="none" Id="" UniqueName="Reflector.none" Model="" IsMounted="true" Position="6" Type="None" />
+        </ChangerElements>
+      </Device>
+      <Device Id="MTBRLHalogenLamp" Name="RL VIS-LED Lamp" UniqueName="ImagerZ2M2.RL_VISLEDLamp" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="true" IsDetector="false">
+        <MinPosition>0</MinPosition>
+        <MaxPosition>12.2</MaxPosition>
+        <MaxDeviation>0.0059628543499511237</MaxDeviation>
+        <TypicalDeviation>0.0059628543499511237</TypicalDeviation>
+        <StepWidth>0.011925708699902247</StepWidth>
+        <PositionUnit>Volt</PositionUnit>
+        <SupportedUnits>%|Volt|</SupportedUnits>
+        <PositionRanges>
+          <Range Unit="%">
+            <Minimum>0</Minimum>
+            <Maximum>100</Maximum>
+          </Range>
+          <Range Unit="Volt">
+            <Minimum>0</Minimum>
+            <Maximum>12.2</Maximum>
+          </Range>
+        </PositionRanges>
+        <Has3200K>true</Has3200K>
+        <HasOnOff>true</HasOnOff>
+        <LampType>LED</LampType>
+      </Device>
+      <Device Id="MTBRLShutter" Name="RL Motorized Shutter" UniqueName="ImagerZ1M1.RL_Shutter_mot" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="false" IsDetector="false">
+        <MinPosition>1</MinPosition>
+        <MaxPosition>2</MaxPosition>
+        <ChangerElements>
+          <ShutterState Name="Closed" Id="" UniqueName="Shutter.Closed" Model="" IsMounted="true" Position="1" Type="ShutterState">
+            <IsOpen>false</IsOpen>
+          </ShutterState>
+          <ShutterState Name="Open" Id="" UniqueName="Shutter.Open" Model="" IsMounted="true" Position="2" Type="ShutterState">
+            <IsOpen>true</IsOpen>
+          </ShutterState>
+        </ChangerElements>
+      </Device>
+      <Device Id="MTBRLTLSwitch" Name="Motorized RL/TL Switch" UniqueName="ImagerZ2M2.RLTLSwitchMot" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="false" IsDetector="false">
+        <MinPosition>1</MinPosition>
+        <MaxPosition>2</MaxPosition>
+        <ChangerElements>
+          <RLTLSwitchState Name="TL" Id="" UniqueName="RLTLSwitch.TL" Model="" IsMounted="true" Position="1" Type="RLTLSwitchState">
+            <LightPathLocation>TransmittedLight</LightPathLocation>
+          </RLTLSwitchState>
+          <RLTLSwitchState Name="RL" Id="" UniqueName="RLTLSwitch.RL" Model="" IsMounted="true" Position="2" Type="RLTLSwitchState">
+            <LightPathLocation>ReflectedLight</LightPathLocation>
+          </RLTLSwitchState>
+        </ChangerElements>
+      </Device>
+      <Device Id="MTBTLHalogenLamp" Name="TL VIS-LED Lamp" UniqueName="ImagerZ2M2.TL_VISLEDLamp" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="true" IsDetector="false">
+        <MinPosition>0</MinPosition>
+        <MaxPosition>12.2</MaxPosition>
+        <MaxDeviation>0.0059628543499511237</MaxDeviation>
+        <TypicalDeviation>0.0059628543499511237</TypicalDeviation>
+        <StepWidth>0.011925708699902247</StepWidth>
+        <PositionUnit>Volt</PositionUnit>
+        <SupportedUnits>%|Volt|</SupportedUnits>
+        <PositionRanges>
+          <Range Unit="%">
+            <Minimum>0</Minimum>
+            <Maximum>100</Maximum>
+          </Range>
+          <Range Unit="Volt">
+            <Minimum>0</Minimum>
+            <Maximum>12.2</Maximum>
+          </Range>
+        </PositionRanges>
+        <Has3200K>true</Has3200K>
+        <HasOnOff>true</HasOnOff>
+        <LampType>LED</LampType>
+      </Device>
+      <Device Id="MTBTubeVisCamChanger" Name="Manual Tube Vis/Camera Slider" UniqueName="ImagerZ1M1.VisCamChanger_man" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Manual" IsEmitter="false" IsDetector="false">
+        <MinPosition>1</MinPosition>
+        <MaxPosition>3</MaxPosition>
+        <ChangerElements>
+          <BeamSplitter Name="100% Eyepiece" Id="" UniqueName="FotoTube.VIS_Cam_100/0" Model="" IsMounted="true" Position="1" Type="BeamSplitter">
+            <SplittingRatioSuccessor1>1</SplittingRatioSuccessor1>
+            <Successor1Id>MTBEyePiece</Successor1Id>
+            <Successor2Id>MTBCameraAdapter_MTBTube_Cameraport</Successor2Id>
+          </BeamSplitter>
+          <BeamSplitter Name="30% Eyepiece/70% Camera" Id="" UniqueName="FotoTube.VIS_Cam_30/70" Model="" IsMounted="true" Position="2" Type="BeamSplitter">
+            <SplittingRatioSuccessor1>0.3</SplittingRatioSuccessor1>
+            <Successor1Id>MTBEyePiece</Successor1Id>
+            <Successor2Id>MTBCameraAdapter_MTBTube_Cameraport</Successor2Id>
+          </BeamSplitter>
+          <BeamSplitter Name="100% Camera" Id="" UniqueName="FotoTube.VIS_Cam_0/100" Model="" IsMounted="true" Position="3" Type="BeamSplitter">
+            <SplittingRatioSuccessor1>0</SplittingRatioSuccessor1>
+            <Successor1Id>MTBEyePiece</Successor1Id>
+            <Successor2Id>MTBCameraAdapter_MTBTube_Cameraport</Successor2Id>
+          </BeamSplitter>
+        </ChangerElements>
+      </Device>
+      <Device Id="MTBCamera_MTBTube_Cameraport.Axiocam305c" Name="Axiocam 305" UniqueName="Axiocam305c_S221" Model="Axiocam305c" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="false" IsDetector="true" IsVisibleInGUI="true" NeedsExperimentStateChange="false" />
+      <Device Id="SoftwareAutofocus" Name="SoftwareAutofocus" UniqueName="SoftwareAutofocus" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="false" IsDetector="false" />
+      <Device Id="Autofocus" Name="Autofocus" UniqueName="Autofocus" Model="" IsAvailable="true" IsBroken="false" IsBrokenReason="" Motorization="Motorized" IsEmitter="false" IsDetector="false" />
+    </Configuration>
+  </HardwareSetting>
+  <CustomAttributes />
+  <Information>
+    <User Id="0" />
+    <Application>
+      <Name>ZEN core</Name>
+      <Version>2.4.72.0</Version>
+    </Application>
+    <Document>
+      <CreationDate>2022-03-22T13:21:19.2932645Z</CreationDate>
+      <UserName>Axio Imager.M2m</UserName>
+    </Document>
+    <Image>
+      <SizeX>2448</SizeX>
+      <SizeY>2054</SizeY>
+      <SizeH>1</SizeH>
+      <OriginalCompressionMethod>Uncompressed</OriginalCompressionMethod>
+      <OriginalEncodingQuality>100</OriginalEncodingQuality>
+      <AcquisitionDateAndTime>2022-03-22T13:11:01.8610051Z</AcquisitionDateAndTime>
+      <SizeC>1</SizeC>
+      <SizeZ>1</SizeZ>
+      <ComponentBitCount>12</ComponentBitCount>
+      <PixelType>Bgr48</PixelType>
+      <Dimensions>
+        <Channels>
+          <Channel Id="Channel:0" Name="C1">
+            <Color>#00FFFFFF</Color>
+            <Fluor>C1</Fluor>
+            <ExposureTime>27269000</ExposureTime>
+            <Reflector>Darkfield Refl.light</Reflector>
+            <IlluminationType>Other</IlluminationType>
+            <ContrastMethod>Other</ContrastMethod>
+            <PixelType>Bgr48</PixelType>
+            <ComponentBitCount>12</ComponentBitCount>
+            <AcquisitionMode>WideField</AcquisitionMode>
+            <DetectorSettings>
+              <Binning>1,1</Binning>
+              <Detector Id="Detector:Axiocam 305" />
+            </DetectorSettings>
+            <LightSourcesSettings>
+              <LightSourceSettings>
+                <Intensity>11.15 Volt</Intensity>
+                <LightSource Id="LightSource:1" />
+              </LightSourceSettings>
+              <LightSourceSettings>
+                <Intensity>12.20 Volt</Intensity>
+                <LightSource Id="LightSource:2" />
+              </LightSourceSettings>
+            </LightSourcesSettings>
+          </Channel>
+        </Channels>
+        <Tracks>
+          <Track Id="Track:1">
+            <ChannelRefs>
+              <ChannelRef Id="Channel:0" />
+            </ChannelRefs>
+          </Track>
+        </Tracks>
+        <T>
+          <StartTime>2022-03-22T13:11:01.8610051Z</StartTime>
+          <Positions>
+            <BinaryList>
+              <AttachmentName>TimeStamps</AttachmentName>
+            </BinaryList>
+          </Positions>
+        </T>
+        <Z>
+          <XYZHandedness>RightHanded</XYZHandedness>
+          <ZAxisDirection>FromObjectiveToSpecimen</ZAxisDirection>
+          <StartPosition>0</StartPosition>
+          <Positions>
+            <Interval>
+              <Start>-369.75</Start>
+              <Increment>21.75</Increment>
+            </Interval>
+          </Positions>
+        </Z>
+      </Dimensions>
+      <ObjectiveSettings>
+        <RefractiveIndex>1.000293</RefractiveIndex>
+        <Medium>Air</Medium>
+        <ObjectiveRef Id="Objective:1" />
+      </ObjectiveSettings>
+      <MicroscopeRef Id="Microscope:1" />
+      <MicroscopeSettings>
+        <EyepieceSettings>
+          <TotalMagnification>50</TotalMagnification>
+        </EyepieceSettings>
+      </MicroscopeSettings>
+      <TubeLenses />
+    </Image>
+    <Instrument>
+      <Microscopes>
+        <Microscope Id="Microscope:1" Name="Axio Imager.M2">
+          <Type>Upright</Type>
+        </Microscope>
+      </Microscopes>
+      <LightSources>
+        <LightSource Id="LightSource:1" Name="RL VIS-LED Lamp">
+          <LightSourceType>
+            <LightEmittingDiode />
+          </LightSourceType>
+        </LightSource>
+        <LightSource Id="LightSource:2" Name="TL VIS-LED Lamp">
+          <LightSourceType>
+            <LightEmittingDiode />
+          </LightSourceType>
+        </LightSource>
+      </LightSources>
+      <Detectors>
+        <Detector Id="Detector:Axiocam 305" Name="Axiocam 305">
+          <Manufacturer>
+            <Model>Axiocam305c</Model>
+          </Manufacturer>
+          <Adapter>
+            <Manufacturer>
+              <Model>0.63x Camera Adapter</Model>
+            </Manufacturer>
+          </Adapter>
+        </Detector>
+      </Detectors>
+      <Objectives>
+        <Objective Id="Objective:1" Name="EC Epiplan 5x/0.13 HD M27">
+          <LensNA>0.13</LensNA>
+          <NominalMagnification>5</NominalMagnification>
+          <WorkingDistance>11800</WorkingDistance>
+          <PupilGeometry>Circular</PupilGeometry>
+          <ImmersionRefractiveIndex>1.000293</ImmersionRefractiveIndex>
+          <Immersion>Air</Immersion>
+          <Manufacturer>
+            <Model>EC Epiplan 5x/0.13 HD M27</Model>
+          </Manufacturer>
+        </Objective>
+      </Objectives>
+    </Instrument>
+  </Information>
+  <Scaling>
+    <Metadata />
+    <AutoScaling>
+      <Type>Measured</Type>
+      <Objective>Objective.422030-9961-000</Objective>
+      <Reflector>Reflector.424922-9901-000</Reflector>
+      <CameraAdapter>CameraAdapterAurox.0.63x</CameraAdapter>
+      <ObjectiveName>EC Epiplan 5x/0.13 HD M27</ObjectiveName>
+      <ReflectorMagnification>1</ReflectorMagnification>
+      <CameraName>Axiocam 305</CameraName>
+      <CameraAdapterMagnification>0.63</CameraAdapterMagnification>
+      <CameraPixelDistance>3.45,3.45</CameraPixelDistance>
+      <CreationDateTime>03/22/2022 13:11:01</CreationDateTime>
+    </AutoScaling>
+    <Items>
+      <Distance Id="X">
+        <Value>1.0952380952380954E-06</Value>
+        <DefaultUnitFormat>µm</DefaultUnitFormat>
+      </Distance>
+      <Distance Id="Y">
+        <Value>1.0952380952380954E-06</Value>
+        <DefaultUnitFormat>µm</DefaultUnitFormat>
+      </Distance>
+      <Distance Id="Z">
+        <Value>2.175E-05</Value>
+        <DefaultUnitFormat>µm</DefaultUnitFormat>
+      </Distance>
+    </Items>
+  </Scaling>
+  <DisplaySetting>
+    <Channels>
+      <Channel Id="Channel:0" Name="C1">
+        <High>0.0625</High>
+        <Gamma>0.45</Gamma>
+        <BitCountRange>12</BitCountRange>
+        <PixelType>Bgr48</PixelType>
+        <IsColorNaNMode>false</IsColorNaNMode>
+        <ColorNaN>#00000000</ColorNaN>
+        <UseFixFloatImageMinMaxValues>false</UseFixFloatImageMinMaxValues>
+        <FixFloatImageMinValue>0</FixFloatImageMinValue>
+        <FixFloatImageMaxValue>10</FixFloatImageMaxValue>
+        <DyeName>C1</DyeName>
+        <ShortName>C1</ShortName>
+        <ColorMode>None</ColorMode>
+      </Channel>
+    </Channels>
+  </DisplaySetting>
+</ImageMetadata>

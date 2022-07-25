@@ -32,9 +32,9 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.6"
-__maintainer__ = ["Ondrej Budik", "Vojtech Barnat"]
-__email__ = ["obudik@prf.jcu.cz", "Vojtech.Barnat@fs.cvut.cz"]
+__version__ = "1.1.0"
+__maintainer__ = ["Ondrej Budik"]
+__email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
 
 __python__ = "3.8.0"
@@ -50,6 +50,11 @@ import imgprocess as ip
 # Get suffixes to fix file names of images. For more suffixes to filter, change config.py
 from config import IMAGE_SUFFIX_NAMES
 
+# Check if imgprocess has correct version
+from imgprocess import __version__ as __imv__
+from version_check import check_version
+check_version(__imv__, [1, 0, 5], "imgprocess.py")
+
 # Get current working directory for file management as global var
 cwd = Path.cwd()
 rcwd = cwd / ".."
@@ -59,35 +64,41 @@ rcwd = rcwd.resolve()
 BREAK = False
 
 # Functions definition
-def img_meta_pair(subfolder):
+def img_meta_pair(groups):
     """
     Takes subfolder with *.tifs and pairs them together with their meta data in based on their names.
     If names do not match (except suffix), automatic pairing can not be performed and files will be ignored
 
     Parameters
     ----------
-    subfolder : pathlib.Path
-        Pathlib object with specified path destination to desired folder
+    groups : list of lists with str (paths). The output of get_groups.
+        List containing groups of seed image paths
 
     Returns
     -------
     groups_holder : list
-        Contains list of lists. Each nested list has 2 paired objects. [[img, meta], [img, meta], ...]
+        Contains list of lists. Each nested list is one group and has 2 paired values. [[[img, meta], [img, meta], ...], [[img, meta], [img, meta], ...]]
     """
     groups_holder = []
-    for img_file in subfolder.glob('*.tif'):
-        # Fix some of their weird naming
-        if img_file.stem[-3:] in IMAGE_SUFFIX_NAMES:
-            temp_img_file = img_file.stem[:-3]
-        else:
-            temp_img_file = img_file
-        # Append meta to path stem
-        meta_temp = str(temp_img_file) + "_meta.xml"
-        meta_file = img_file.parent / meta_temp
-        if not meta_file.is_file():
-            print(f"\nFor image {img_file.stem} in {meta_file.parent} were no meta data found! File is excluded from upload.\n")
-            continue
-        groups_holder.append([img_file, meta_file])
+    for group in groups:
+        temp_group = []
+        for img in group:
+            img_path = Path(img)
+            # Fix some of their weird naming
+            if img_path.stem[-3:] in IMAGE_SUFFIX_NAMES:
+                temp_img_file = img_path.stem[:-3]
+            else:
+                temp_img_file = img_path.stem
+            # Append meta to path stem
+            meta_temp = str(temp_img_file) + "_meta.xml"
+            meta_file = img_path.parent / meta_temp
+            if not meta_file.is_file():
+                print(f"\nFor image {img_path.stem} in {meta_file.parent} were no meta data found! File is excluded from upload.\n")
+                continue
+            temp_group.append([img_path, meta_file])
+        groups_holder.append(temp_group)
+        temp_group = []
+
     return groups_holder
 
 def __zeis_parser__(meta_dict):
@@ -133,9 +144,35 @@ def __zeis_parser__(meta_dict):
     for scale in scaling:
         temp_scale[scale['@Id'].lower()] = float(scale['Value'])
     parsed_meta["scaling"] = temp_scale
+    parsed_meta["vendor"] = "Carl Zeiss"
     return parsed_meta
 
-def parse_meta(xml_path, origin='zeis'):
+def __keyence_parse__(meta_dict):
+    """
+    Processing of KEYENCE microscope meta data. In case KEYENCE would change their xml structure, this
+    processing has to be altered! If more informations are required to extract, this is the place
+    to do so.
+
+    Parameters
+    ----------
+    meta_dict : dict
+        XML converted to dictionary for easy data manipulation in python.
+
+    Returns
+    -------
+    parsed_meta : dict
+        Dictionary containing desired data
+    """
+    # Prepare holder for output meta
+    parsed_meta = {}
+
+    # Logic #TODO
+    raise NotImplementedError("We are not there yet..")
+
+    parsed_meta["vendor"] = "Keyence"
+    return parsed_meta
+
+def parse_meta(xml_path, origin='zeiss'):
     """
     Takes path to xml file with microscope meta data and extracts desired data for specified database.
 
@@ -150,17 +187,22 @@ def parse_meta(xml_path, origin='zeis'):
     -----
     parsed_meta : dict
         Dictionary containing parsed data from given xml file.
+    
+    Raises
+    ------
+    IOError
+        Raises when unknown meta data parser has been selected.
     """
     # Load xml and convert it to dict
     meta_dict = xmltodict.parse(ET.tostring(ET.parse(xml_path).getroot()))
 
     # read meta data for specific manufacturer
-    if origin.lower() == 'zeis':
+    if origin.lower() in ['zeiss', 'zeis', "carl zeiss"]:
         parsed_meta = __zeis_parser__(meta_dict)
     elif origin.lower() == 'keyens':
-        raise NotImplementedError("We are not there yet..")
+        parsed_meta = __keyence_parse__(meta_dict)
     else:
-        raise IOError("Unknown meta data origin! Please code missing meta parser.")
+        raise IOError(f"Unknown meta data origin for {origin}! Please code missing meta parser.")
 
     # Get creation data
     parsed_meta['timestamp'] = xml_path.stat().st_ctime
@@ -243,31 +285,167 @@ def resolve_folders(path):
     IMG_SUBS : list
         list of all subfolders in given folder
     """
-
     IMG_PATH = resolve_path(path)
 
     # Get all subfolders
     IMG_SUBS = [f for f in IMG_PATH.iterdir() if f.is_dir()]
     return IMG_SUBS
 
-def get_amount_of_files(path, filetype=".tif"):
+def get_amount_of_files(path, filetype=["*.tif", "*.tiff"]):
     """
-    Loops over entire given folder and returns amount of files for given file type.
+    Loops over entire given folder (including subfolders!) and returns amount of files for given file type.
 
     Parameters
     ----------
     path : str
         Path to folder with files to be counted. Can have nested folders.
     filetype : str, optional
-        File type to count. Defaults to "*.tif"
+        File type to count. Defaults to *.tif"
+
+    Returns
+    -------
+    int
+        Number of files in given folder 
     """
     path = resolve_path(path)
-
-    files = [f for f in path.rglob("*.tif")]
+    files = []
+    for ftype in filetype:
+        files.extend([f for f in path.rglob(ftype)])
     return len(files)
 
+def parse_file_name_for_seed_image_relations(filepath, seed_delimiter, seed_image_delimiter):
+    """Parses file name for determination of seed and its images. 
+    By default assumes that image name structure is as follows: 'seed shortcut name_SeedNumber--SeedImageNumber.tif
 
-def main(path, origin, save=False, consolecall=False):
+    Parameters
+    ----------
+    filepath : Pathlib.Path
+        Pathlib path to file which should be processed
+    seed_delimiter : str
+        Delimired which marks the position of seed number. Eg. "_"
+    seed_image_delimiter : str
+        Delimiter which separetes seed number from image number. Eg. "--"
+
+    Returns
+    -------
+    seed_nr : str
+        Extracted seed number
+    img_nr : str
+        Extracted image number
+    """
+    file = filepath.stem # Get filename
+    seed_nr_index = file.find(seed_delimiter) # Find seed delimiter, if not found return "none"
+    if seed_nr_index == -1:
+        seed_nr = "none"
+        img_nr = "none"
+    else:
+        temp = file[seed_nr_index:].split("_")[1]
+
+        temp = temp.split(seed_image_delimiter) # Catch if no image number was specified - assume no group
+        if len(temp) < 2:
+            seed_nr = "none"
+            img_nr = "none"
+        else:
+            seed_nr = temp[0]
+            img_nr = temp[1]
+
+    return seed_nr, img_nr
+
+def get_groups(path, seed_delimiter = "_", seed_image_delimiter = "--", filetype=["*.tif", "*.tiff"]):
+    """Gets image groups for seeds based on delimiter pattern used on creation
+
+    Parameters
+    ----------
+    path : str
+        Path to folder with files to group by delimiters
+    seed_delimiter : str, optional
+        Delimired which marks the position of seed number, by default "_"
+    seed_image_delimiter : str, optional
+        Delimiter which separetes seed number from image number, by default "--"
+    filetype : list, optional
+        file types which should be considered as images to evaluate, by default [".tif", ".tiff"]
+
+    Returns
+    -------
+    list
+        list of lists with grouped file paths according to seed number
+    """
+    groups = []
+    files = []
+    path = resolve_path(path)
+    # Load all file's paths for specified filetype
+    for ftype in filetype:
+        files.extend(path.glob(ftype))
+
+    # Get groups of images for same seed based on delimiters
+    current_group , _ = parse_file_name_for_seed_image_relations(files[0], seed_delimiter, seed_image_delimiter)
+    if current_group == "none":
+        current_group = "0"
+
+    group = []
+    for file in files:
+        seed_nr, img_nr = parse_file_name_for_seed_image_relations(file, seed_delimiter, seed_image_delimiter)
+        if seed_nr == current_group:
+            group.append(file.as_posix())      
+        elif seed_nr == "none":
+            if len(group) != 0:
+                groups.append(group)
+            groups.append([file.as_posix()])
+            group = []
+        else:
+            if len(group) != 0:
+                groups.append(group)
+            group = [file.as_posix()]
+            current_group = seed_nr
+    if len(group) != 0:
+        groups.append(group) # Append last group to groups
+
+    return groups
+
+def raw_data_processing(pair, origin):
+    """Processed one image with its associated meta data. 
+    Calculates seed dimensions, color, boundingbox ratio.
+
+    Parameters
+    ----------
+    pair : list
+        Pair of image to be processed with associated metadata
+    origin : str
+        Type of microscope used to aquire data
+
+    Returns
+    ------
+    dictionary
+        Dictionary describing one image file
+    """
+    # lets process those damn data!
+    imag = pair[0]
+    meta = pair[1]
+
+    # Parse meta data
+    data = parse_meta(meta, origin=origin)
+
+    # Process image data
+    max_x_dist, max_y_dist, area, hex_color = ip.preproces_seed_image(imag)
+    # Catch if image processing failed
+    if max_x_dist == 0 or max_y_dist == 0 or area == 0:
+        data['x_length'] = 0
+        data['y_length'] = 0
+        data['area'] = 0
+        data['bound_seed_ratio'] = 0
+    else:
+        # Convert pixels to um
+        data['x_length'] = px_to_metric(max_x_dist, data['scaling']['x'], data['scalingunit'])
+        data['y_length'] = px_to_metric(max_y_dist, data['scaling']['y'], data['scalingunit'])
+        data['area'] = px_to_metric(area, (data['scaling']['x']+data['scaling']['y'])/2,
+                                    data['scalingunit'])
+        data['bound_seed_ratio'] = data['area'] / (data['x_length'] * data['y_length'])
+    data['hex_color'] = "#"+hex_color
+    data['img_path'] = imag
+    data['meta_path'] = meta
+    return data
+
+def main(path, origin, generator=True, save=False, consolecall=False):
     """
     Checks content of given folder for .tif files and their associated meta data.
     For each image reads relevant data from its meta data and calculates
@@ -281,16 +459,23 @@ def main(path, origin, save=False, consolecall=False):
         Origin of images. Important to say, which microscope took the pictures
         Changes the extraction of meta data
     save : Bool, optional
-        Changes whether output of processing should be saved as json or not.
+        Changes whether output of processing should be saved as json or not to cwd.
         Defaults to False
 
-    Yields
+    Returns
     -------
+    None 
+    or
     data : dict
         Dictionary containing all extracted informations from both meta data and
+    
+    Raises
+    ------
+    NotImplementedError
+        Should never occure, unless you change the code below. Indicates more groups than defined
     """
     IMG_SUBS = resolve_folders(path)
-
+    data_out = []
     # Open folders one by one and process images inside
     for folder in IMG_SUBS:
         # Get species name. Folder naming is important!
@@ -303,53 +488,51 @@ def main(path, origin, save=False, consolecall=False):
             # Check if in found folders there is one named diaspore
             for subfolder in diaspore:
                 if subfolder.name.lower() == 'diaspore':
-                    # If there is one, lets get img and meta data paths
-                    pair = img_meta_pair(subfolder)
-                    if pair is not None:
-                        DIASPORE_CONTENT_GROUPS = pair
+                    # If there is one, lets get them in image groups and get img and meta data paths
+                    groups = get_groups(subfolder)
+                    pairs = img_meta_pair(groups)
+                    if pairs is not None:
+                        DIASPORE_CONTENT_GROUPS = pairs
                     else:
                         DIASPORE_CONTENT_GROUPS = []
         else:
             DIASPORE_CONTENT_GROUPS = []
 
         # Lets get seed and meta data paths
-        pair = img_meta_pair(folder)
-        if pair is not None:
-            SEED_CONTENT_GROUPS = pair
+        groups = get_groups(folder)
+        pairs = img_meta_pair(groups)
+        if pairs is not None:
+            SEED_CONTENT_GROUPS = pairs
         else:
             SEED_CONTENT_GROUPS = []
 
-        # DATA are now loaded, lets process em!
         for nr, groups in enumerate([DIASPORE_CONTENT_GROUPS, SEED_CONTENT_GROUPS]):
+            group_temp = []
             for group in groups:
-                imag = group[0]
-                meta = group[1]
+                for pair in group:
+                    data = raw_data_processing(pair, origin)
+                    # Add species name to data
+                    data['species_name'] = SPECIES_NAME
+                    # Add seed or diaspore. Diaspore = 0, Seed = 1
+                    if nr == 0:
+                        data['type'] = ['Diaspore']
+                    elif nr == 1:
+                        data['type'] = ['Seed']
+                    else:
+                        raise NotImplementedError("Unexpected type classificator. nr should be only 0 or 1.")
 
-                # Parse meta data
-                data = parse_meta(meta, origin=origin)
-                # Add species name to data
-                data['species_name'] = SPECIES_NAME
-                # Add seed or diaspore. Diaspore = 0, Seed = 1
-                if nr == 0:
-                    data['type'] = ['Diaspore']
-                elif nr == 1:
-                    data['type'] = ['Seed']
-                else:
-                    raise NotImplementedError("Unexpected classificator. nr should be only 0 or 1.")
-
-                # Process image data
-                max_x_dist, max_y_dist, area, hex_color = ip.preproces_seed_image(imag)
-
-                # Convert pixels to um
-                data['x_length'] = px_to_metric(max_x_dist, data['scaling']['x'], data['scalingunit'])
-                data['y_length'] = px_to_metric(max_y_dist, data['scaling']['y'], data['scalingunit'])
-                data['area'] = px_to_metric(area, (data['scaling']['x']+data['scaling']['y'])/2,
-                                            data['scalingunit'])
-                data['bound_seed_ratio'] = data['area'] / (data['x_length'] * data['y_length'])
-                data['hex_color'] = "#"+hex_color
-                data['img_path'] = imag
-                data['meta_path'] = meta
-                yield data
+                    group_temp.append(data)
+                if generator: 
+                    yield group_temp
+                data_out.append(group_temp)
+                group_temp = []
+    if save:
+        if consolecall:
+            print("Saving results...")
+        with open(cwd / "preload_data.json", 'w') as fout:
+            json.dump(data_out , fout, indent=2)
+    if not generator:
+        return data_out
 
 def preload_data(input_path, origin, output_path="", save=False, relative=False, consolecall=False, progresshandler=None):
     """
@@ -383,8 +566,8 @@ def preload_data(input_path, origin, output_path="", save=False, relative=False,
         (file count).
     """
     global BREAK
-    # Init generator
-    data_generator = main(input_path, origin=origin, consolecall=consolecall)
+    # Preload groups in generator
+    group_generator = main(input_path, origin=origin, consolecall=consolecall, generator=True)
 
     if save:
         # Check, if path is relative or has to be cwd
@@ -395,26 +578,33 @@ def preload_data(input_path, origin, output_path="", save=False, relative=False,
             output_path = Path(*output_path)
         else:
             output_path = rcwd
-
+    
+    # Holder for output list
     output_holder = []
     ct = 0
     while not BREAK:
         try:
-            data = next(data_generator)
-            if relative:
-                try:
-                    data['img_path'] = data['img_path'].relative_to(rcwd).as_posix()
-                    data['meta_path'] = data['meta_path'].relative_to(rcwd).as_posix()
-                except ValueError:
+            # Get one group and process it
+            group = next(group_generator)
+            temp_group = []
+            for data in group:
+                if relative:
+                    try:
+                        data['img_path'] = data['img_path'].relative_to(rcwd).as_posix()
+                        data['meta_path'] = data['meta_path'].relative_to(rcwd).as_posix()
+                    except ValueError: # Not nices way to catch paths but hey it works
+                        data['img_path'] = data['img_path'].as_posix()
+                        data['meta_path'] = data['meta_path'].as_posix()
+                else:
                     data['img_path'] = data['img_path'].as_posix()
                     data['meta_path'] = data['meta_path'].as_posix()
-            else:
-                data['img_path'] = data['img_path'].as_posix()
-                data['meta_path'] = data['meta_path'].as_posix()
-            output_holder.append(data)
-            ct += 1
-            if progresshandler:
-                progresshandler(ct, ct_max=None)
+                temp_group.append(data)
+                ct += 1
+                if progresshandler:
+                    progresshandler(ct, ct_max=None)
+            # Append group to output list and reset temp group
+            output_holder.append(temp_group)
+            temp_group = []
         except StopIteration:
             if consolecall:
                 print("All data have been processed.")
@@ -422,11 +612,13 @@ def preload_data(input_path, origin, output_path="", save=False, relative=False,
     BREAK = False
     if progresshandler:
         progresshandler(ct, ct_max=None, finished=True)
+    # If promted save groups as json, else return list of lists with dictionaries
     if save:
         if consolecall:
             print("Saving results...")
         with open(output_path / "preload_data.json", 'w') as fout:
             json.dump(output_holder , fout, indent=2)
+        # If saving, returns number of groups in json
         return ct
     else:
         return output_holder
@@ -434,6 +626,11 @@ def preload_data(input_path, origin, output_path="", save=False, relative=False,
 if __name__ == "__main__":
     # Runs this script in current working directory. Looks for folder
     # named to_be_uploaded
-    PATH = ".//test"
+    print('main processing function test')
+    PATH = "..//JCU_ArcheoPlant_Uploader//test"
     file = main(PATH, 'zeis')
-    print(next(file))
+    print("Test successful!\n", next(file))
+
+    print("preload_data function test")
+    output = preload_data(PATH, "zeis")
+    print("Test successful!\n", output)
