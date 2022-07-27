@@ -10,7 +10,7 @@
 SERVER = "live"
 
 # Document set name. Eg: "ArcheoPlant - CZ/DE - 2021-09-09"
-DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2021-09-07"
+DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2022-01-09"
 
 # Specifies type of the seed. Valid DB options are Recent and Archeo
 TYPE = "Recent"

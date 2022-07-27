@@ -31,7 +31,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky", "Jakub Geyer"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 __maintainer__ = ["Ondrej Budik"]
 __email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
@@ -102,119 +102,122 @@ class Connector(ConnectorFrame):
         if not uploaderhandler:
             uploaderhandler = self.__dummy_uploadhandler__
         # Get common data from group for entire upload
-        data = group[0]
-        # Create a new finding in defined schema'
-        with unicatdb.Client(self.config) as client:
-            new_finding = Finding(
-                document_name=data["species_name"],
-                amount=len(group),
-                document_set=self.setup["document_set"],
-                date=self.setup['date'].split("T")[0],
-                person=data["user"] if "user" in data.keys() else "Raw Script",
-                location_description=self.setup["loc_desc"],
-                location_gps_point=None,
-                location_gps_area=None,
-                note=self.setup["note"] if self.setup["note"] != None else "Automatic script upload",
-                tags=self.setup["tags"] if self.setup["tags"] != None else data["species_name"].split(" "),
-                taxonomy_human_readable=data["species_name"],
-                taxonomy_name=(TaxonomyName(
-                    kingdom=None,
-                    phylum=None,
-                    _class=None,
-                    order=None,
-                    family=None,
-                    genus=None,
-                    species=None,
-                    authorship=None
-                )),
-                attachment_note="Automatic script upload",
-                dynamic_data=({
-                    "number-1657784374772-average-max-lenght-m": self.get_average_length(group),
-                    "select-1658738801093-type": self.setup['type'],
-                    "text-1657785026284-collection-organization": self.setup['organization'],
-                    "text-1657784892422-internal-number": self.get_internal_number(data['species_name']),
-                    "number-1657784595002-shape-number-by": -1,
-                    "nested-1657785596588-imagemetadata": self.create_dynamic_group(group)
-                  })
-            )
-            # assign to schema
-            new_finding_relationships = FindingResourceObjectRelationships(
-                schema=(ResponseRelationshipOneToOne(
-                    data=(RelationshipResourceIdentifier(
-                        type="schemas",
-                        id="62d1defa50d7c51fb431dba0"     # ID of schema 'Seed2'
+        try:
+            data = group[0]
+            # Create a new finding in defined schema'
+            with unicatdb.Client(self.config) as client:
+                new_finding = Finding(
+                    document_name=data["species_name"],
+                    amount=len(group),
+                    document_set=self.setup["document_set"],
+                    date=self.setup['date'].split("T")[0],
+                    person=data["user"] if "user" in data.keys() else "Raw Script",
+                    location_description=self.setup["loc_desc"],
+                    location_gps_point=None,
+                    location_gps_area=None,
+                    note=self.setup["note"] if self.setup["note"] != None else "Automatic script upload",
+                    tags=self.setup["tags"] if self.setup["tags"] != None else data["species_name"].split(" "),
+                    taxonomy_human_readable=data["species_name"],
+                    taxonomy_name=(TaxonomyName(
+                        kingdom=None,
+                        phylum=None,
+                        _class=None,
+                        order=None,
+                        family=None,
+                        genus=None,
+                        species=None,
+                        authorship=None
+                    )),
+                    attachment_note="Automatic script upload",
+                    dynamic_data=({
+                        "number-1657784374772-average-max-lenght-m": self.get_average_length(group),
+                        "select-1658738801093-type": self.setup['type'],
+                        "text-1657785026284-collection-organization": self.setup['organization'],
+                        "text-1657784892422-internal-number": self.get_internal_number(data['species_name']),
+                        "number-1657784595002-shape-number-by": -1,
+                        "nested-1657785596588-imagemetadata": self.create_dynamic_group(group)
+                    })
+                )
+                # assign to schema
+                new_finding_relationships = FindingResourceObjectRelationships(
+                    schema=(ResponseRelationshipOneToOne(
+                        data=(RelationshipResourceIdentifier(
+                            type="schemas",
+                            id="62d1defa50d7c51fb431dba0"     # ID of schema 'Seed2'
+                        ))
                     ))
-                ))
-            )
-            # construct request payload
-            create_finding_request = NewFindingRequestBody(data=(
-                FindingResourceObject(
-                    type="findings",
-                    attributes=new_finding,
-                    relationships=new_finding_relationships
                 )
-            ))
-            #print(create_finding_request)
-            # workspace ID
-            workspace_id = "62435c37272ae85863de4758"
-
-            # Commit finding
-            try:
-                # insert new finding (make POST API call with request payload)
-                insert_result: FindingSingleResponse = client.findings.api_findings_post(
-                    workspace_id,
-                    new_finding_request_body=create_finding_request
-                )
-
-                # pretty-print inserterted finding
-                if consolecall:
-                    pprint(insert_result)
-
-            except Exception as e:
-                # add custom error handling code her
-                print("Error occured when insering new finding: " + str(e.__class__.__name__) + " " + e.__str__())
-
-            # Upload image and meta data
-            try:
-                finding_id = insert_result.data.id
-
-                # get prepared TUS protocol for uplading files
-                tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
-                # File size
-                for data in group:
-                    file_size = Path(data['img_path']).stat().st_size
-                    #data['meta_path'] = data['meta_path'].as_posix()
-                    # Number of chunks
-                    nr_chunks = -(-file_size // chunk)
-                    # create uploader for our file, don't forget to provide required metadata
-                    uploader = tus_client.uploader(
-                        data['img_path'],
-                        metadata={
-                            "fileName": data['img_path'].split('/')[-1],
-                            "contentType": "image/"+data['img_path'].split(".")[-1]
-                        },
-                        chunk_size=chunk,   # set chunk size in Bytes (1MB is the default)
-                        log_func= lambda msg: uploaderhandler(msg, file_size, chunk=chunk, nr_chunks=nr_chunks) ## print the progress to console or to GUI upload handler
+                # construct request payload
+                create_finding_request = NewFindingRequestBody(data=(
+                    FindingResourceObject(
+                        type="findings",
+                        attributes=new_finding,
+                        relationships=new_finding_relationships
                     )
-                    # Uploads the entire image file and meta data
-                    # This uploads chunk by chunk.
-                    uploader.upload()
-                    # create uploader for our file, don't forget to provide required metadata
-                    tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
-                    uploader = tus_client.uploader(
-                        data['meta_path'],
-                        metadata={
-                            "fileName": data['meta_path'].split('/')[-1],
-                            "contentType": "text/"+data['meta_path'].split(".")[-1]
-                        },
-                        chunk_size=chunk   # set chunk size in Bytes (1MB is the default)
-                        )
-                    # Uploads the entire image file and meta data
-                    # This uploads chunk by chunk.
-                    uploader.upload()
+                ))
+                #print(create_finding_request)
+                # workspace ID
+                workspace_id = "62435c37272ae85863de4758"
 
-            except Exception as e:
-                print("Error occured when uploading: " + str(e.__class__.__name__) + " " + e.__str__())
+                # Commit finding
+                try:
+                    # insert new finding (make POST API call with request payload)
+                    insert_result: FindingSingleResponse = client.findings.api_findings_post(
+                        workspace_id,
+                        new_finding_request_body=create_finding_request
+                    )
+
+                    # pretty-print inserterted finding
+                    if consolecall:
+                        pprint(insert_result)
+
+                except Exception as e:
+                    # add custom error handling code her
+                    print("Error occured when insering new finding: " + str(e.__class__.__name__) + " " + e.__str__())
+
+                # Upload image and meta data
+                try:
+                    finding_id = insert_result.data.id
+
+                    # get prepared TUS protocol for uplading files
+                    tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
+                    # File size
+                    for data in group:
+                        file_size = Path(data['img_path']).stat().st_size
+                        #data['meta_path'] = data['meta_path'].as_posix()
+                        # Number of chunks
+                        nr_chunks = -(-file_size // chunk)
+                        # create uploader for our file, don't forget to provide required metadata
+                        uploader = tus_client.uploader(
+                            data['img_path'],
+                            metadata={
+                                "fileName": data['img_path'].split('/')[-1],
+                                "contentType": "image/"+data['img_path'].split(".")[-1]
+                            },
+                            chunk_size=chunk,   # set chunk size in Bytes (1MB is the default)
+                            log_func= lambda msg: uploaderhandler(msg, file_size, chunk=chunk, nr_chunks=nr_chunks) ## print the progress to console or to GUI upload handler
+                        )
+                        # Uploads the entire image file and meta data
+                        # This uploads chunk by chunk.
+                        uploader.upload()
+                        # create uploader for our file, don't forget to provide required metadata
+                        tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
+                        uploader = tus_client.uploader(
+                            data['meta_path'],
+                            metadata={
+                                "fileName": data['meta_path'].split('/')[-1],
+                                "contentType": "text/"+data['meta_path'].split(".")[-1]
+                            },
+                            chunk_size=chunk   # set chunk size in Bytes (1MB is the default)
+                            )
+                        # Uploads the entire image file and meta data
+                        # This uploads chunk by chunk.
+                        uploader.upload()
+
+                except Exception as e:
+                    print("Error occured when uploading: " + str(e.__class__.__name__) + " " + e.__str__())
+        except IndexError:
+            pass # If by some reason empty group gets here, it gets skipped instead of killing process!
 
     def get_internal_number(self, species):
         """Gets internal number from setup (config) for given seed. If no internal number is known,

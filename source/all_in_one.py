@@ -47,8 +47,8 @@ import uploader as up
 
 # Check if uploader and dataprocess has correct versions
 from version_check import check_version
-check_version(dp.__version__, [1, 1, 0], "dataprocess.py")
-check_version(up.__version__, [1, 1, 0], "uploader.py")
+check_version(dp.__version__, [1, 1, 1], "dataprocess.py")
+check_version(up.__version__, [1, 1, 1], "uploader.py")
 
 # Global for interupting the script
 BREAK = False
@@ -140,4 +140,4 @@ def all_in_one(path, origin, user="Test User In AiO", progresshandler=None, uplo
 if __name__ == "__main__":
     # Runs this script in specified PATH. Uploads all species within that folder.
     PATH = ".//test"
-    file = all_in_one(PATH, 'zeis')
+    file = all_in_one(PATH, "Zeiss Axiocam 305c")

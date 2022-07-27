@@ -32,7 +32,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 __maintainer__ = ["Ondrej Budik"]
 __email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
@@ -52,8 +52,11 @@ from config import IMAGE_SUFFIX_NAMES
 
 # Check if imgprocess has correct version
 from imgprocess import __version__ as __imv__
+from parsers import __zeiss_axiocam305c_parser__, __keyence_parser__
 from version_check import check_version
 check_version(__imv__, [1, 0, 5], "imgprocess.py")
+check_version(__imv__, [1, 0, 0], "parsers.py")
+
 
 # Get current working directory for file management as global var
 cwd = Path.cwd()
@@ -101,78 +104,7 @@ def img_meta_pair(groups):
 
     return groups_holder
 
-def __zeis_parser__(meta_dict):
-    """
-    Processing of ZEIS microscope meta data. In case ZEIS would change their xml structure, this
-    processing has to be altered! If more informations are required to extract, this is the place
-    to do so.
-
-    Parameters
-    ----------
-    meta_dict : dict
-        XML converted to dictionary for easy data manipulation in python.
-
-    Returns
-    -------
-    parsed_meta : dict
-        Dictionary containing desired data
-    """
-    # Prepare holder for output meta
-    parsed_meta = {}
-    # Capture postprocessing methodic
-    capture_property = meta_dict['ImageMetadata']['Experiment']['ExperimentBlocks']['AcquisitionBlock']['SubDimensionSetups']['ZStackSetup']['SetupExtensions']['SetupExtension'][0]['ZStackSetupExtension']
-    parsed_meta['focusmethod'] = capture_property['FocusMethod']
-    parsed_meta['texturemethod'] = capture_property['TextureMethod']
-    parsed_meta['topographymethod'] = capture_property['TopographyMethod']
-    # Used detector
-    detector = meta_dict['ImageMetadata']['Information']['Instrument']['Detectors']['Detector']
-    parsed_meta['model']= detector['Manufacturer']['Model']
-    parsed_meta['adapter'] = detector['Adapter']['Manufacturer']['Model']
-    # Used objective
-    objective = meta_dict['ImageMetadata']['Information']['Instrument']['Objectives']['Objective']
-    parsed_meta['objective'] = objective['Manufacturer']['Model']
-    # Hardware settings
-    hardware = meta_dict['ImageMetadata']['HardwareSetting']['ParameterCollection'][1]
-    parsed_meta['pixelaccuracy'] = float(hardware['CameraPixelAccuracy'][list(hardware['CameraPixelAccuracy'].keys())[-1]])
-    parsed_meta['pixeldistance'] = list(map(float, hardware['CameraPixelDistances'][list(hardware['CameraPixelDistances'].keys())[-1]].split(",")))
-    parsed_meta['totalmagnification'] = float(hardware['TotalMagnification'][list(hardware['TotalMagnification'].keys())[-1]])
-    parsed_meta['scalingunit'] = hardware['DefaultScalingUnit'][list(hardware['DefaultScalingUnit'].keys())[-1]]
-    parsed_meta['sdk'] = hardware['SDKVersion'][list(hardware['SDKVersion'].keys())[-1]]
-    # Scaling props
-    scaling = meta_dict['ImageMetadata']['Scaling']['Items']['Distance']
-    temp_scale = {}
-    for scale in scaling:
-        temp_scale[scale['@Id'].lower()] = float(scale['Value'])
-    parsed_meta["scaling"] = temp_scale
-    parsed_meta["vendor"] = "Carl Zeiss"
-    return parsed_meta
-
-def __keyence_parse__(meta_dict):
-    """
-    Processing of KEYENCE microscope meta data. In case KEYENCE would change their xml structure, this
-    processing has to be altered! If more informations are required to extract, this is the place
-    to do so.
-
-    Parameters
-    ----------
-    meta_dict : dict
-        XML converted to dictionary for easy data manipulation in python.
-
-    Returns
-    -------
-    parsed_meta : dict
-        Dictionary containing desired data
-    """
-    # Prepare holder for output meta
-    parsed_meta = {}
-
-    # Logic #TODO
-    raise NotImplementedError("We are not there yet..")
-
-    parsed_meta["vendor"] = "Keyence"
-    return parsed_meta
-
-def parse_meta(xml_path, origin='zeiss'):
+def parse_meta(xml_path, origin='zeiss axiocam 305c'):
     """
     Takes path to xml file with microscope meta data and extracts desired data for specified database.
 
@@ -181,13 +113,13 @@ def parse_meta(xml_path, origin='zeiss'):
     xml_path : str or pathlib.Path
         Path to target xml file with meta data to parse.
     origin : str, optional
-        Origin of meta data. Important for various parsing mechanisms. Defaults to zeis.
+        Origin of meta data. Important for various parsing mechanisms. Defaults to zeiss axiocam 305c.
 
     Returns
     -----
     parsed_meta : dict
         Dictionary containing parsed data from given xml file.
-    
+
     Raises
     ------
     IOError
@@ -197,10 +129,10 @@ def parse_meta(xml_path, origin='zeiss'):
     meta_dict = xmltodict.parse(ET.tostring(ET.parse(xml_path).getroot()))
 
     # read meta data for specific manufacturer
-    if origin.lower() in ['zeiss', 'zeis', "carl zeiss"]:
-        parsed_meta = __zeis_parser__(meta_dict)
+    if origin.lower() == "zeiss axiocam 305c":
+        parsed_meta = __zeiss_axiocam305c_parser__(meta_dict)
     elif origin.lower() == 'keyens':
-        parsed_meta = __keyence_parse__(meta_dict)
+        parsed_meta = __keyence_parser__(meta_dict)
     else:
         raise IOError(f"Unknown meta data origin for {origin}! Please code missing meta parser.")
 
@@ -305,7 +237,7 @@ def get_amount_of_files(path, filetype=["*.tif", "*.tiff"]):
     Returns
     -------
     int
-        Number of files in given folder 
+        Number of files in given folder
     """
     path = resolve_path(path)
     files = []
@@ -314,7 +246,7 @@ def get_amount_of_files(path, filetype=["*.tif", "*.tiff"]):
     return len(files)
 
 def parse_file_name_for_seed_image_relations(filepath, seed_delimiter, seed_image_delimiter):
-    """Parses file name for determination of seed and its images. 
+    """Parses file name for determination of seed and its images.
     By default assumes that image name structure is as follows: 'seed shortcut name_SeedNumber--SeedImageNumber.tif
 
     Parameters
@@ -340,6 +272,9 @@ def parse_file_name_for_seed_image_relations(filepath, seed_delimiter, seed_imag
         img_nr = "none"
     else:
         temp = file[seed_nr_index:].split("_")[1]
+        # Sometimes biologists decide to put diaspore in name of file, catch it and process it
+        if temp.lower() == "diaspore":
+            temp = file[seed_nr_index:].split("_")[2]
 
         temp = temp.split(seed_image_delimiter) # Catch if no image number was specified - assume no group
         if len(temp) < 2:
@@ -386,7 +321,7 @@ def get_groups(path, seed_delimiter = "_", seed_image_delimiter = "--", filetype
     for file in files:
         seed_nr, img_nr = parse_file_name_for_seed_image_relations(file, seed_delimiter, seed_image_delimiter)
         if seed_nr == current_group:
-            group.append(file.as_posix())      
+            group.append(file.as_posix())
         elif seed_nr == "none":
             if len(group) != 0:
                 groups.append(group)
@@ -403,7 +338,7 @@ def get_groups(path, seed_delimiter = "_", seed_image_delimiter = "--", filetype
     return groups
 
 def raw_data_processing(pair, origin):
-    """Processed one image with its associated meta data. 
+    """Processed one image with its associated meta data.
     Calculates seed dimensions, color, boundingbox ratio.
 
     Parameters
@@ -464,11 +399,11 @@ def main(path, origin, generator=True, save=False, consolecall=False):
 
     Returns
     -------
-    None 
+    None
     or
     data : dict
         Dictionary containing all extracted informations from both meta data and
-    
+
     Raises
     ------
     NotImplementedError
@@ -499,11 +434,14 @@ def main(path, origin, generator=True, save=False, consolecall=False):
             DIASPORE_CONTENT_GROUPS = []
 
         # Lets get seed and meta data paths
-        groups = get_groups(folder)
-        pairs = img_meta_pair(groups)
-        if pairs is not None:
-            SEED_CONTENT_GROUPS = pairs
-        else:
+        try:
+            groups = get_groups(folder)
+            pairs = img_meta_pair(groups)
+            if pairs is not None:
+                SEED_CONTENT_GROUPS = pairs
+            else:
+                SEED_CONTENT_GROUPS = []
+        except IndexError:
             SEED_CONTENT_GROUPS = []
 
         for nr, groups in enumerate([DIASPORE_CONTENT_GROUPS, SEED_CONTENT_GROUPS]):
@@ -522,7 +460,7 @@ def main(path, origin, generator=True, save=False, consolecall=False):
                         raise NotImplementedError("Unexpected type classificator. nr should be only 0 or 1.")
 
                     group_temp.append(data)
-                if generator: 
+                if generator:
                     yield group_temp
                 data_out.append(group_temp)
                 group_temp = []
@@ -578,7 +516,7 @@ def preload_data(input_path, origin, output_path="", save=False, relative=False,
             output_path = Path(*output_path)
         else:
             output_path = rcwd
-    
+
     # Holder for output list
     output_holder = []
     ct = 0
@@ -628,9 +566,9 @@ if __name__ == "__main__":
     # named to_be_uploaded
     print('main processing function test')
     PATH = "..//JCU_ArcheoPlant_Uploader//test"
-    file = main(PATH, 'zeis')
+    file = main(PATH, 'zeiss axiocam 305c')
     print("Test successful!\n", next(file))
 
     print("preload_data function test")
-    output = preload_data(PATH, "zeis")
+    output = preload_data(PATH, "Zeiss Axiocam 305c")
     print("Test successful!\n", output)

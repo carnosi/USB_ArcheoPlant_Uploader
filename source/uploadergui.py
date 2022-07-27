@@ -155,7 +155,7 @@ class GUI():
         emptiness = HTML(value=" ")
 
         # Microscope origin dropdown
-        self.origin = Dropdown(options=["Zeis", "Keyence"], value="Zeis", description="Microscope:", disabled=False, layout=Layout(width="50%"))
+        self.origin = Dropdown(options=["Zeiss Axiocam 305c", "Keyence"], value="Zeiss Axiocam 305c", description="Microscope:", disabled=False, layout=Layout(width="50%"))
 
         # Select if uploader or preloader
         self.mode = Dropdown(options=["Uploader", "Pre Loader", "All-in-One"], value="Pre Loader", description="Mode:", disabled=False, layout=Layout(width="50%"))
