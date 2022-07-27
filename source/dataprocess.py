@@ -48,7 +48,7 @@ import xmltodict
 # Import custom scripts
 import imgprocess as ip
 # Get suffixes to fix file names of images. For more suffixes to filter, change config.py
-from config import IMAGE_SUFFIX_NAMES
+from config import IMAGE_SUFFIX_NAMES, IMAGE_ADDITIONS
 
 # Check if imgprocess has correct version
 from imgprocess import __version__ as __imv__
@@ -65,6 +65,13 @@ rcwd = rcwd.resolve()
 
 # Global for interupting the script
 BREAK = False
+
+# clean addition and suffixes
+for pos, item in enumerate(IMAGE_SUFFIX_NAMES):
+    IMAGE_SUFFIX_NAMES[pos] = item.lower()
+
+for pos, item in enumerate(IMAGE_ADDITIONS):
+    IMAGE_ADDITIONS[pos] = item.lower()
 
 # Functions definition
 def img_meta_pair(groups):
@@ -272,8 +279,8 @@ def parse_file_name_for_seed_image_relations(filepath, seed_delimiter, seed_imag
         img_nr = "none"
     else:
         temp = file[seed_nr_index:].split("_")[1]
-        # Sometimes biologists decide to put diaspore in name of file, catch it and process it
-        if temp.lower() == "diaspore":
+        # Sometimes biologists decide to put diaspore or other funny words in the name of file, catch it and process it
+        if temp.lower() in IMAGE_ADDITIONS:
             temp = file[seed_nr_index:].split("_")[2]
 
         temp = temp.split(seed_image_delimiter) # Catch if no image number was specified - assume no group

@@ -10,7 +10,7 @@
 SERVER = "live"
 
 # Document set name. Eg: "ArcheoPlant - CZ/DE - 2021-09-09"
-DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2022-01-09"
+DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2022-04-01"
 
 # Specifies type of the seed. Valid DB options are Recent and Archeo
 TYPE = "Recent"
@@ -91,6 +91,9 @@ INTERNAL_NUMBER = {"RE":{
 
 # Image suffix names which shall be filtered out from name space.
 IMAGE_SUFFIX_NAMES = ["_c1", "_c2", "_c3"]
+
+# Image name additions before numbers
+IMAGE_ADDITIONS = ["diaspore", "same", "hülle"]
 
 # additional pad border size for better contour detection in percent of original width
 BORDER_SIZE = 0.15
