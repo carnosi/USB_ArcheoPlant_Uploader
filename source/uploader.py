@@ -143,7 +143,7 @@ class Connector(ConnectorFrame):
                     schema=(ResponseRelationshipOneToOne(
                         data=(RelationshipResourceIdentifier(
                             type="schemas",
-                            id="62d1defa50d7c51fb431dba0"     # ID of schema 'Seed2'
+                            id="62d1defa50d7c51fb431dba0"     # ID of schema 'Seed'
                         ))
                     ))
                 )
