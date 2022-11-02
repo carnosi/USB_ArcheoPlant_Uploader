@@ -191,6 +191,30 @@ def __keyence_parser__(path_to_tif):
         print(lens_cali_tag)
         print(lens_cali)
 
+        # Whether magnification-adjustmens calibration adjustment factors must be applied
+        lens_magni_adj_tagid = "0143"
+        lens_magni_adj_tag = __extract_tag_with_offset__(lens_magni_adj_tagid, maker_notes_tags)
+        lens_magni_adj = __lens_calib_adj_parser__(tif_file, lens_magni_adj_tag["val_or_offset"], lens_magni_adj_tag["n_of_elements"])
+
+        print(lens_magni_adj_tag)
+        print(lens_magni_adj)
+
+        # Whether filming-size calibration adjustment factors must be applied
+        lens_film_adj_tagid = "0147"
+        lens_film_adj_tag = __extract_tag_with_offset__(lens_film_adj_tagid, maker_notes_tags)
+        lens_film_adj = __lens_calib_adj_parser__(tif_file, lens_film_adj_tag["val_or_offset"], lens_film_adj_tag["n_of_elements"])
+
+        print(lens_film_adj_tag)
+        print(lens_film_adj)
+
+        # Whether digital-zoom calibration adjustment factors must be applied
+        lens_digi_adj_tagid = "0145"
+        lens_digi_adj_tag = __extract_tag_with_offset__(lens_digi_adj_tagid, maker_notes_tags)
+        lens_digi_adj = __lens_calib_adj_parser__(tif_file, lens_digi_adj_tag["val_or_offset"], lens_digi_adj_tag["n_of_elements"])
+
+        print(lens_digi_adj_tag)
+        print(lens_digi_adj)
+
 
 
     parsed_meta["vendor"] = "Keyence"
@@ -259,7 +283,7 @@ def __lens_tag_parser__(file, offset, number_of_elements):
     ----------
     file : path, str
         path to file from which should the data be retrieved
-    offset : hexstr or int
+    offset : hexstr
         offset where data are stored in given file
     number_of_elements : int
         number of bytes which should be retrieved from offset
@@ -295,7 +319,7 @@ def __lens_calibration_parser__(file, offset, number_of_elements):
     ----------
     file : path, str
         path to file from which should the data be retrieved
-    offset : hexstr or int
+    offset : hexstr
         offset where data are stored in given file
     number_of_elements : int
         number of bytes which should be retrieved from offset
@@ -318,6 +342,44 @@ def __lens_calibration_parser__(file, offset, number_of_elements):
     cali["value"] = struct.unpack('!d', bytes.fromhex(swapEndianness(offset_data[6:14].hex())))[0]
 
     return cali
+
+def __lens_calib_adj_parser__(file, offset, number_of_elements):
+    """
+    Whether magnification-adjustment, filming-size, and digital-zoom calibration adjustment factors must be applied
+
+    Parameters
+    ----------
+    file : path, str
+        path to file from which should the data be retrieved
+    offset : hexstr
+        offset where data are stored in given file
+    number_of_elements : int
+        number of bytes which should be retrieved from offset
+
+    Returns
+    -------
+    dict
+        decoded lens calibration namespace values saved in dictionary
+    """
+
+    # Prepare holder
+    magni = {}
+    # Load data
+    with open(file, "rb") as file:
+        file.seek(int(f"0x{offset}", 16))
+        offset_data = file.read()[:number_of_elements]
+    # Parse offset data
+    magni["crc32"] = swapEndianness(offset_data[0:4].hex())
+    magni["vartype"] = int(swapEndianness(offset_data[4:6].hex()), 16)
+    temp = swapEndianness(offset_data[6:8].hex())
+    if temp == "ffff":
+        magni["value"] = True
+    elif temp == "0000":
+        magni["value"] = False
+    else:
+        magni["value"] = "corrupted values"
+
+    return magni
 
 def swapEndianness(hexstring):
     """

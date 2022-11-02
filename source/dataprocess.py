@@ -143,7 +143,7 @@ def parse_meta(path, origin='zeiss axiocam 305c'):
         raise IOError(f"Unknown meta data origin for {origin}! Please code missing meta parser.")
 
     # Get creation data
-    parsed_meta['timestamp'] = xml_path.stat().st_ctime
+    parsed_meta['timestamp'] = path.stat().st_ctime
     return parsed_meta
 
 def px_to_metric(pixel, scaling_factor, scaling):
