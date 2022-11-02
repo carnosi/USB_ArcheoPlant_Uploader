@@ -69,6 +69,7 @@ except ModuleNotFoundError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "ipyfilechooser"])
     subprocess.check_call([sys.executable, "-m", "pip", "install", "imutils"])
     subprocess.check_call([sys.executable, "-m", "pip", "install", "unicatdb==2.2b1"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "exifread"])
     print("Instalation finished.")
 
     import threading

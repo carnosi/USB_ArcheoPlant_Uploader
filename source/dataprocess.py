@@ -111,7 +111,7 @@ def img_meta_pair(groups):
 
     return groups_holder
 
-def parse_meta(xml_path, origin='zeiss axiocam 305c'):
+def parse_meta(path, origin='zeiss axiocam 305c'):
     """
     Takes path to xml file with microscope meta data and extracts desired data for specified database.
 
@@ -132,14 +132,13 @@ def parse_meta(xml_path, origin='zeiss axiocam 305c'):
     IOError
         Raises when unknown meta data parser has been selected.
     """
-    # Load xml and convert it to dict
-    meta_dict = xmltodict.parse(ET.tostring(ET.parse(xml_path).getroot()))
-
     # read meta data for specific manufacturer
     if origin.lower() == "zeiss axiocam 305c":
+        # Load xml and convert it to dict
+        meta_dict = xmltodict.parse(ET.tostring(ET.parse(path).getroot()))
         parsed_meta = __zeiss_axiocam305c_parser__(meta_dict)
     elif origin.lower() == 'keyens':
-        parsed_meta = __keyence_parser__(meta_dict)
+        parsed_meta = __keyence_parser__(path)
     else:
         raise IOError(f"Unknown meta data origin for {origin}! Please code missing meta parser.")
 
