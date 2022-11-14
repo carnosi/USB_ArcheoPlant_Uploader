@@ -31,7 +31,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.0"
+__version__ = "1.0.2"
 __maintainer__ = ["Ondrej Budik"]
 __email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
@@ -93,7 +93,7 @@ def __zeiss_axiocam305c_parser__(meta_dict):
         parsed_meta["scaling"] = temp_scale
         parsed_meta["vendor"] = "Carl Zeiss"
     except Exception as e:
-        print("Exception on processing Zeiss meta data!", Exception)
+        print("Exception on processing Zeiss meta data!", type(e).__name__, e)
         parsed_meta = __empty_dict__()
         parsed_meta["vendor"] = "Carl Zeiss"
     return parsed_meta
@@ -119,105 +119,151 @@ def __keyence_parser__(path_to_tif):
         Dictionary containing desired data
     """
     # Prepare holder for output meta
-    parsed_meta = {}
+    parsed_meta = __empty_dict__()
 
-    # Open file and get makernotes
-    tif_file = Path(path_to_tif).resolve()
+    try:
+        # Open file and get makernotes
+        tif_file = Path(path_to_tif).resolve()
 
-    # Get makernote position in file
-    with open(tif_file, "rb") as file:
-        makernote_offset = exr.process_file(file, details=True)['EXIF MakerNote'].field_offset
+        # Get makernote position in file
+        with open(tif_file, "rb") as file:
+            makernote_offset = exr.process_file(file, details=True)['EXIF MakerNote'].field_offset
 
-    # Read makernote on given offset
-    with open(tif_file, "rb") as file:
-        file.seek(makernote_offset)
-        maker_notes_data = file.read()
+        # Read makernote on given offset
+        with open(tif_file, "rb") as file:
+            file.seek(makernote_offset)
+            maker_notes_data = file.read()
 
-    # Compose KmsFile from 0:7 byte, if no KmsFile is present, probly no keyence data.
-    kmsfile = ""
-    for char in range(0, 7):
-        kmsfile += chr(maker_notes_data[char])
-    # If version does not match, probly its not good idea to process data.
-    maker_note_version = maker_notes_data[7]
+        # Compose KmsFile from 0:7 byte, if no KmsFile is present, probly no keyence data.
+        kmsfile = ""
+        for char in range(0, 7):
+            kmsfile += chr(maker_notes_data[char])
+        # If version does not match, probly its not good idea to process data.
+        maker_note_version = maker_notes_data[7]
 
-    # Set flag in one of two identifiers do not match
-    if kmsfile != "KmsFile" or maker_note_version != 1:
-        print(f"Metadata in given tif file might be corrupted or not taken with Keyence! Processing skipped. KmsFile: {kmsfile}, Version: {maker_note_version}")
-        parsed_meta = __empty_dict__()
-        parsed_meta['sdk'] = f"{kmsfile} Version: {maker_note_version}"
-        parsed_meta["vendor"] = "Keyence"
-    else:
-        parsed_meta['sdk'] = f"{kmsfile} Version: {maker_note_version}"
-        parsed_meta["vendor"] = "Keyence"
+        # Set flag in one of two identifiers do not match
+        if kmsfile != "KmsFile" or maker_note_version != 1:
+            print(f"Metadata in given tif file might be corrupted or not taken with Keyence! Processing skipped. KmsFile: {kmsfile}, Version: {maker_note_version}")
+            parsed_meta = __empty_dict__()
+            parsed_meta['sdk'] = f"{kmsfile} Version: {maker_note_version}"
+            parsed_meta["vendor"] = "Keyence"
+        else:
+            parsed_meta['sdk'] = f"{kmsfile} Version: {maker_note_version}"
+            parsed_meta["vendor"] = "Keyence"
 
-        # Gen n tags
-        tags_count = maker_notes_data[8]
+            # Gen n tags
+            tags_count = maker_notes_data[8]
 
-        # tags dict holder
-        maker_notes_tags = {}
-        # Offset from start to where keyence data start
-        offset = 10
-        # Step size for iteration - number of bytes in each tag
-        step = 12
-        # Extract data according to their tags and keep them in a dict for easy access
-        for tag in range(0, tags_count):
-            start = offset + step*tag
-            end = start + step
-            split = maker_notes_data[start:end].hex()
-            tagid = split[2:4]+split[0:2]
-            maker_notes_tags[tagid] = split[4:]
+            # tags dict holder
+            maker_notes_tags = {}
+            # Offset from start to where keyence data start
+            offset = 10
+            # Step size for iteration - number of bytes in each tag
+            step = 12
+            # Extract data according to their tags and keep them in a dict for easy access
+            for tag in range(0, tags_count):
+                start = offset + step*tag
+                end = start + step
+                split = maker_notes_data[start:end].hex()
+                tagid = split[2:4]+split[0:2]
+                maker_notes_tags[tagid] = split[4:]
 
-        # Lens model
-        lens_model_tagid = "011f"
-        lens_model_tag = __extract_tag_with_offset__(lens_model_tagid, maker_notes_tags)
-        lens_model = __lens_tag_parser__(tif_file, lens_model_tag["val_or_offset"], lens_model_tag["n_of_elements"])
+            # Lens model
+            lens_model_tagid = "011f"
+            lens_model_tag = __extract_tag_with_offset__(lens_model_tagid, maker_notes_tags)
+            lens_model = __lens_tag_parser__(tif_file, lens_model_tag["val_or_offset"], lens_model_tag["n_of_elements"])
 
-        print(lens_model_tag)
-        print(lens_model)
+            parsed_meta["model"] = lens_model["char_string_area"]
 
-        # Lens magnification name
-        lens_mag_tagid = "0010"
-        lens__mag_tag = __extract_tag_with_offset__(lens_mag_tagid, maker_notes_tags)
-        lens_mag = __lens_tag_parser__(tif_file, lens__mag_tag["val_or_offset"], lens__mag_tag["n_of_elements"])
+            # Lens magnification name
+            lens_mag_tagid = "0010"
+            lens__mag_tag = __extract_tag_with_offset__(lens_mag_tagid, maker_notes_tags)
+            lens_mag = __lens_tag_parser__(tif_file, lens__mag_tag["val_or_offset"], lens__mag_tag["n_of_elements"])
 
-        print(lens__mag_tag)
-        print(lens_mag)
+            parsed_meta["objective"] = lens_mag["char_string_area"]
 
-        # Lens calibration storage method
-        lens_cali_tagid = "0011"
-        lens_cali_tag = __extract_tag_with_offset__(lens_cali_tagid, maker_notes_tags)
-        lens_cali = __lens_calibration_parser__(tif_file, lens_cali_tag["val_or_offset"], lens_cali_tag["n_of_elements"])
+            # Lens calibration storage method
+            lens_cali_tagid = "0011"
+            lens_cali_tag = __extract_tag_with_offset__(lens_cali_tagid, maker_notes_tags)
+            lens_cali = __lens_calibration_parser__(tif_file, lens_cali_tag["val_or_offset"], lens_cali_tag["n_of_elements"])
 
-        print(lens_cali_tag)
-        print(lens_cali)
+            # As of 14.11.2022 Keyence claims to always use um for this value. We can only hope that it will be the case, there is no info about units in meta data.
+            # For our app we convert this value to m further down.
+            parsed_meta["scalingunit"] = "\u00b5m"
 
-        # Whether magnification-adjustmens calibration adjustment factors must be applied
-        lens_magni_adj_tagid = "0143"
-        lens_magni_adj_tag = __extract_tag_with_offset__(lens_magni_adj_tagid, maker_notes_tags)
-        lens_magni_adj = __lens_calib_adj_parser__(tif_file, lens_magni_adj_tag["val_or_offset"], lens_magni_adj_tag["n_of_elements"])
+            # Whether magnification-adjustmens calibration adjustment factors must be applied
+            lens_magni_adj_tagid = "0143"
+            lens_magni_adj_tag = __extract_tag_with_offset__(lens_magni_adj_tagid, maker_notes_tags)
+            lens_magni_adj = __lens_calib_adj_parser__(tif_file, lens_magni_adj_tag["val_or_offset"], lens_magni_adj_tag["n_of_elements"])
 
-        print(lens_magni_adj_tag)
-        print(lens_magni_adj)
+            # Magnification-adjustment calibration adjustment factor
+            if lens_magni_adj["value"]:
+                lens_magni_cali_tagid = "0144"
+                lens_magni_cali_tag = __extract_tag_with_offset__(lens_magni_cali_tagid, maker_notes_tags)
+                lens_magni_cali = __lens_calibration_parser__(tif_file, lens_magni_cali_tag["val_or_offset"], lens_magni_cali_tag["n_of_elements"])
+                magni_factor = lens_magni_cali["value"]
+            else:
+                magni_factor = 1.0
 
-        # Whether filming-size calibration adjustment factors must be applied
-        lens_film_adj_tagid = "0147"
-        lens_film_adj_tag = __extract_tag_with_offset__(lens_film_adj_tagid, maker_notes_tags)
-        lens_film_adj = __lens_calib_adj_parser__(tif_file, lens_film_adj_tag["val_or_offset"], lens_film_adj_tag["n_of_elements"])
+            # Whether filming-size calibration adjustment factors must be applied
+            lens_film_adj_tagid = "0147"
+            lens_film_adj_tag = __extract_tag_with_offset__(lens_film_adj_tagid, maker_notes_tags)
+            lens_film_adj = __lens_calib_adj_parser__(tif_file, lens_film_adj_tag["val_or_offset"], lens_film_adj_tag["n_of_elements"])
 
-        print(lens_film_adj_tag)
-        print(lens_film_adj)
+            # Filming-size calibration adjustment factor
+            if lens_film_adj["value"]:
+                lens_film_cali_tagid = "0148"
+                lens_film_cali_tag = __extract_tag_with_offset__(lens_film_cali_tagid, maker_notes_tags)
+                lens_film_cali = __lens_calibration_parser__(tif_file, lens_film_cali_tag["val_or_offset"], lens_film_cali_tag["n_of_elements"])
+                film_factor = lens_film_cali["value"]
+            else:
+                film_factor = 1.0
 
-        # Whether digital-zoom calibration adjustment factors must be applied
-        lens_digi_adj_tagid = "0145"
-        lens_digi_adj_tag = __extract_tag_with_offset__(lens_digi_adj_tagid, maker_notes_tags)
-        lens_digi_adj = __lens_calib_adj_parser__(tif_file, lens_digi_adj_tag["val_or_offset"], lens_digi_adj_tag["n_of_elements"])
+            # Whether digital-zoom calibration adjustment factors must be applied
+            lens_digi_adj_tagid = "0145"
+            lens_digi_adj_tag = __extract_tag_with_offset__(lens_digi_adj_tagid, maker_notes_tags)
+            lens_digi_adj = __lens_calib_adj_parser__(tif_file, lens_digi_adj_tag["val_or_offset"], lens_digi_adj_tag["n_of_elements"])
 
-        print(lens_digi_adj_tag)
-        print(lens_digi_adj)
+            # Digital-zoom calibration adjustment factor
+            if lens_digi_adj["value"]:
+                lens_digi_cali_tagid = "0146"
+                lens_digi_cali_tag = __extract_tag_with_offset__(lens_digi_cali_tagid, maker_notes_tags)
+                lens_digi_cali = __lens_calibration_parser__(tif_file, lens_digi_cali_tag["val_or_offset"], lens_digi_cali_tag["n_of_elements"])
+                digi_factor = lens_digi_cali["value"]
+            else:
+                digi_factor = 1.0
 
+            # Calculate adjusted scaling factor based on equation provided by keyence
+            scaling = (lens_cali["value"])/(magni_factor * film_factor * digi_factor)
+            # Convert to m from um
+            scaling = scaling * 10e-6
 
+            parsed_meta["scaling"]["x"] = scaling
+            parsed_meta["scaling"]["y"] = scaling
 
-    parsed_meta["vendor"] = "Keyence"
+            #--------------------------------------#
+            # 3d calibration
+            calibration_3d_tagid = "0118"
+            #TODO read out 3d texture processor. Not used in this project, not coded, just marked the tag.
+
+            # 3d height data
+            height_3d_data_tagid = "0119"
+            #TODO read out 3d texture processor. Not used in this project, not coded, just marked the tag.
+
+            # 3d texture (standard)
+            texture_3d_standard_tagid = "011a"
+            #TODO read out 3d texture processor. Not used in this project, not coded, just marked the tag.
+
+            # 3d texture (stitched)
+            texture_3d_stitch_tagid = "011c"
+            #TODO read out 3d texture processor. Not used in this project, not coded, just marked the tag.
+
+            # 3d texture (upper limit increased)
+            texture_3d_increased_tagid = "01c9"
+            #TODO read out 3d texture processor. Not used in this project, not coded, just marked the tag.
+    except Exception as e:
+            print("Exception on processing Keyence meta data!", type(e).__name__, e)
+
     return parsed_meta
 
 def __empty_dict__():
@@ -242,7 +288,7 @@ def __empty_dict__():
     parsed_meta['totalmagnification'] = 0.0
     parsed_meta['scalingunit'] = "nan"
     parsed_meta['sdk'] = "nan"
-    parsed_meta["scaling"] = 0.0
+    parsed_meta["scaling"] = {"x" : 0.0, "y" : 0.0, "z" : 0.0}
     parsed_meta["vendor"] = "nan"
 
     return parsed_meta
