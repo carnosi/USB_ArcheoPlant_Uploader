@@ -88,7 +88,7 @@ except ModuleNotFoundError:
 
 # Check if custom scripts have correct version
 from version_check import check_version
-check_version(dp.__version__, [1, 1, 0], "dataprocess.py")
+check_version(dp.__version__, [1, 1, 3], "dataprocess.py")
 check_version(up.__version__, [1, 1, 0], "uploader.py")
 check_version(aio.__version__, [1, 0, 2], "all_in_one.py")
 

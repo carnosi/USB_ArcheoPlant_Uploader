@@ -31,7 +31,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 __maintainer__ = ["Ondrej Budik"]
 __email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
@@ -236,7 +236,7 @@ def __keyence_parser__(path_to_tif):
             # Calculate adjusted scaling factor based on equation provided by keyence
             scaling = (lens_cali["value"])/(magni_factor * film_factor * digi_factor)
             # Convert to m from um
-            scaling = scaling * 10e-6
+            scaling = scaling * 10e-7
 
             parsed_meta["scaling"]["x"] = scaling
             parsed_meta["scaling"]["y"] = scaling

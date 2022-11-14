@@ -1,105 +1,69 @@
 [
   [
     {
-      "focusmethod": "Widefield",
-      "texturemethod": "Wavelets",
-      "topographymethod": "Centroid",
-      "model": "Axiocam305c",
-      "adapter": "0.63x Camera Adapter",
-      "objective": "EC Epiplan 5x/0.13 HD M27",
-      "pixelaccuracy": 0.000244140625,
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "E100",
+      "adapter": "nan",
+      "objective": "X100",
+      "pixelaccuracy": 0.0,
       "pixeldistance": [
-        3.45,
-        3.45
+        0.0,
+        0.0
       ],
-      "totalmagnification": 3.15,
+      "totalmagnification": 0.0,
       "scalingunit": "\u00b5m",
-      "sdk": "1.78",
+      "sdk": "KmsFile Version: 1",
       "scaling": {
-        "x": 1.0952380952380954e-06,
-        "y": 1.0952380952380954e-06,
-        "z": 2.175e-05
+        "x": 1.03357370401025e-05,
+        "y": 1.03357370401025e-05,
+        "z": 0.0
       },
-      "vendor": "Carl Zeiss",
-      "timestamp": 1652268179.3428996,
-      "x_length": 1880.5238095238099,
-      "y_length": 518.0476190476192,
-      "area": 691319.761904762,
-      "bound_seed_ratio": 0.7096275261261924,
-      "hex_color": "#BBAE96",
-      "img_path": "test/Achillea millefolium/diaspore/ach mil_1--01_c1.tif",
-      "meta_path": "test/Achillea millefolium/diaspore/ach mil_1--01_meta.xml",
-      "species_name": "Achillea Millefolium",
-      "type": [
-        "Diaspore"
-      ]
-    }
-  ],
-  [
-    {
-      "focusmethod": "Widefield",
-      "texturemethod": "Wavelets",
-      "topographymethod": "Centroid",
-      "model": "Axiocam305c",
-      "adapter": "0.63x Camera Adapter",
-      "objective": "EC Epiplan 5x/0.13 HD M27",
-      "pixelaccuracy": 0.000244140625,
-      "pixeldistance": [
-        3.45,
-        3.45
-      ],
-      "totalmagnification": 3.15,
-      "scalingunit": "\u00b5m",
-      "sdk": "1.78",
-      "scaling": {
-        "x": 1.0952380952380954e-06,
-        "y": 1.0952380952380954e-06,
-        "z": 2.175e-05
-      },
-      "vendor": "Carl Zeiss",
-      "timestamp": 1652268179.1063542,
-      "x_length": 1880.5238095238099,
-      "y_length": 518.0476190476192,
-      "area": 691319.761904762,
-      "bound_seed_ratio": 0.7096275261261924,
-      "hex_color": "#BBAE96",
-      "img_path": "test/Achillea millefolium/ach mil_1--01_c1.tif",
-      "meta_path": "test/Achillea millefolium/ach mil_1--01_meta.xml",
-      "species_name": "Achillea Millefolium",
+      "vendor": "Keyence",
+      "timestamp": 1667392019.7327037,
+      "x_length": 15689.648826875597,
+      "y_length": 10253.05114378168,
+      "area": 10497253.60282818,
+      "bound_seed_ratio": 0.06525433115933299,
+      "hex_color": "#614434",
+      "img_path": "keyence/prunella testis/20220627_181313--0.tif",
+      "meta_path": "keyence/prunella testis/20220627_181313--0.tif",
+      "species_name": "Prunella Testis",
       "type": [
         "Seed"
       ]
     },
     {
-      "focusmethod": "Widefield",
-      "texturemethod": "Wavelets",
-      "topographymethod": "Centroid",
-      "model": "Axiocam305c",
-      "adapter": "0.63x Camera Adapter",
-      "objective": "EC Epiplan 5x/0.13 HD M27",
-      "pixelaccuracy": 0.000244140625,
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "E100",
+      "adapter": "nan",
+      "objective": "X100",
+      "pixelaccuracy": 0.0,
       "pixeldistance": [
-        3.45,
-        3.45
+        0.0,
+        0.0
       ],
-      "totalmagnification": 3.15,
+      "totalmagnification": 0.0,
       "scalingunit": "\u00b5m",
-      "sdk": "1.78",
+      "sdk": "KmsFile Version: 1",
       "scaling": {
-        "x": 1.0952380952380954e-06,
-        "y": 1.0952380952380954e-06,
-        "z": 2.175e-05
+        "x": 1.03357370401025e-05,
+        "y": 1.03357370401025e-05,
+        "z": 0.0
       },
-      "vendor": "Carl Zeiss",
-      "timestamp": 1652268179.2266357,
-      "x_length": 1888.1904761904764,
-      "y_length": 618.8095238095239,
-      "area": 810184.8571428573,
-      "bound_seed_ratio": 0.6933959964969572,
-      "hex_color": "#C0B39B",
-      "img_path": "test/Achillea millefolium/ach mil_1--02_c1.tif",
-      "meta_path": "test/Achillea millefolium/ach mil_1--02_meta.xml",
-      "species_name": "Achillea Millefolium",
+      "vendor": "Keyence",
+      "timestamp": 1668441027.8347998,
+      "x_length": 15689.648826875597,
+      "y_length": 10253.05114378168,
+      "area": 10497253.60282818,
+      "bound_seed_ratio": 0.06525433115933299,
+      "hex_color": "#614434",
+      "img_path": "keyence/prunella testis/20220627_181313--1.tif",
+      "meta_path": "keyence/prunella testis/20220627_181313--1.tif",
+      "species_name": "Prunella Testis",
       "type": [
         "Seed"
       ]
@@ -107,177 +71,35 @@
   ],
   [
     {
-      "focusmethod": "Wavelets",
-      "texturemethod": "Wavelets",
-      "topographymethod": "Centroid",
-      "model": "Axiocam305c",
-      "adapter": "0.63x Camera Adapter",
-      "objective": "EC Epiplan 5x/0.13 HD M27",
-      "pixelaccuracy": 0.000244140625,
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "E100",
+      "adapter": "nan",
+      "objective": "X100",
+      "pixelaccuracy": 0.0,
       "pixeldistance": [
-        3.45,
-        3.45
+        0.0,
+        0.0
       ],
-      "totalmagnification": 3.15,
+      "totalmagnification": 0.0,
       "scalingunit": "\u00b5m",
-      "sdk": "1.78",
+      "sdk": "KmsFile Version: 1",
       "scaling": {
-        "x": 1.0952380952380954e-06,
-        "y": 1.0952380952380954e-06,
-        "z": 2.175e-05
+        "x": 1.03357370401025e-05,
+        "y": 1.03357370401025e-05,
+        "z": 0.0
       },
-      "vendor": "Carl Zeiss",
-      "timestamp": 1658752172.0270076,
-      "x_length": 1939.666666666667,
-      "y_length": 722.8571428571429,
-      "area": 1027508.5714285717,
-      "bound_seed_ratio": 0.7328344451561499,
-      "hex_color": "#AFA69D",
-      "img_path": "test/Achillea millefolium/Achillea millefolium_2--01.tif",
-      "meta_path": "test/Achillea millefolium/Achillea millefolium_2--01_meta.xml",
-      "species_name": "Achillea Millefolium",
-      "type": [
-        "Seed"
-      ]
-    },
-    {
-      "focusmethod": "Wavelets",
-      "texturemethod": "Wavelets",
-      "topographymethod": "Centroid",
-      "model": "Axiocam305c",
-      "adapter": "0.63x Camera Adapter",
-      "objective": "EC Epiplan 5x/0.13 HD M27",
-      "pixelaccuracy": 0.000244140625,
-      "pixeldistance": [
-        3.45,
-        3.45
-      ],
-      "totalmagnification": 3.15,
-      "scalingunit": "\u00b5m",
-      "sdk": "1.78",
-      "scaling": {
-        "x": 1.0952380952380954e-06,
-        "y": 1.0952380952380954e-06,
-        "z": 2.175e-05
-      },
-      "vendor": "Carl Zeiss",
-      "timestamp": 1658752172.1349635,
-      "x_length": 1942.9523809523812,
-      "y_length": 578.2857142857143,
-      "area": 782670.2857142858,
-      "bound_seed_ratio": 0.6965851718498647,
-      "hex_color": "#968E88",
-      "img_path": "test/Achillea millefolium/Achillea millefolium_2--02.tif",
-      "meta_path": "test/Achillea millefolium/Achillea millefolium_2--02_meta.xml",
-      "species_name": "Achillea Millefolium",
-      "type": [
-        "Seed"
-      ]
-    }
-  ],
-  [
-    {
-      "focusmethod": "Wavelets",
-      "texturemethod": "Wavelets",
-      "topographymethod": "Centroid",
-      "model": "Axiocam305c",
-      "adapter": "0.63x Camera Adapter",
-      "objective": "EC Epiplan 5x/0.13 HD M27",
-      "pixelaccuracy": 0.000244140625,
-      "pixeldistance": [
-        3.45,
-        3.45
-      ],
-      "totalmagnification": 3.15,
-      "scalingunit": "\u00b5m",
-      "sdk": "1.78",
-      "scaling": {
-        "x": 1.0952380952380954e-06,
-        "y": 1.0952380952380954e-06,
-        "z": 2.175e-05
-      },
-      "vendor": "Carl Zeiss",
-      "timestamp": 1658752172.2386456,
-      "x_length": 2231.0000000000005,
-      "y_length": 1454.4761904761908,
-      "area": 2050908.904761905,
-      "bound_seed_ratio": 0.6320336253125454,
-      "hex_color": "#7C7059",
-      "img_path": "test/Ajuga reptans/aju rep_11--01.tif",
-      "meta_path": "test/Ajuga reptans/aju rep_11--01_meta.xml",
-      "species_name": "Ajuga Reptans",
-      "type": [
-        "Seed"
-      ]
-    }
-  ],
-  [
-    {
-      "focusmethod": "Wavelets",
-      "texturemethod": "Wavelets",
-      "topographymethod": "Centroid",
-      "model": "Axiocam305c",
-      "adapter": "0.63x Camera Adapter",
-      "objective": "EC Epiplan 5x/0.13 HD M27",
-      "pixelaccuracy": 0.000244140625,
-      "pixeldistance": [
-        3.45,
-        3.45
-      ],
-      "totalmagnification": 3.15,
-      "scalingunit": "\u00b5m",
-      "sdk": "1.78",
-      "scaling": {
-        "x": 1.0952380952380954e-06,
-        "y": 1.0952380952380954e-06,
-        "z": 2.175e-05
-      },
-      "vendor": "Carl Zeiss",
-      "timestamp": 1658752172.4692695,
-      "x_length": 2220.0476190476193,
-      "y_length": 1450.0952380952383,
-      "area": 2044380.1904761908,
-      "bound_seed_ratio": 0.6350425825634766,
-      "hex_color": "#8D8166",
-      "img_path": "test/Ajuga reptans/aju rep_11.tif",
-      "meta_path": "test/Ajuga reptans/aju rep_11_meta.xml",
-      "species_name": "Ajuga Reptans",
-      "type": [
-        "Seed"
-      ]
-    }
-  ],
-  [
-    {
-      "focusmethod": "Wavelets",
-      "texturemethod": "Wavelets",
-      "topographymethod": "Centroid",
-      "model": "Axiocam305c",
-      "adapter": "0.63x Camera Adapter",
-      "objective": "EC Epiplan 5x/0.13 HD M27",
-      "pixelaccuracy": 0.000244140625,
-      "pixeldistance": [
-        3.45,
-        3.45
-      ],
-      "totalmagnification": 3.15,
-      "scalingunit": "\u00b5m",
-      "sdk": "1.78",
-      "scaling": {
-        "x": 1.0952380952380954e-06,
-        "y": 1.0952380952380954e-06,
-        "z": 2.175e-05
-      },
-      "vendor": "Carl Zeiss",
-      "timestamp": 1658752172.5841446,
-      "x_length": 2220.0476190476193,
-      "y_length": 1450.0952380952383,
-      "area": 2044380.1904761908,
-      "bound_seed_ratio": 0.6350425825634766,
-      "hex_color": "#8D8166",
-      "img_path": "test/Ajuga reptans/aju rep_12.tif",
-      "meta_path": "test/Ajuga reptans/aju rep_12_meta.xml",
-      "species_name": "Ajuga Reptans",
+      "vendor": "Keyence",
+      "timestamp": 1667395017.662873,
+      "x_length": 17570.752968174253,
+      "y_length": 8485.640109924152,
+      "area": 7024507.9717759825,
+      "bound_seed_ratio": 0.047113018283618,
+      "hex_color": "#3D3431",
+      "img_path": "keyence/prunella testis/20220805_115118--0.tif",
+      "meta_path": "keyence/prunella testis/20220805_115118--0.tif",
+      "species_name": "Prunella Testis",
       "type": [
         "Seed"
       ]

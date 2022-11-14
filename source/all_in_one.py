@@ -47,7 +47,7 @@ import uploader as up
 
 # Check if uploader and dataprocess has correct versions
 from version_check import check_version
-check_version(dp.__version__, [1, 1, 1], "dataprocess.py")
+check_version(dp.__version__, [1, 1, 3], "dataprocess.py")
 check_version(up.__version__, [1, 1, 1], "uploader.py")
 
 # Global for interupting the script

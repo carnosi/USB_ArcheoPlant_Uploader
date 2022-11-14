@@ -32,7 +32,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.1.1"
+__version__ = "1.1.3"
 __maintainer__ = ["Ondrej Budik"]
 __email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
@@ -55,7 +55,7 @@ from imgprocess import __version__ as __imv__
 from parsers import __zeiss_axiocam305c_parser__, __keyence_parser__
 from version_check import check_version
 check_version(__imv__, [1, 0, 5], "imgprocess.py")
-check_version(__imv__, [1, 0, 0], "parsers.py")
+check_version(__imv__, [1, 0, 3], "parsers.py")
 
 
 # Get current working directory for file management as global var
@@ -74,7 +74,7 @@ for pos, item in enumerate(IMAGE_ADDITIONS):
     IMAGE_ADDITIONS[pos] = item.lower()
 
 # Functions definition
-def img_meta_pair(groups):
+def img_meta_pair(groups, origin):
     """
     Takes subfolder with *.tifs and pairs them together with their meta data in based on their names.
     If names do not match (except suffix), automatic pairing can not be performed and files will be ignored
@@ -83,31 +83,42 @@ def img_meta_pair(groups):
     ----------
     groups : list of lists with str (paths). The output of get_groups.
         List containing groups of seed image paths
+    origin : str
+        Name of group origins. Some microscopes save data inside of the image, thus grouping is not necessary.
 
     Returns
     -------
     groups_holder : list
         Contains list of lists. Each nested list is one group and has 2 paired values. [[[img, meta], [img, meta], ...], [[img, meta], [img, meta], ...]]
     """
-    groups_holder = []
-    for group in groups:
-        temp_group = []
-        for img in group:
-            img_path = Path(img)
-            # Fix some of their weird naming
-            if img_path.stem[-3:] in IMAGE_SUFFIX_NAMES:
-                temp_img_file = img_path.stem[:-3]
-            else:
-                temp_img_file = img_path.stem
-            # Append meta to path stem
-            meta_temp = str(temp_img_file) + "_meta.xml"
-            meta_file = img_path.parent / meta_temp
-            if not meta_file.is_file():
-                print(f"\nFor image {img_path.stem} in {meta_file.parent} were no meta data found! File is excluded from upload.\n")
-                continue
-            temp_group.append([img_path, meta_file])
-        groups_holder.append(temp_group)
-        temp_group = []
+    if origin.lower() not in ["keyence"]:
+        groups_holder = []
+        for group in groups:
+            temp_group = []
+            for img in group:
+                img_path = Path(img)
+                # Fix some of their weird naming
+                if img_path.stem[-3:] in IMAGE_SUFFIX_NAMES:
+                    temp_img_file = img_path.stem[:-3]
+                else:
+                    temp_img_file = img_path.stem
+                # Append meta to path stem
+                meta_temp = str(temp_img_file) + "_meta.xml"
+                meta_file = img_path.parent / meta_temp
+                if not meta_file.is_file():
+                    print(f"\nFor image {img_path.stem} in {meta_file.parent} were no meta data found! File is excluded from upload.\n")
+                    continue
+                temp_group.append([img_path, meta_file])
+            groups_holder.append(temp_group)
+            temp_group = []
+    else:
+        groups_holder = []
+        for group in groups:
+            temp_group = []
+            for img in group:
+                img_path = Path(img)
+                temp_group.append([img_path, img_path])
+            groups_holder.append(temp_group)
 
     return groups_holder
 
@@ -137,7 +148,7 @@ def parse_meta(path, origin='zeiss axiocam 305c'):
         # Load xml and convert it to dict
         meta_dict = xmltodict.parse(ET.tostring(ET.parse(path).getroot()))
         parsed_meta = __zeiss_axiocam305c_parser__(meta_dict)
-    elif origin.lower() == 'keyens':
+    elif origin.lower() == 'keyence':
         parsed_meta = __keyence_parser__(path)
     else:
         raise IOError(f"Unknown meta data origin for {origin}! Please code missing meta parser.")
@@ -431,7 +442,7 @@ def main(path, origin, generator=True, save=False, consolecall=False):
                 if subfolder.name.lower() == 'diaspore':
                     # If there is one, lets get them in image groups and get img and meta data paths
                     groups = get_groups(subfolder)
-                    pairs = img_meta_pair(groups)
+                    pairs = img_meta_pair(groups, origin)
                     if pairs is not None:
                         DIASPORE_CONTENT_GROUPS = pairs
                     else:
@@ -442,7 +453,7 @@ def main(path, origin, generator=True, save=False, consolecall=False):
         # Lets get seed and meta data paths
         try:
             groups = get_groups(folder)
-            pairs = img_meta_pair(groups)
+            pairs = img_meta_pair(groups, origin)
             if pairs is not None:
                 SEED_CONTENT_GROUPS = pairs
             else:
@@ -571,10 +582,16 @@ if __name__ == "__main__":
     # Runs this script in current working directory. Looks for folder
     # named to_be_uploaded
     print('main processing function test')
-    PATH = "..//JCU_ArcheoPlant_Uploader//test"
-    file = main(PATH, 'zeiss axiocam 305c')
+
+    # PATH = "..//JCU_ArcheoPlant_Uploader//test"
+    # file = main(PATH, 'zeiss axiocam 305c')
+
+    PATH = "..//JCU_ArcheoPlant_Uploader//keyence"
+    file = main(PATH, 'keyence', consolecall=True)
     print("Test successful!\n", next(file))
 
     print("preload_data function test")
-    output = preload_data(PATH, "Zeiss Axiocam 305c")
+
+    # output = preload_data(PATH, "Zeiss Axiocam 305c")
+    output = preload_data(PATH, "Keyence")
     print("Test successful!\n", output)
