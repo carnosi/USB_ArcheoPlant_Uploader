@@ -4,32 +4,31 @@
       "focusmethod": "nan",
       "texturemethod": "nan",
       "topographymethod": "nan",
-      "model": "E100",
-      "adapter": "nan",
-      "objective": "X100",
-      "pixelaccuracy": 0.0,
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
       "pixeldistance": [
-        0.0,
-        0.0
+        3.45,
+        3.45
       ],
-      "totalmagnification": 0.0,
+      "totalmagnification": 0.96,
       "scalingunit": "\u00b5m",
-      "sdk": "KmsFile Version: 1",
+      "sdk": "1.78",
       "scaling": {
-        "x": 1.03357370401025e-05,
-        "y": 1.03357370401025e-05,
-        "z": 0.0
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
       },
-      "vendor": "Keyence",
-      "timestamp": 1667392019.7327037,
-      "x_length": 15689.648826875597,
-      "y_length": 10253.05114378168,
-      "area": 10497253.60282818,
-      "bound_seed_ratio": 0.06525433115933299,
-      "hex_color": "#614434",
-      "img_path": "keyence/prunella testis/20220627_181313--0.tif",
-      "meta_path": "keyence/prunella testis/20220627_181313--0.tif",
-      "species_name": "Prunella Testis",
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.0480947,
+      "x_length": 14432.043650793652,
+      "y_length": 1922.3710317460318,
+      "area": 3309221.9742063493,
+      "bound_seed_ratio": 0.11927813838122633,
+      "hex_color": "#BCA290",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
       "type": [
         "Seed"
       ]
@@ -38,32 +37,163 @@
       "focusmethod": "nan",
       "texturemethod": "nan",
       "topographymethod": "nan",
-      "model": "E100",
-      "adapter": "nan",
-      "objective": "X100",
-      "pixelaccuracy": 0.0,
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
       "pixeldistance": [
-        0.0,
-        0.0
+        3.45,
+        3.45
       ],
-      "totalmagnification": 0.0,
+      "totalmagnification": 0.96,
       "scalingunit": "\u00b5m",
-      "sdk": "KmsFile Version: 1",
+      "sdk": "1.78",
       "scaling": {
-        "x": 1.03357370401025e-05,
-        "y": 1.03357370401025e-05,
-        "z": 0.0
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
       },
-      "vendor": "Keyence",
-      "timestamp": 1668441027.8347998,
-      "x_length": 15689.648826875597,
-      "y_length": 10253.05114378168,
-      "area": 10497253.60282818,
-      "bound_seed_ratio": 0.06525433115933299,
-      "hex_color": "#614434",
-      "img_path": "keyence/prunella testis/20220627_181313--1.tif",
-      "meta_path": "keyence/prunella testis/20220627_181313--1.tif",
-      "species_name": "Prunella Testis",
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.0949724,
+      "x_length": 14386.40873015873,
+      "y_length": 2743.7996031746034,
+      "area": 3050928.3234126987,
+      "bound_seed_ratio": 0.07729069650332969,
+      "hex_color": "#C3A996",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.142278,
+      "x_length": 14437.748015873016,
+      "y_length": 2030.7539682539684,
+      "area": 3303260.912698413,
+      "bound_seed_ratio": 0.11266424484897287,
+      "hex_color": "#C2A794",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.1971724,
+      "x_length": 14489.087301587304,
+      "y_length": 1779.7619047619048,
+      "area": 3116414.4345238097,
+      "bound_seed_ratio": 0.12085156295262423,
+      "hex_color": "#C2A694",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.23599,
+      "x_length": 13815.972222222223,
+      "y_length": 1973.7103174603176,
+      "area": 2776827.876984127,
+      "bound_seed_ratio": 0.10183195882428993,
+      "hex_color": "#C5AA99",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.2673304,
+      "x_length": 14220.982142857143,
+      "y_length": 2213.293650793651,
+      "area": 3130190.476190476,
+      "bound_seed_ratio": 0.09944939294839533,
+      "hex_color": "#B49686",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_1--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
       "type": [
         "Seed"
       ]
@@ -74,32 +204,4429 @@
       "focusmethod": "nan",
       "texturemethod": "nan",
       "topographymethod": "nan",
-      "model": "E100",
-      "adapter": "nan",
-      "objective": "X100",
-      "pixelaccuracy": 0.0,
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
       "pixeldistance": [
-        0.0,
-        0.0
+        3.45,
+        3.45
       ],
-      "totalmagnification": 0.0,
+      "totalmagnification": 0.96,
       "scalingunit": "\u00b5m",
-      "sdk": "KmsFile Version: 1",
+      "sdk": "1.78",
       "scaling": {
-        "x": 1.03357370401025e-05,
-        "y": 1.03357370401025e-05,
-        "z": 0.0
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
       },
-      "vendor": "Keyence",
-      "timestamp": 1667395017.662873,
-      "x_length": 17570.752968174253,
-      "y_length": 8485.640109924152,
-      "area": 7024507.9717759825,
-      "bound_seed_ratio": 0.047113018283618,
-      "hex_color": "#3D3431",
-      "img_path": "keyence/prunella testis/20220805_115118--0.tif",
-      "meta_path": "keyence/prunella testis/20220805_115118--0.tif",
-      "species_name": "Prunella Testis",
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.236774,
+      "x_length": 14854.166666666668,
+      "y_length": 1853.9186507936508,
+      "area": 3107566.9642857146,
+      "bound_seed_ratio": 0.11284479447621103,
+      "hex_color": "#C5AB98",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.2837455,
+      "x_length": 14831.349206349207,
+      "y_length": 1802.579365079365,
+      "area": 3170400.5456349207,
+      "bound_seed_ratio": 0.11858754498116084,
+      "hex_color": "#C7AE9B",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.3149836,
+      "x_length": 14854.166666666668,
+      "y_length": 2276.0416666666665,
+      "area": 3210912.9464285714,
+      "bound_seed_ratio": 0.09497297240295689,
+      "hex_color": "#BAA290",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.362516,
+      "x_length": 15213.541666666666,
+      "y_length": 1865.3273809523812,
+      "area": 3401450.148809524,
+      "bound_seed_ratio": 0.11986122636146347,
+      "hex_color": "#AD9685",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.40939,
+      "x_length": 15162.202380952382,
+      "y_length": 2327.3809523809523,
+      "area": 3155939.9801587304,
+      "bound_seed_ratio": 0.08943324115395496,
+      "hex_color": "#B79E8D",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.456788,
+      "x_length": 14660.218253968254,
+      "y_length": 2281.746031746032,
+      "area": 3121582.5892857146,
+      "bound_seed_ratio": 0.09331835831500593,
+      "hex_color": "#B69E8C",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_10--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.500216,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.5427308,
+      "x_length": 15578.621031746032,
+      "y_length": 2190.476190476191,
+      "area": 2574157.490079365,
+      "bound_seed_ratio": 0.0754340741566236,
+      "hex_color": "#E7D4BC",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.5822186,
+      "x_length": 15515.873015873018,
+      "y_length": 1631.4484126984128,
+      "area": 2580609.1269841273,
+      "bound_seed_ratio": 0.1019465812959419,
+      "hex_color": "#E2D4BE",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.6378148,
+      "x_length": 15601.438492063493,
+      "y_length": 1357.638888888889,
+      "area": 2602468.253968254,
+      "bound_seed_ratio": 0.12286736021171048,
+      "hex_color": "#E3D6C2",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.6857152,
+      "x_length": 15538.690476190477,
+      "y_length": 2076.3888888888887,
+      "area": 2592012.152777778,
+      "bound_seed_ratio": 0.08033668763720479,
+      "hex_color": "#E8D8C1",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.733158,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_11--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.7737336,
+      "x_length": 17677.82738095238,
+      "y_length": 2407.2420634920636,
+      "area": 3388518.353174603,
+      "bound_seed_ratio": 0.07962715331221952,
+      "hex_color": "#B29C8E",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.8280876,
+      "x_length": 17866.071428571428,
+      "y_length": 2042.1626984126985,
+      "area": 3101657.242063492,
+      "bound_seed_ratio": 0.0850108576996418,
+      "hex_color": "#B69A89",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.87585,
+      "x_length": 17643.60119047619,
+      "y_length": 1631.4484126984128,
+      "area": 3356967.5099206353,
+      "bound_seed_ratio": 0.11662363125003872,
+      "hex_color": "#B39C8D",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.9407218,
+      "x_length": 17506.69642857143,
+      "y_length": 1973.7103174603176,
+      "area": 3361645.0892857146,
+      "bound_seed_ratio": 0.09728911388897281,
+      "hex_color": "#B79F8F",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.0043743,
+      "x_length": 17763.39285714286,
+      "y_length": 2475.6944444444443,
+      "area": 3347349.9503968256,
+      "bound_seed_ratio": 0.07611638521593203,
+      "hex_color": "#B59E8F",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.0799944,
+      "x_length": 17672.123015873018,
+      "y_length": 1876.736111111111,
+      "area": 3197695.932539683,
+      "bound_seed_ratio": 0.09641513817216085,
+      "hex_color": "#CCB2A1",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.1481588,
+      "x_length": 17717.757936507936,
+      "y_length": 2064.980158730159,
+      "area": 3096665.9226190476,
+      "bound_seed_ratio": 0.0846388410210515,
+      "hex_color": "#DBCAB3",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--07.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--07_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.2174551,
+      "x_length": 17917.410714285714,
+      "y_length": 1859.623015873016,
+      "area": 3056763.8888888895,
+      "bound_seed_ratio": 0.0917406330322279,
+      "hex_color": "#D5C8B3",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--08.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--08_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.2986715,
+      "x_length": 17820.43650793651,
+      "y_length": 1540.1785714285716,
+      "area": 2954222.2222222225,
+      "bound_seed_ratio": 0.10763505724730464,
+      "hex_color": "#DECFB9",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--09.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--09_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.3665175,
+      "x_length": 17609.375,
+      "y_length": 2064.980158730159,
+      "area": 3071241.5674603176,
+      "bound_seed_ratio": 0.08446059797928299,
+      "hex_color": "#E5D6BE",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--10.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--10_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.4402938,
+      "x_length": 16936.259920634922,
+      "y_length": 1505.952380952381,
+      "area": 2892033.234126984,
+      "bound_seed_ratio": 0.11338994111750272,
+      "hex_color": "#D9CBB4",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--11.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--11_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.494401,
+      "x_length": 16816.468253968254,
+      "y_length": 1831.1011904761906,
+      "area": 2903681.5476190476,
+      "bound_seed_ratio": 0.09429786239281227,
+      "hex_color": "#E6D6BE",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--12.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_12--12_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.5512064,
+      "x_length": 16765.128968253972,
+      "y_length": 1580.1091269841272,
+      "area": 2752698.412698413,
+      "bound_seed_ratio": 0.10391174837453798,
+      "hex_color": "#E3D4BD",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.6176796,
+      "x_length": 16713.789682539686,
+      "y_length": 1448.9087301587301,
+      "area": 2717120.2876984132,
+      "bound_seed_ratio": 0.11220001191793451,
+      "hex_color": "#E5D3B9",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.6813922,
+      "x_length": 16730.902777777777,
+      "y_length": 1511.656746031746,
+      "area": 2760576.140873016,
+      "bound_seed_ratio": 0.10915086155755824,
+      "hex_color": "#E8D8BE",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.7432256,
+      "x_length": 16719.49404761905,
+      "y_length": 1523.0654761904761,
+      "area": 2766634.176587302,
+      "bound_seed_ratio": 0.10864507212542109,
+      "hex_color": "#E4D7BE",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.803474,
+      "x_length": 16748.015873015873,
+      "y_length": 1283.482142857143,
+      "area": 2710600.1984126987,
+      "bound_seed_ratio": 0.12609918256130792,
+      "hex_color": "#E4D7BF",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_13--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.867061,
+      "x_length": 15789.68253968254,
+      "y_length": 1374.751984126984,
+      "area": 2640887.1527777775,
+      "bound_seed_ratio": 0.12166119847039278,
+      "hex_color": "#E1D3BC",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.9206586,
+      "x_length": 15875.248015873016,
+      "y_length": 1277.7777777777778,
+      "area": 2635998.511904762,
+      "bound_seed_ratio": 0.12994791357465357,
+      "hex_color": "#E6D8C0",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581497.9820108,
+      "x_length": 15863.839285714286,
+      "y_length": 1306.2996031746034,
+      "area": 2531517.3611111115,
+      "bound_seed_ratio": 0.12216022213169499,
+      "hex_color": "#E9DDC4",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.0455625,
+      "x_length": 15772.569444444447,
+      "y_length": 1403.2738095238096,
+      "area": 2600169.39484127,
+      "bound_seed_ratio": 0.11747806220384713,
+      "hex_color": "#DFD1BA",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.1082814,
+      "x_length": 15629.960317460316,
+      "y_length": 1317.7083333333335,
+      "area": 2594504.9603174604,
+      "bound_seed_ratio": 0.1259729609647731,
+      "hex_color": "#E3D4BC",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_14--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.2354934,
+      "x_length": 16833.58134920635,
+      "y_length": 1922.3710317460318,
+      "area": 2846101.6865079366,
+      "bound_seed_ratio": 0.08795016875862717,
+      "hex_color": "#E4CFBB",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.316009,
+      "x_length": 16742.31150793651,
+      "y_length": 1534.4742063492065,
+      "area": 2841047.619047619,
+      "bound_seed_ratio": 0.11058685373436468,
+      "hex_color": "#E5D1BC",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.3842726,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.442875,
+      "x_length": 16576.884920634922,
+      "y_length": 1939.4841269841272,
+      "area": 2776166.1706349207,
+      "bound_seed_ratio": 0.08634879981975732,
+      "hex_color": "#E9D5C0",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.5080013,
+      "x_length": 16445.684523809527,
+      "y_length": 1477.4305555555557,
+      "area": 2819604.910714286,
+      "bound_seed_ratio": 0.11604574651111318,
+      "hex_color": "#EDE0CB",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.1871755,
+      "x_length": 16468.501984126986,
+      "y_length": 1825.3968253968255,
+      "area": 2652233.134920635,
+      "bound_seed_ratio": 0.08822675562115026,
+      "hex_color": "#EDDDC6",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_15_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.5746632,
+      "x_length": 17364.087301587304,
+      "y_length": 1454.6130952380954,
+      "area": 2835075.1488095243,
+      "bound_seed_ratio": 0.11224451337753863,
+      "hex_color": "#E3D3B8",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.6510074,
+      "x_length": 17204.36507936508,
+      "y_length": 1277.7777777777778,
+      "area": 2826079.365079365,
+      "bound_seed_ratio": 0.1285554146003921,
+      "hex_color": "#DFCFB5",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.712319,
+      "x_length": 17404.01785714286,
+      "y_length": 1466.0218253968253,
+      "area": 2866323.660714286,
+      "bound_seed_ratio": 0.11234022064757024,
+      "hex_color": "#DFD0B7",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.7786877,
+      "x_length": 17386.904761904763,
+      "y_length": 1477.4305555555557,
+      "area": 2869187.251984127,
+      "bound_seed_ratio": 0.11169392192603421,
+      "hex_color": "#DDCDB5",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.8241422,
+      "x_length": 17267.113095238095,
+      "y_length": 1511.656746031746,
+      "area": 2830215.029761905,
+      "bound_seed_ratio": 0.10842926475502268,
+      "hex_color": "#E6D7BD",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.8701832,
+      "x_length": 17141.617063492064,
+      "y_length": 1260.6646825396826,
+      "area": 2817203.373015873,
+      "bound_seed_ratio": 0.13036674569860776,
+      "hex_color": "#D3C3AA",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_16--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.9278085,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581498.9891474,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.0645351,
+      "x_length": 17860.367063492064,
+      "y_length": 2053.571428571429,
+      "area": 2763953.125,
+      "bound_seed_ratio": 0.07535819365947813,
+      "hex_color": "#DACCB3",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.1140614,
+      "x_length": 17415.426587301587,
+      "y_length": 1197.9166666666667,
+      "area": 2681496.527777778,
+      "bound_seed_ratio": 0.1285335535966049,
+      "hex_color": "#DFD3BB",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.177479,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.236468,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.2988958,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--07.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--07_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.348037,
+      "x_length": 16765.128968253972,
+      "y_length": 1197.9166666666667,
+      "area": 2624732.390873016,
+      "bound_seed_ratio": 0.13069275855437368,
+      "hex_color": "#E3D4BB",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--08.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--08_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.4203079,
+      "x_length": 17461.06150793651,
+      "y_length": 1300.5952380952383,
+      "area": 2652130.4563492066,
+      "bound_seed_ratio": 0.11678365978722496,
+      "hex_color": "#E8DAC0",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--09.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--09_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.4858775,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--10.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_17--10_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.5415902,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.5994303,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.662041,
+      "x_length": 16765.128968253972,
+      "y_length": 1197.9166666666667,
+      "area": 2624732.390873016,
+      "bound_seed_ratio": 0.13069275855437368,
+      "hex_color": "#E3D4BB",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.720811,
+      "x_length": 17461.06150793651,
+      "y_length": 1300.5952380952383,
+      "area": 2652130.4563492066,
+      "bound_seed_ratio": 0.11678365978722496,
+      "hex_color": "#E8DAC0",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.7800918,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_18--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.844874,
+      "x_length": 16941.964285714286,
+      "y_length": 1608.6309523809525,
+      "area": 2653539.4345238097,
+      "bound_seed_ratio": 0.09736555938665097,
+      "hex_color": "#E2D4BB",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.90776,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581499.972181,
+      "x_length": 17666.41865079365,
+      "y_length": 1317.7083333333335,
+      "area": 2913584.3253968256,
+      "bound_seed_ratio": 0.12515833632190274,
+      "hex_color": "#E1D4BD",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.0345457,
+      "x_length": 17637.896825396827,
+      "y_length": 1374.751984126984,
+      "area": 2674177.8273809524,
+      "bound_seed_ratio": 0.11028568134488471,
+      "hex_color": "#E7D9BF",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.097942,
+      "x_length": 17130.208333333336,
+      "y_length": 1426.0912698412699,
+      "area": 2697634.1765873013,
+      "bound_seed_ratio": 0.1104264445120097,
+      "hex_color": "#E5D7BD",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_19--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.314199,
+      "x_length": 14386.40873015873,
+      "y_length": 2749.503968253968,
+      "area": 3063398.0654761908,
+      "bound_seed_ratio": 0.07744558918858445,
+      "hex_color": "#C3A895",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.3455052,
+      "x_length": 13935.76388888889,
+      "y_length": 1802.579365079365,
+      "area": 2931113.8392857146,
+      "bound_seed_ratio": 0.11668297975345866,
+      "hex_color": "#C5AA99",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.3767524,
+      "x_length": 13764.632936507938,
+      "y_length": 1928.075396825397,
+      "area": 3153880.7043650798,
+      "bound_seed_ratio": 0.1188383504111327,
+      "hex_color": "#B79D8D",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.423628,
+      "x_length": 14312.251984126984,
+      "y_length": 2709.573412698413,
+      "area": 3007540.922619048,
+      "bound_seed_ratio": 0.07755372266248828,
+      "hex_color": "#BE9F8C",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.455523,
+      "x_length": 14238.095238095239,
+      "y_length": 2658.2341269841268,
+      "area": 2988368.551587302,
+      "bound_seed_ratio": 0.07895670834110842,
+      "hex_color": "#BCA190",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.5023925,
+      "x_length": 14426.339285714286,
+      "y_length": 2002.232142857143,
+      "area": 2895301.8353174604,
+      "bound_seed_ratio": 0.10023589549630088,
+      "hex_color": "#C6A794",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_2--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.1522515,
+      "x_length": 16959.07738095238,
+      "y_length": 1483.1349206349207,
+      "area": 2927189.2361111115,
+      "bound_seed_ratio": 0.11637720352739876,
+      "hex_color": "#E5D1B8",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.1965532,
+      "x_length": 17888.88888888889,
+      "y_length": 1523.0654761904761,
+      "area": 3013644.5932539683,
+      "bound_seed_ratio": 0.11060890501779608,
+      "hex_color": "#E2D3BC",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.239766,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.2968047,
+      "x_length": 17717.757936507936,
+      "y_length": 1471.7261904761906,
+      "area": 3036382.1924603176,
+      "bound_seed_ratio": 0.11644494852260896,
+      "hex_color": "#EBD9BF",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.344479,
+      "x_length": 16873.511904761905,
+      "y_length": 1574.4047619047622,
+      "area": 2792646.0813492066,
+      "bound_seed_ratio": 0.10512209879714875,
+      "hex_color": "#EAD9C0",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.4202497,
+      "x_length": 17597.966269841272,
+      "y_length": 3234.3750000000005,
+      "area": 4220180.555555555,
+      "bound_seed_ratio": 0.07414437006240258,
+      "hex_color": "#C2B1A5",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_20--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.4814596,
+      "x_length": 17221.478174603173,
+      "y_length": 1391.8650793650795,
+      "area": 2688267.609126984,
+      "bound_seed_ratio": 0.11215146080053225,
+      "hex_color": "#E6D6BC",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.5473034,
+      "x_length": 16582.589285714286,
+      "y_length": 1243.5515873015875,
+      "area": 2643733.630952381,
+      "bound_seed_ratio": 0.12820399105415053,
+      "hex_color": "#ECDEC5",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.60754,
+      "x_length": 17432.539682539686,
+      "y_length": 1454.6130952380954,
+      "area": 2751317.9563492066,
+      "bound_seed_ratio": 0.10850072173645237,
+      "hex_color": "#E8D8BF",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.6714854,
+      "x_length": 17261.40873015873,
+      "y_length": 1374.751984126984,
+      "area": 2720696.924603175,
+      "bound_seed_ratio": 0.11465145597854853,
+      "hex_color": "#D6C6AF",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.739839,
+      "x_length": 17244.295634920636,
+      "y_length": 1420.3869047619048,
+      "area": 2698147.5694444445,
+      "bound_seed_ratio": 0.11015737526180892,
+      "hex_color": "#E5D6BC",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.804122,
+      "x_length": 18122.76785714286,
+      "y_length": 1186.5079365079366,
+      "area": 2784876.7361111115,
+      "bound_seed_ratio": 0.12951223625493855,
+      "hex_color": "#E2D2B9",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_21--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.8662767,
+      "x_length": 17215.77380952381,
+      "y_length": 2315.972222222222,
+      "area": 2967638.888888889,
+      "bound_seed_ratio": 0.07443053821002026,
+      "hex_color": "#E7D6C1",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.9296274,
+      "x_length": 17158.73015873016,
+      "y_length": 1688.4920634920636,
+      "area": 2974119.0476190476,
+      "bound_seed_ratio": 0.10265359901992649,
+      "hex_color": "#E3D4BF",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581500.9941576,
+      "x_length": 17215.77380952381,
+      "y_length": 1910.9623015873017,
+      "area": 3007278.521825397,
+      "bound_seed_ratio": 0.09141026856382793,
+      "hex_color": "#ECDDC8",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581501.0396345,
+      "x_length": 16628.22420634921,
+      "y_length": 1494.5436507936508,
+      "area": 3007917.410714286,
+      "bound_seed_ratio": 0.12103512748359167,
+      "hex_color": "#DECCB9",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581501.1047504,
+      "x_length": 17033.23412698413,
+      "y_length": 1825.3968253968255,
+      "area": 2929784.722222222,
+      "bound_seed_ratio": 0.09422828853490198,
+      "hex_color": "#E1CEB9",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581501.1694407,
+      "x_length": 17021.825396825396,
+      "y_length": 1277.7777777777778,
+      "area": 2766383.1845238097,
+      "bound_seed_ratio": 0.12718938687492715,
+      "hex_color": "#E6D8BF",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581501.2296925,
+      "x_length": 16947.66865079365,
+      "y_length": 1283.482142857143,
+      "area": 2742327.876984127,
+      "bound_seed_ratio": 0.12607227313303968,
+      "hex_color": "#E6D8C0",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--07.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--07_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581501.2940204,
+      "x_length": 16936.259920634922,
+      "y_length": 1272.0734126984128,
+      "area": 2778339.533730159,
+      "bound_seed_ratio": 0.1289601806566732,
+      "hex_color": "#E1D2BA",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--08.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--08_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581501.3383422,
+      "x_length": 16953.373015873014,
+      "y_length": 1426.0912698412699,
+      "area": 2816393.3531746035,
+      "bound_seed_ratio": 0.1164903289835567,
+      "hex_color": "#E2D5BD",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--09.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--09_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581501.4161155,
+      "x_length": 16827.876984126986,
+      "y_length": 1186.5079365079366,
+      "area": 2684930.555555556,
+      "bound_seed_ratio": 0.13447237684938493,
+      "hex_color": "#E1D2B9",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--10.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--10_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581501.497702,
+      "x_length": 16947.66865079365,
+      "y_length": 1266.3690476190477,
+      "area": 2771448.660714286,
+      "bound_seed_ratio": 0.1291328055258806,
+      "hex_color": "#E6D9C1",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--11.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_22--11_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.5341892,
+      "x_length": 17438.24404761905,
+      "y_length": 1585.813492063492,
+      "area": 3168244.2956349207,
+      "bound_seed_ratio": 0.11456812400487085,
+      "hex_color": "#CCAE9C",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.581151,
+      "x_length": 17170.13888888889,
+      "y_length": 2344.494047619048,
+      "area": 3264391.3690476194,
+      "bound_seed_ratio": 0.08109223649930253,
+      "hex_color": "#CEB19E",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.6124024,
+      "x_length": 17632.192460317463,
+      "y_length": 1813.9880952380952,
+      "area": 2999446.4285714286,
+      "bound_seed_ratio": 0.09377786895666027,
+      "hex_color": "#C2A28E",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.659955,
+      "x_length": 17660.714285714286,
+      "y_length": 1631.4484126984128,
+      "area": 3267762.6488095243,
+      "bound_seed_ratio": 0.11341458137413649,
+      "hex_color": "#B4998A",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.7068098,
+      "x_length": 17529.51388888889,
+      "y_length": 2624.0079365079364,
+      "area": 3480387.152777778,
+      "bound_seed_ratio": 0.07566456502361872,
+      "hex_color": "#CBAD9A",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.7540638,
+      "x_length": 17130.208333333336,
+      "y_length": 2253.2242063492067,
+      "area": 3121371.527777778,
+      "bound_seed_ratio": 0.08086831825301828,
+      "hex_color": "#D1B5A4",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_3--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.8002892,
+      "x_length": 14004.21626984127,
+      "y_length": 1985.1190476190477,
+      "area": 2995344.990079365,
+      "bound_seed_ratio": 0.10774608133814965,
+      "hex_color": "#BEA591",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.8323321,
+      "x_length": 14278.025793650793,
+      "y_length": 2783.730158730159,
+      "area": 3221534.4742063493,
+      "bound_seed_ratio": 0.08105269998168983,
+      "hex_color": "#BDA390",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.8792975,
+      "x_length": 14346.478174603175,
+      "y_length": 1876.736111111111,
+      "area": 3115889.6329365084,
+      "bound_seed_ratio": 0.11572669588390105,
+      "hex_color": "#C0A38D",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.9261293,
+      "x_length": 14266.617063492065,
+      "y_length": 2452.8769841269846,
+      "area": 3124816.9642857146,
+      "bound_seed_ratio": 0.08929513767799248,
+      "hex_color": "#B89D8A",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581494.9580412,
+      "x_length": 14220.982142857143,
+      "y_length": 2738.095238095238,
+      "area": 3214911.7063492066,
+      "bound_seed_ratio": 0.082564034950034,
+      "hex_color": "#B19886",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.0051234,
+      "x_length": 13291.170634920634,
+      "y_length": 1990.8234126984128,
+      "area": 3105228.174603175,
+      "bound_seed_ratio": 0.11735390482015902,
+      "hex_color": "#BDA695",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_4--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.0524435,
+      "x_length": 15458.829365079366,
+      "y_length": 2852.1825396825398,
+      "area": 3289176.8353174604,
+      "bound_seed_ratio": 0.07459905098668378,
+      "hex_color": "#B69C8B",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.0993185,
+      "x_length": 15401.785714285716,
+      "y_length": 2019.345238095238,
+      "area": 3179772.8174603176,
+      "bound_seed_ratio": 0.1022384934086629,
+      "hex_color": "#BAA293",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.1466072,
+      "x_length": 15464.533730158731,
+      "y_length": 1608.6309523809525,
+      "area": 3085724.9503968256,
+      "bound_seed_ratio": 0.12404062934745926,
+      "hex_color": "#B49E8E",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.1934774,
+      "x_length": 15453.125000000002,
+      "y_length": 2977.6785714285716,
+      "area": 3265321.1805555555,
+      "bound_seed_ratio": 0.07096296812833892,
+      "hex_color": "#B49D8D",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.2450616,
+      "x_length": 15481.646825396825,
+      "y_length": 1671.3789682539684,
+      "area": 3100493.551587302,
+      "bound_seed_ratio": 0.11982260126849913,
+      "hex_color": "#BAA191",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.2891324,
+      "x_length": 15515.873015873018,
+      "y_length": 1945.1884920634923,
+      "area": 3123539.1865079366,
+      "bound_seed_ratio": 0.10349254111946957,
+      "hex_color": "#B89E8E",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--06.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_5--06_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.337319,
+      "x_length": 15955.109126984127,
+      "y_length": 2692.4603174603176,
+      "area": 3476599.4543650798,
+      "bound_seed_ratio": 0.08092925966314578,
+      "hex_color": "#C1A694",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.3822727,
+      "x_length": 15841.021825396827,
+      "y_length": 2241.815476190476,
+      "area": 3619510.912698413,
+      "bound_seed_ratio": 0.10192174135342694,
+      "hex_color": "#C1A896",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.4273412,
+      "x_length": 15937.996031746032,
+      "y_length": 2002.232142857143,
+      "area": 3280044.146825397,
+      "bound_seed_ratio": 0.10278542728525611,
+      "hex_color": "#BAA18E",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.4701574,
+      "x_length": 15858.134920634922,
+      "y_length": 2954.8611111111113,
+      "area": 3298132.6884920634,
+      "bound_seed_ratio": 0.07038481008377785,
+      "hex_color": "#B89F8D",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.5139165,
+      "x_length": 15983.630952380954,
+      "y_length": 1916.6666666666667,
+      "area": 3377018.3531746035,
+      "bound_seed_ratio": 0.11023293920491574,
+      "hex_color": "#BAA08E",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_6--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.5511482,
+      "x_length": 17723.462301587304,
+      "y_length": 2561.259920634921,
+      "area": 3568103.174603175,
+      "bound_seed_ratio": 0.07860228737222343,
+      "hex_color": "#B49989",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.6054268,
+      "x_length": 17757.688492063495,
+      "y_length": 1882.4404761904764,
+      "area": 3274448.16468254,
+      "bound_seed_ratio": 0.0979558627659858,
+      "hex_color": "#B99D8B",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.6502204,
+      "x_length": 0,
+      "y_length": 0,
+      "area": 0,
+      "bound_seed_ratio": 0,
+      "hex_color": "##000000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.6929955,
+      "x_length": 17512.400793650795,
+      "y_length": 2327.3809523809523,
+      "area": 3492183.779761905,
+      "bound_seed_ratio": 0.08568088172813383,
+      "hex_color": "#AF988A",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.7394116,
+      "x_length": 18333.829365079364,
+      "y_length": 1842.5099206349207,
+      "area": 3370869.0476190476,
+      "bound_seed_ratio": 0.09978812476007051,
+      "hex_color": "#000",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_7--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.7877004,
+      "x_length": 17061.755952380954,
+      "y_length": 3262.8968253968255,
+      "area": 3540340.029761905,
+      "bound_seed_ratio": 0.0635942586043323,
+      "hex_color": "#BFA591",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.8368478,
+      "x_length": 16160.466269841269,
+      "y_length": 2184.7718253968255,
+      "area": 3250130.456349206,
+      "bound_seed_ratio": 0.09205360897266085,
+      "hex_color": "#C7AC97",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.881639,
+      "x_length": 16679.56349206349,
+      "y_length": 2287.450396825397,
+      "area": 3331138.14484127,
+      "bound_seed_ratio": 0.08730844986504774,
+      "hex_color": "#CAAE99",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.9218576,
+      "x_length": 16907.738095238095,
+      "y_length": 3188.7400793650795,
+      "area": 3530568.4523809524,
+      "bound_seed_ratio": 0.06548472436918215,
+      "hex_color": "#C3A996",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581495.953768,
+      "x_length": 16993.303571428572,
+      "y_length": 1962.3015873015872,
+      "area": 3624701.884920635,
+      "bound_seed_ratio": 0.10869979441530551,
+      "hex_color": "#C3A995",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_8--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    }
+  ],
+  [
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.0006347,
+      "x_length": 16200.396825396827,
+      "y_length": 2789.434523809524,
+      "area": 3290625.7440476194,
+      "bound_seed_ratio": 0.07281765127977789,
+      "hex_color": "#C1A896",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--01.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--01_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.0479834,
+      "x_length": 16052.083333333336,
+      "y_length": 1859.623015873016,
+      "area": 3043409.970238095,
+      "bound_seed_ratio": 0.10195396981483618,
+      "hex_color": "#CDB4A2",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--02.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--02_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.095251,
+      "x_length": 16046.37896825397,
+      "y_length": 2310.267857142857,
+      "area": 3061287.4503968256,
+      "bound_seed_ratio": 0.08257807041496434,
+      "hex_color": "#C8AA97",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--03.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--03_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.1423926,
+      "x_length": 16006.448412698413,
+      "y_length": 2772.321428571429,
+      "area": 3189202.1329365084,
+      "bound_seed_ratio": 0.07186931156263952,
+      "hex_color": "#BAA08F",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--04.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--04_meta.xml",
+      "species_name": "Tragopogon Pratensis",
+      "type": [
+        "Seed"
+      ]
+    },
+    {
+      "focusmethod": "nan",
+      "texturemethod": "nan",
+      "topographymethod": "nan",
+      "model": "Axiocam305c",
+      "adapter": "0,63x",
+      "objective": "1,6x",
+      "pixelaccuracy": 0.000244140625,
+      "pixeldistance": [
+        3.45,
+        3.45
+      ],
+      "totalmagnification": 0.96,
+      "scalingunit": "\u00b5m",
+      "sdk": "1.78",
+      "scaling": {
+        "x": 5.70436507936508e-06,
+        "y": 5.70436507936508e-06
+      },
+      "vendor": "Carl Zeiss",
+      "timestamp": 1668581496.1892679,
+      "x_length": 16320.188492063493,
+      "y_length": 1705.6051587301588,
+      "area": 3151045.6349206353,
+      "bound_seed_ratio": 0.11320119763577277,
+      "hex_color": "#C3A897",
+      "img_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--05.tif",
+      "meta_path": "C:/Users/anonn/Downloads/seeds/Tragopogon pratensis/Tragopodon pratensis_9--05_meta.xml",
+      "species_name": "Tragopogon Pratensis",
       "type": [
         "Seed"
       ]

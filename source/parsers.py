@@ -61,40 +61,59 @@ def __zeiss_axiocam305c_parser__(meta_dict):
     """
     try:
         # Prepare holder for output meta
-        parsed_meta = {}
-        # Capture postprocessing methodic
-        capture_property = meta_dict['ImageMetadata']['Experiment']['ExperimentBlocks']['AcquisitionBlock']['SubDimensionSetups']['ZStackSetup']['SetupExtensions']['SetupExtension'][0]['ZStackSetupExtension']
-        parsed_meta['focusmethod'] = capture_property['FocusMethod']
-        parsed_meta['texturemethod'] = capture_property['TextureMethod']
-        parsed_meta['topographymethod'] = capture_property['TopographyMethod']
+        parsed_meta = __empty_dict__()
+        parsed_meta["vendor"] = "Carl Zeiss"
         # Used detector
         detector = meta_dict['ImageMetadata']['Information']['Instrument']['Detectors']['Detector']
         parsed_meta['model']= detector['Manufacturer']['Model']
         parsed_meta['adapter'] = detector['Adapter']['Manufacturer']['Model']
-        # Used objective
-        objective = meta_dict['ImageMetadata']['Information']['Instrument']['Objectives']['Objective']
-        parsed_meta['objective'] = objective['Manufacturer']['Model']
-        # Hardware settings specific for Axiocam 305c
-        hardware = meta_dict['ImageMetadata']['HardwareSetting']['ParameterCollection']
-        for collection in hardware:
-            if collection["@Id"] == 'MTBCamera_MTBTube_Cameraport.Axiocam305c':
-                hardware = collection
-                break
-        parsed_meta['pixelaccuracy'] = float(hardware['CameraPixelAccuracy'][list(hardware['CameraPixelAccuracy'].keys())[-1]])
-        parsed_meta['pixeldistance'] = list(map(float, hardware['CameraPixelDistances'][list(hardware['CameraPixelDistances'].keys())[-1]].split(",")))
-        parsed_meta['totalmagnification'] = float(hardware['TotalMagnification'][list(hardware['TotalMagnification'].keys())[-1]])
-        parsed_meta['scalingunit'] = hardware['DefaultScalingUnit'][list(hardware['DefaultScalingUnit'].keys())[-1]]
-        parsed_meta['sdk'] = hardware['SDKVersion'][list(hardware['SDKVersion'].keys())[-1]]
-        # Scaling props
-        scaling = meta_dict['ImageMetadata']['Scaling']['Items']['Distance']
-        temp_scale = {}
-        for scale in scaling:
-            temp_scale[scale['@Id'].lower()] = float(scale['Value'])
-        parsed_meta["scaling"] = temp_scale
-        parsed_meta["vendor"] = "Carl Zeiss"
+        # Capture postprocessing methodic
+        z_stack = meta_dict["ImageMetadata"]["Experiment"]["ExperimentBlocks"]["AcquisitionBlock"]["SubDimensionSetups"]["ZStackSetup"]
+        if z_stack["@IsActivated"] == "true":
+            capture_property = z_stack['SetupExtensions']['SetupExtension'][0]['ZStackSetupExtension']
+            parsed_meta['focusmethod'] = capture_property['FocusMethod']
+            parsed_meta['texturemethod'] = capture_property['TextureMethod']
+            parsed_meta['topographymethod'] = capture_property['TopographyMethod']
+            # Used objective
+            objective = meta_dict['ImageMetadata']['Information']['Instrument']['Objectives']['Objective']
+            parsed_meta['objective'] = objective['Manufacturer']['Model']
+            # Hardware settings specific for Axiocam 305c
+            hardware = meta_dict['ImageMetadata']['HardwareSetting']['ParameterCollection']
+            for collection in hardware:
+                if collection["@Id"] == 'MTBCamera_MTBTube_Cameraport.Axiocam305c':
+                    hardware = collection
+                    break
+            parsed_meta['pixelaccuracy'] = float(hardware['CameraPixelAccuracy'][list(hardware['CameraPixelAccuracy'].keys())[-1]])
+            parsed_meta['pixeldistance'] = list(map(float, hardware['CameraPixelDistances'][list(hardware['CameraPixelDistances'].keys())[-1]].split(",")))
+            parsed_meta['totalmagnification'] = float(hardware['TotalMagnification'][list(hardware['TotalMagnification'].keys())[-1]])
+            parsed_meta['scalingunit'] = hardware['DefaultScalingUnit'][list(hardware['DefaultScalingUnit'].keys())[-1]]
+            parsed_meta['sdk'] = hardware['SDKVersion'][list(hardware['SDKVersion'].keys())[-1]]
+            # Scaling props
+            scaling = meta_dict['ImageMetadata']['Scaling']['Items']['Distance']
+            temp_scale = {}
+            for scale in scaling:
+                temp_scale[scale['@Id'].lower()] = float(scale['Value'])
+            parsed_meta["scaling"] = temp_scale
+        elif z_stack["@IsActivated"] == "false":
+            # Used objective
+            objective = meta_dict['ImageMetadata']['Information']['Instrument']['Objectives']['Objective']
+            parsed_meta['objective'] = objective["@Name"]
+            # Hardware settings specific for Axiocam 305c without zstack
+            hardware = meta_dict['ImageMetadata']['HardwareSetting']['ParameterCollection']
+            parsed_meta['pixelaccuracy'] = float(hardware['CameraPixelAccuracy'][list(hardware['CameraPixelAccuracy'].keys())[-1]])
+            parsed_meta['pixeldistance'] = list(map(float, hardware['CameraPixelDistances'][list(hardware['CameraPixelDistances'].keys())[-1]].split(",")))
+            parsed_meta['totalmagnification'] = float(meta_dict['ImageMetadata']["Information"]["Image"]["MicroscopeSettings"]["EyepieceSettings"]["TotalMagnification"])
+            #parsed_meta['scalingunit'] = meta_dict["ImageMetadata"]["Scaling"]["Items"]["Distance"][0]["DefaultUnitFormat"]
+            parsed_meta['scalingunit'] = "\u00b5m"
+            parsed_meta['sdk'] = hardware['SDKVersion'][list(hardware['SDKVersion'].keys())[-1]]
+            # Scaling props
+            scaling = meta_dict['ImageMetadata']['Scaling']['Items']['Distance']
+            temp_scale = {}
+            for scale in scaling:
+                temp_scale[scale['@Id'].lower()] = float(scale['Value'])
+            parsed_meta["scaling"] = temp_scale
     except Exception as e:
         print("Exception on processing Zeiss meta data!", type(e).__name__, e)
-        parsed_meta = __empty_dict__()
         parsed_meta["vendor"] = "Carl Zeiss"
     return parsed_meta
 
@@ -288,7 +307,7 @@ def __empty_dict__():
     parsed_meta['totalmagnification'] = 0.0
     parsed_meta['scalingunit'] = "nan"
     parsed_meta['sdk'] = "nan"
-    parsed_meta["scaling"] = {"x" : 0.0, "y" : 0.0, "z" : 0.0}
+    parsed_meta["scaling"] = {"x" : 1.0, "y" : 1.0, "z" : 1.0}
     parsed_meta["vendor"] = "nan"
 
     return parsed_meta

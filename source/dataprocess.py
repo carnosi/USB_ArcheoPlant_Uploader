@@ -583,15 +583,16 @@ if __name__ == "__main__":
     # named to_be_uploaded
     print('main processing function test')
 
-    # PATH = "..//JCU_ArcheoPlant_Uploader//test"
-    # file = main(PATH, 'zeiss axiocam 305c')
+    PATH = "..//JCU_ArcheoPlant_Uploader//test"
+    # PATH = r"C:\Users\anonn\Downloads\seeds"
+    file = main(PATH, 'zeiss axiocam 305c')
 
-    PATH = "..//JCU_ArcheoPlant_Uploader//keyence"
-    file = main(PATH, 'keyence', consolecall=True)
+    # PATH = "..//JCU_ArcheoPlant_Uploader//keyence"
+    # file = main(PATH, 'keyence', consolecall=True)
     print("Test successful!\n", next(file))
 
     print("preload_data function test")
 
-    # output = preload_data(PATH, "Zeiss Axiocam 305c")
-    output = preload_data(PATH, "Keyence")
+    output = preload_data(PATH, "Zeiss Axiocam 305c")
+    # output = preload_data(PATH, "Keyence")
     print("Test successful!\n", output)
