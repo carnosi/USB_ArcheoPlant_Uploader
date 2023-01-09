@@ -10,7 +10,7 @@
 SERVER = "live"
 
 # Document set name. Eg: "ArcheoPlant - CZ/DE - 2021-09-09"
-DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2022-03-04"
+DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2022-06-28"
 
 # Specifies type of the seed. Valid DB options are Recent and Archeo
 TYPE = "Recent"
@@ -28,7 +28,7 @@ NOTE = None
 TAGS = None
 
 # Whom belong the originals Eg. "USB" for University Southern Bohemia, "RE" for Regensburg
-COLLECTION_ORGANIZATION = "RE"
+COLLECTION_ORGANIZATION = "USB"
 
 # If seed has internal number in relation to collection organization it should be filled in as dictionary
 INTERNAL_NUMBER = {"RE":{

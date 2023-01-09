@@ -31,7 +31,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Vojtech Barnat", "Ivo Bukovsky", "Jakub Geyer"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.1.1"
+__version__ = "1.1.2"
 __maintainer__ = ["Ondrej Budik"]
 __email__ = ["obudik@prf.jcu.cz"]
 __status__ = "Beta"
@@ -201,18 +201,20 @@ class Connector(ConnectorFrame):
                         # This uploads chunk by chunk.
                         uploader.upload()
                         # create uploader for our file, don't forget to provide required metadata
-                        tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
-                        uploader = tus_client.uploader(
-                            data['meta_path'],
-                            metadata={
-                                "fileName": data['meta_path'].split('/')[-1],
-                                "contentType": "text/"+data['meta_path'].split(".")[-1]
-                            },
-                            chunk_size=chunk   # set chunk size in Bytes (1MB is the default)
-                            )
-                        # Uploads the entire image file and meta data
-                        # This uploads chunk by chunk.
-                        uploader.upload()
+                        # Check if img and meta are the same - keyence method, in that case dont upload tif twice.
+                        if data["img_path"] != data['meta_path']:
+                            tus_client = client.get_tus_client_for_finding(workspace_id, finding_id)
+                            uploader = tus_client.uploader(
+                                data['meta_path'],
+                                metadata={
+                                    "fileName": data['meta_path'].split('/')[-1],
+                                    "contentType": "text/"+data['meta_path'].split(".")[-1]
+                                },
+                                chunk_size=chunk   # set chunk size in Bytes (1MB is the default)
+                                )
+                            # Uploads the entire image file and meta data
+                            # This uploads chunk by chunk.
+                            uploader.upload()
 
                 except Exception as e:
                     print("Error occured when uploading: " + str(e.__class__.__name__) + " " + e.__str__())
