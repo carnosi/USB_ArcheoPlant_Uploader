@@ -54,7 +54,7 @@ from config import IMAGE_SUFFIX_NAMES, IMAGE_ADDITIONS
 from imgprocess import __version__ as __imv__
 from parsers import __zeiss_axiocam305c_parser__, __keyence_parser__
 from version_check import check_version
-check_version(__imv__, [1, 0, 5], "imgprocess.py")
+check_version(__imv__, [1, 0, 6], "imgprocess.py")
 check_version(__imv__, [1, 0, 4], "parsers.py")
 
 

@@ -32,7 +32,7 @@ __copyright__ = "<2022> <University Southern Bohemia>"
 __credits__ = ["Ondrej Budik", "Ivo Bukovsky"]
 
 __license__ = "MIT (X11)"
-__version__ = "1.0.5"
+__version__ = "1.0.6"
 __maintainer__ = ["Vojtech Barnat", "Ondrej Budik"]
 __email__ = ["Vojtech.Barnat@fs.cvut.cz", "obudik@prf.jcu.cz"]
 __status__ = "Beta"
@@ -45,7 +45,6 @@ import numpy as np
 import cv2 as cv2
 from scipy.spatial.distance import pdist, squareform
 from imutils import rotate
-import matplotlib.pyplot as plt
 from config import BORDER_SIZE, L_THRESH, H_THRESH, L_AREA, H_AREA, COLOR_SAMPLE_SIZE, THRESHOLD_PAD, KERNEL_SIZE, E_ITERS, D_ITERS, COLOR_CNT_PAD
 
 
@@ -172,7 +171,7 @@ def preproces_seed_image(img_path, downscale=0.05, autoload=True):
         x size of found seed in pixels
     max_y_dist : int
         y size of found seed in pixels
-    area : int 
+    area : int
         area of found seed in pixels squared
     hex_color : str
         average color of found seed in hex format
@@ -201,7 +200,7 @@ def preproces_seed_image(img_path, downscale=0.05, autoload=True):
         #dynamic thresholding
         l_thresh = h - THRESHOLD_PAD
         h_thresh = h + THRESHOLD_PAD
-        img_bin = cv2.inRange(img_h, l_thresh, h_thresh) 
+        img_bin = cv2.inRange(img_h, l_thresh, h_thresh)
 
         img_bin = (255-img_bin)
 
@@ -260,7 +259,7 @@ def preproces_seed_image(img_path, downscale=0.05, autoload=True):
         #rotate furthest apart points
         rotated_point1 = rotate_point([ox, oy], point1, -np.radians(angle))
         rotated_point2 = rotate_point([ox, oy], point2, -np.radians(angle))
-        
+
         #Find the maximum y distance between points in contour
         max_y_index = np.argmax(rotated_contour[:,0,1])
         min_y_index = np.argmin(rotated_contour[:,0,1])
@@ -274,7 +273,7 @@ def preproces_seed_image(img_path, downscale=0.05, autoload=True):
         p2 = rotated_point2
         p3 = max_y_dist_point1
         p4 = max_y_dist_point2
-      
+
         #crop
         x, y, w, h = cv2.boundingRect(np.array([[p1[0], p3[1]],[p2[0], p4[1]]]))
         cropped = img[y:y+h, x:x+w]
@@ -304,9 +303,9 @@ def preproces_seed_image(img_path, downscale=0.05, autoload=True):
 
         for i in range(3):
             avg_color[i] = int(sum_color[i] / total[i])
-            
+
         hex_color = rgb_to_hex(avg_color[0], avg_color[1], avg_color[2])
-    
+
     except Exception as e:
         print("Automatic image feature extraction failed! No data values are provided. Analyze the seed in path: " + str(img_path) +" manually!")
         print(str(e.__class__.__name__) + ": " + str(e))
@@ -321,6 +320,7 @@ if __name__ == "__main__":
     Example of usage
     For every class display results
     """
+    import matplotlib.pyplot as plt
     from glob import glob
     import os
 
@@ -342,7 +342,7 @@ if __name__ == "__main__":
         print("size_y = " + str(max_y_dist) + " pix")
         print("area = " + str(area) + " pix^2")
         print("color = #" + hex_color)
-        
+
         avg_color = hex_to_rgb(hex_color)
 
         color_img = np.ones((100,100,3))

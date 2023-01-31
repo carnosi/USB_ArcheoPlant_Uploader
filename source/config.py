@@ -10,10 +10,10 @@
 SERVER = "live"
 
 # Document set name. Eg: "ArcheoPlant - CZ/DE - 2021-09-09"
-DOCUMENT_SET = "ArcheoPlant - CZ/DE - 2022-06-28"
+DOCUMENT_SET = "ArcheoPlant - CZ/DE"
 
-# Specifies type of the seed. Valid DB options are Recent and Archeo
-TYPE = "Recent"
+# Specifies type of the seed. Valid DB options are Recent, Archeo, Artificial Archeo
+TYPE = "Artificial Archeo"
 
 # Minimal username length accepted by user GUI in jupyter notebook
 MIN_USERNAME_LENGTH = 3
@@ -21,10 +21,10 @@ MIN_USERNAME_LENGTH = 3
 # Description where data from which location data have been uploaded (NOT AQUIRED!)
 LOCATION_DESCRIPTION = "Uploaded from University Southern Bohemia"
 
-# Any note which should be uploaded with target data for given script task
+# Any note which should be uploaded with target data for given script task.
 NOTE = None
 
-# Any extra tags which should be entered along side the seed name
+# Any extra tags which should be entered along side the seed name. If given no automatic tag extraction is performed.
 TAGS = None
 
 # Whom belong the originals Eg. "USB" for University Southern Bohemia, "RE" for Regensburg
