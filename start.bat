@@ -1,4 +1,4 @@
 cd %cd%/source
-jupyter notebook IMGuploader.ipynb
+python -m notebook IMGuploader.ipynb
 pause
 exit
